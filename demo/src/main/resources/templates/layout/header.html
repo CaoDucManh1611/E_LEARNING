@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<nav th:fragment="header(role)" style="background:#0C447C; padding:12px 24px; display:flex; justify-content:space-between; align-items:center;">
+    <span style="color:white; font-weight:bold; font-size:16px; letter-spacing:1px;">E-LEARNING</span>
+    <div style="display:flex; align-items:center; gap:4px;">
+        <a href="/TimKiem" style="color:rgba(255,255,255,0.85); text-decoration:none; padding:6px 12px; border-radius:6px; font-size:14px;">Tìm kiếm</a>
+        <a href="/home"    style="color:rgba(255,255,255,0.85); text-decoration:none; padding:6px 12px; border-radius:6px; font-size:14px;">Trang chủ</a>
+        <a href="/products" style="color:rgba(255,255,255,0.85); text-decoration:none; padding:6px 12px; border-radius:6px; font-size:14px;">Sản phẩm</a>
+
+        <div id="userDropdown" style="position:relative; display:inline-block;">
+            <span th:text="${role} + ' ▼'" onclick="toggleDropdown()"
+                  style="color:white; cursor:pointer; padding:6px 12px; border-radius:6px; border:1px solid rgba(255,255,255,0.3); font-size:14px; user-select:none;">
+                User ▼
+            </span>
+            <div id="dropMenu" style="display:none; position:absolute; right:0; top:calc(100% + 8px); background:white; border-radius:8px; min-width:150px; box-shadow:0 4px 16px rgba(0,0,0,0.15); overflow:hidden; z-index:999;">
+                <a href="/profile"  style="display:block; padding:10px 16px; color:#1a202c; text-decoration:none; font-size:14px;">Hồ sơ</a>
+                <a href="/settings" style="display:block; padding:10px 16px; color:#1a202c; text-decoration:none; font-size:14px;">Cài đặt</a>
+                <hr style="margin:4px 0; border:none; border-top:1px solid #e2e8f0;">
+                <a th:href="@{/login}" style="display:block; padding:10px 16px; color:#e53e3e; text-decoration:none; font-size:14px;">Đăng xuất</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            var m = document.getElementById('dropMenu');
+            m.style.display = m.style.display === 'none' ? 'block' : 'none';
+        }
+        document.addEventListener('click', function(e) {
+            if (!document.getElementById('userDropdown').contains(e.target))
+                document.getElementById('dropMenu').style.display = 'none';
+        });
+    </script>
+</nav>
+</body>
+</html>
