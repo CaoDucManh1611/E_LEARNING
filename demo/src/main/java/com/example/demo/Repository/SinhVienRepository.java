@@ -10,5 +10,5 @@ import java.util.Optional;
 public interface SinhVienRepository extends JpaRepository <SinhVien, Integer> {
     SinhVien findByEmail (String email);
 
-    SinhVien sddff (String ten);
+    SinhVien findByTensv (String ten);
 }

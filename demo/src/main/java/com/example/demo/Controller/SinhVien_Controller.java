@@ -37,7 +37,7 @@ public class SinhVien_Controller {
     public String Post_Create (@ModelAttribute SinhVien sv, Model model, BindingResult bindingResult)
     {
         SinhVien svm = svsv.Create(sv);
-        if (svm == null)
+        if (svm != null)
         {
             bindingResult.rejectValue("email", "error.sinhVien", "Email nay da ton tai!");
         }
@@ -112,18 +112,15 @@ public class SinhVien_Controller {
         return "testFindByName";
 
     }
-
-
     @PostMapping("/findByName")
-    public String findByName (String name, BindingResult bindingResult, Model model)
+    public String findByName (String name, Model model)
+
     {
-
-        model.addAttribute("us", svsv.FindByName(name));
-
+        SinhVien sv = svsv.FindByName(name);
+        model.addAttribute("us", sv);
         return "testFindByName";
 
     }
-
 
 
     //findByName

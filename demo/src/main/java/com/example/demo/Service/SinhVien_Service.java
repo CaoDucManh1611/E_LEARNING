@@ -66,7 +66,7 @@ public class SinhVien_Service {
 
     public SinhVien FindByName (String name)
     {
-        return svrepo.sddff(name);
+        return svrepo.findByTensv(name);
     }
 
     public SinhVien FindUserByEmail (String email)
@@ -77,7 +77,7 @@ public class SinhVien_Service {
     public SinhVien DangKy (SinhVien sv)
     {
         SinhVien ktr = svrepo.findByEmail(sv.getEmail());
-        if (ktr == null)
+        if (ktr != null)
         {
             return null;
         }
