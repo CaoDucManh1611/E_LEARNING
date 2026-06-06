@@ -8,5 +8,7 @@ import java.util.Optional;
 
 @Repository
 public interface SinhVienRepository extends JpaRepository <SinhVien, Integer> {
-    Optional <SinhVien> findByEmail (String email);
+    SinhVien findByEmail (String email);
+
+    SinhVien sddff (String ten);
 }

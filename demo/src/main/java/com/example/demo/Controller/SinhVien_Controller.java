@@ -106,5 +106,28 @@ public class SinhVien_Controller {
     }
 
 
+    @GetMapping("/findByName")
+    public String findByName (Model model)
+    {
+        return "testFindByName";
+
+    }
+
+
+    @PostMapping("/findByName")
+    public String findByName (String name, BindingResult bindingResult, Model model)
+    {
+
+        model.addAttribute("us", svsv.FindByName(name));
+
+        return "testFindByName";
+
+    }
+
+
+
+    //findByName
+
+
 
 }

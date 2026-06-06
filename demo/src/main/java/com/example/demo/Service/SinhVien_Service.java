@@ -25,8 +25,8 @@ public class SinhVien_Service {
     }
     public SinhVien Create (SinhVien sv)
     {
-        Optional <SinhVien> ktr_email  =  svrepo.findByEmail(sv.getEmail());
-        if (ktr_email.isPresent())
+        SinhVien ktr_email  =  svrepo.findByEmail(sv.getEmail());
+        if (ktr_email == null)
         {
             return null;
         }
@@ -63,15 +63,21 @@ public class SinhVien_Service {
         }
         return svtk;
     }
+
+    public SinhVien FindByName (String name)
+    {
+        return svrepo.sddff(name);
+    }
+
     public SinhVien FindUserByEmail (String email)
     {
-        return svrepo.findByEmail(email).orElse(null);
+        return svrepo.findByEmail(email);
     }
     /////Spring sercurity
     public SinhVien DangKy (SinhVien sv)
     {
-        Optional<SinhVien> ktr = svrepo.findByEmail(sv.getEmail());
-        if (ktr.isPresent())
+        SinhVien ktr = svrepo.findByEmail(sv.getEmail());
+        if (ktr == null)
         {
             return null;
         }
