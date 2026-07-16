@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <title>Header @hoidanit</title>
+</head>
+
+<body>
+<header th:fragment="header(currentPage)">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="/">E_LEARNING</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/"
+                           th:classappend="${currentPage == 'home'} ? 'active' ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user"
+                           th:classappend="${currentPage == 'user'} ? 'active' ">Manage User</a>
+                    </li>
+                </ul>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Settings
+                    </a>
+                    <ul class="dropdown-menu">
+
+                        <!-- THÊM: Chưa login → chỉ hiện Login -->
+                        <li sec:authorize="isAnonymous()">
+                            <a class="dropdown-item" href="/login">Login</a>
+                        </li>
+                        <!-- /THÊM -->
+
+                        <!-- THÊM: Đã login → hiện tên user + Logout -->
+                        <li sec:authorize="isAuthenticated()">
+                                <span class="dropdown-item disabled">
+                                    Xin chào, <span sec:authentication="name"></span>
+                                </span>
+                        </li>
+                        <li sec:authorize="isAuthenticated()">
+                            <form th:action="@{/logout}" method="post" style="margin:0;">
+                                <button type="submit" class="dropdown-item text-danger">
+                                    Logout
+                                </button>
+                            </form>
+                        </li>
+                        <!-- /THÊM -->
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- THÊM: Bootstrap JS để dropdown hoạt động -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</header>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cập Nhật Sinh Viên</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #fafafa; color: #333; }
+        .update-box {
+            max-width: 450px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 25px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+        }
+        .form-label { font-size: 0.9rem; margin-bottom: 4px; }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="update-box">
+        <h5 class="mb-4 pb-2 border-bottom">Cập nhật Sinh viên (ID: <span th:text="${SinhVien.id}"></span>)</h5>
+
+        <form method="post" th:action="@{/Update}" th:object="${SinhVien}">
+
+            <input type="hidden" th:field="*{id}">
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Họ tên</label>
+                <input type="text" class="form-control form-control-sm" th:field="*{tensv}"
+                       th:classappend="${#fields.hasErrors('tensv')} ? 'is-invalid'" required>
+                <div th:if="${#fields.hasErrors('tensv')}" th:errors="*{tensv}" class="invalid-feedback"></div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Email</label>
+                <input type="email" class="form-control form-control-sm" th:field="*{email}"
+                       th:classappend="${#fields.hasErrors('email')} ? 'is-invalid'" required>
+                <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="invalid-feedback"></div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Địa chỉ</label>
+                <input type="text" class="form-control form-control-sm" th:field="*{address}">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Mật khẩu mới</label>
+                <input type="password" class="form-control form-control-sm" th:field="*{password}">
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-semibold">Quyền hạn (Role)</label>
+                <select class="form-select form-select-sm" th:field="*{role}" required>
+                    <option value="USER">User</option>
+                    <option value="ADMIN">Admin</option>
+                </select>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-dark btn-sm px-4">Lưu dữ liệu</button>
+                <a href="/Home" class="btn btn-outline-secondary btn-sm">Quay lại</a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+<div th:replace="~{layout/footer :: footer}"></div>
+</html>

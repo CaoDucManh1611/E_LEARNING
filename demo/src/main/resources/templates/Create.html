@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm/Cập nhật Sinh Viên</title>
+    <!-- Thêm Bootstrap để giao diện đẹp hơn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f5f5f5; padding-top: 50px; }
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+<div th:replace="~{layout/header :: header('user')}"></div>
+<div class="form-container">
+    <h4 class="mb-4 text-center">Thông tin sinh viên</h4>
+
+    <form method="post" th:action="@{/Create}" th:object="${SinhVien}">
+        <!-- ID ẩn để dùng khi Update -->
+        <input type="hidden" th:field="*{id}">
+
+        <div class="mb-3">
+            <label class="form-label fw-bold">Họ tên</label>
+            <input type="text" class="form-control" th:field="*{tensv}" placeholder="Nhập họ tên..." required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-bold">Email</label>
+            <input type="email" class="form-control" th:field="*{email}" placeholder="example@gmail.com" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-bold">Địa chỉ</label>
+            <input type="text" class="form-control" th:field="*{address}" placeholder="Nhập địa chỉ...">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-bold">Mật khẩu</label>
+            <input type="password" class="form-control" th:field="*{password}" placeholder="********" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-bold">Role</label>
+            <select class="form-select" th:field="*{role}" required>
+                <option value="" selected disabled>-- Chọn quyền hạn --</option>
+                <option value="ADMIN">Admin</option>
+                <option value="USER">User</option>
+            </select>
+        </div>
+
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="submit">Lưu sinh viên</button>
+            <a href="/Home" class="btn btn-light">Hủy bỏ</a>
+        </div>
+    </form>
+</div>
+<div th:replace="~{layout/footer :: footer}"></div>
+</body>
+</html>
