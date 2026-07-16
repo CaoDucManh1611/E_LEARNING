@@ -1,0 +1,810 @@
+external_course_id,title,organization,certificate_type,duration,rating,reviews_num,difficulty,external_url,students_enrolled
+1,(ISC)2 Systems Security Certified Practitioner (SSCP),ISC2,Specialization,3 - 6 Months,4.7,492,Beginner,https://www.coursera.org/specializations/sscp-training,6958.0
+2,.NET FullStack Developer,Board Infinity,Specialization,1 - 3 Months,4.3,51,Intermediate,https://www.coursera.org/specializations/dot-net-fullstack,2531.0
+3,A Crash Course in Causality Inferring Causal Effects from Observational Data,University of Pennsylvania,Course,1 - 3 Months,4.7,517,Intermediate,https://www.coursera.org/learn/crash-course-in-causality,39004.0
+4,A life with ADHD,University of Geneva,Course,1 - 3 Months,4.7,,Beginner,https://www.coursera.org/learn/life-with-adhd,47565.0
+5,AI For Business,University of Pennsylvania,Specialization,3 - 6 Months,4.7,381,Beginner,https://www.coursera.org/specializations/ai-for-business-wharton,13671.0
+6,AI For Everyone,DeepLearning.AI,Course,1 - 4 Weeks,4.8,39.3k,Beginner,https://www.coursera.org/learn/ai-for-everyone,1092100.0
+7,AI Foundations for Everyone,IBM,Specialization,3 - 6 Months,4.7,14k,Beginner,https://www.coursera.org/specializations/ai-foundations-for-everyone,20717.0
+8,AI Product Management,Duke University,Specialization,3 - 6 Months,4.7,342,Beginner,https://www.coursera.org/specializations/ai-product-management-duke,19086.0
+9,AI and Climate Change,DeepLearning.AI,Course,1 - 4 Weeks,4.8,41,Beginner,https://www.coursera.org/learn/ai-and-climate-change,3472.0
+10,AI and Public Health,DeepLearning.AI,Course,1 - 4 Weeks,4.7,111,Beginner,https://www.coursera.org/learn/ai-and-public-health,8294.0
+11,AI for Good,DeepLearning.AI,Specialization,1 - 3 Months,4.8,148,Beginner,https://www.coursera.org/specializations/ai-for-good,6742.0
+12,AI for Medical Diagnosis,DeepLearning.AI,Course,1 - 4 Weeks,4.7,1.9k,Intermediate,https://www.coursera.org/learn/ai-for-medical-diagnosis,65794.0
+13,AI for Medicine,DeepLearning.AI,Specialization,1 - 3 Months,4.7,2.2k,Intermediate,https://www.coursera.org/specializations/ai-for-medicine,41525.0
+14,AWS Cloud Practitioner Essentials,Amazon Web Services,Course,1 - 3 Months,4.8,1.5k,Beginner,https://www.coursera.org/learn/aws-cloud-practitioner-essentials,111494.0
+15,AWS Cloud Solutions Architect,Amazon Web Services,Professional Certificate,3 - 6 Months,4.8,4.6k,Intermediate,https://www.coursera.org/professional-certificates/aws-cloud-solutions-architect,35988.0
+16,AWS Cloud Technical Essentials,Amazon Web Services,Course,1 - 3 Months,4.8,4.3k,Beginner,https://www.coursera.org/learn/aws-cloud-technical-essentials,219668.0
+17,AWS Cloud Technology Consultant,Amazon Web Services,Professional Certificate,3 - 6 Months,4.8,4.3k,Beginner,https://www.coursera.org/professional-certificates/aws-cloud-technology-consultant,3034.0
+18,AWS Fundamentals,Amazon Web Services,Specialization,3 - 6 Months,4.8,4.4k,Beginner,https://www.coursera.org/specializations/aws-fundamentals,18282.0
+19,Abnormal Psychology,Wesleyan University,Specialization,3 - 6 Months,4.8,426,Beginner,https://www.coursera.org/specializations/abnormal-psychology,10496.0
+20,Academic English Writing,"University of California, Irvine",Specialization,3 - 6 Months,4.7,22k,Beginner,https://www.coursera.org/specializations/academic-english,208329.0
+21,Accelerated Computer Science Fundamentals,University of Illinois at Urbana-Champaign,Specialization,1 - 3 Months,4.7,3.2k,Intermediate,https://www.coursera.org/specializations/cs-fundamentals,42050.0
+22,Accounting Principles of Financial Accounting,IESE Business School,Course,1 - 4 Weeks,4.8,2.9k,Beginner,https://www.coursera.org/learn/financial-accounting,118185.0
+23,Achieving Personal and Professional Success,University of Pennsylvania,Specialization,3 - 6 Months,4.7,3k,Beginner,https://www.coursera.org/specializations/wharton-success,44615.0
+24,Addiction Treatment Clinical Skills for Healthcare Providers,Yale University,Course,1 - 3 Months,4.8,1.7k,Beginner,https://www.coursera.org/learn/addiction-treatment,55217.0
+25,Advanced Business Analytics,University of Colorado Boulder,Specialization,3 - 6 Months,4.6,5k,Intermediate,https://www.coursera.org/specializations/data-analytics-business,56365.0
+26,Advanced Data Science with IBM,IBM,Specialization,3 - 6 Months,4.3,3k,Advanced,https://www.coursera.org/specializations/advanced-data-science-ibm,43623.0
+27,Advanced Embedded Linux Development,University of Colorado Boulder,Specialization,1 - 3 Months,4.0,49,Intermediate,https://www.coursera.org/specializations/advanced-embedded-linux-development,3201.0
+28,Advanced Learning Algorithms,DeepLearning.AI,Course,1 - 4 Weeks,4.9,3.9k,Beginner,https://www.coursera.org/learn/advanced-learning-algorithms,173009.0
+29,Agile Development,University of Virginia,Specialization,3 - 6 Months,4.7,4.5k,Beginner,https://www.coursera.org/specializations/agile-development,33927.0
+30,Agile Leadership,University of Colorado System,Specialization,3 - 6 Months,4.8,2.1k,Beginner,https://www.coursera.org/specializations/agile-leadership-change-management,18224.0
+31,Agile Project Management,Google,Course,1 - 4 Weeks,4.8,10.2k,Beginner,https://www.coursera.org/learn/agile-project-management,364660.0
+32,Agile with Atlassian Jira,Atlassian,Course,1 - 4 Weeks,4.7,8.3k,Beginner,https://www.coursera.org/learn/agile-atlassian-jira,282500.0
+33,Akamai Customer Consulting and Support,"Akamai Technologies, Inc.",Professional Certificate,3 - 6 Months,4.9,26,Beginner,https://www.coursera.org/professional-certificates/akamai-customer-consulting-and-support,47565.0
+34,Akamai Network Engineering,"Akamai Technologies, Inc.",Professional Certificate,3 - 6 Months,4.9,26,Beginner,https://www.coursera.org/professional-certificates/akamai-network-engineering,2214.0
+35,Algorithms for Battery Management Systems,University of Colorado Boulder,Specialization,3 - 6 Months,4.7,2.4k,Intermediate,https://www.coursera.org/specializations/algorithms-for-battery-management-systems,21805.0
+36,An Introduction to American Law,University of Pennsylvania,Course,1 - 3 Months,4.8,4.7k,Beginner,https://www.coursera.org/learn/american-law,182239.0
+37,An Introduction to Consumer Neuroscience Neuromarketing,Copenhagen Business School,Course,1 - 3 Months,4.7,3.1k,Beginner,https://www.coursera.org/learn/neuromarketing,171277.0
+38,An Introduction to Programming the Internet of Things (IOT),"University of California, Irvine",Specialization,3 - 6 Months,4.7,19.6k,Beginner,https://www.coursera.org/specializations/iot,154449.0
+39,Analyze Data to Answer Questions,Google,Course,1 - 4 Weeks,4.6,1.1k,Beginner,https://www.coursera.org/learn/analyze-data,6911.0
+40,Analyze Datasets and Train ML Models using AutoML,DeepLearning.AI,Course,1 - 4 Weeks,4.6,9.5k,Advanced,https://www.coursera.org/learn/automl-datasets-ml-models,466585.0
+41,Android App Development,Vanderbilt University,Specialization,3 - 6 Months,4.8,3.5k,Beginner,https://www.coursera.org/specializations/android-app-development,67777.0
+42,Animal Behaviour and Welfare,The University of Edinburgh,Course,1 - 3 Months,4.5,3.6k,Mixed,https://www.coursera.org/learn/animal-welfare,105704.0
+43,Analisis de Datos de Google,Google,Professional Certificate,3 - 6 Months,4.6,454,Beginner,https://www.coursera.org/professional-certificates/analisis-de-datos-de-google,49668.0
+44,Applied Data Science,IBM,Specialization,3 - 6 Months,4.8,63,Beginner,https://www.coursera.org/specializations/applied-data-science,8745.0
+45,Applied Data Science Capstone,IBM,Course,1 - 3 Months,4.6,48.3k,Intermediate,https://www.coursera.org/learn/applied-data-science-capstone,14456.0
+46,Applied Data Science with Python,University of Michigan,Specialization,3 - 6 Months,4.7,6.8k,Intermediate,https://www.coursera.org/specializations/data-science-python,144609.0
+47,Applied Data Science with R,IBM,Specialization,3 - 6 Months,4.5,33.5k,Beginner,https://www.coursera.org/specializations/applied-data-science-r,392217.0
+48,Applied Software Engineering Fundamentals,IBM,Specialization,3 - 6 Months,4.5,792,Beginner,https://www.coursera.org/specializations/software-engineering-fundamentals,3076.0
+49,Architecting with Google Compute Engine,Google Cloud,Specialization,3 - 6 Months,4.6,35.8k,Intermediate,https://www.coursera.org/specializations/gcp-architecture,4621.0
+50,Architecting with Google Kubernetes Engine,Google Cloud,Specialization,3 - 6 Months,4.7,56.7k,Beginner,https://www.coursera.org/specializations/architecting-google-kubernetes-engine,78577.0
+51,Arizona State University TESOL,Arizona State University,Professional Certificate,3 - 6 Months,4.7,48.8k,Beginner,https://www.coursera.org/professional-certificates/arizona-state-university-tesol,54360.0
+52,Arm Cortex-M Architecture and Software Development,Arm,Specialization,3 - 6 Months,4.9,18k,Intermediate,https://www.coursera.org/specializations/cortex-m-architecture-and-software-development,55089.0
+53,Artificial Intelligence in Marketing,University of Virginia,Course,1 - 4 Weeks,4.7,84,Beginner,https://www.coursera.org/learn/uva-darden-artificial-intelligence-marketing,2997.0
+54,Artificial Intelligence an Overview,Politecnico di Milano,Specialization,3 - 6 Months,4.5,144,Beginner,https://www.coursera.org/specializations/artificial-intelligence-overview,21486.0
+55,Arts and Heritage Management,Universita Bocconi,Course,1 - 3 Months,4.5,177,Mixed,https://www.coursera.org/learn/arts-heritage,3002.0
+56,Ask Questions to Make Data-Driven Decisions,Google,Course,1 - 4 Weeks,4.8,1.3k,Beginner,https://www.coursera.org/learn/ask-questions-make-decisions,35382.0
+57,Aspectos basicos de la asistencia tecnica,Google,Course,1 - 3 Months,4.7,28.4k,Beginner,https://www.coursera.org/learn/asistencia-tecnica,860755.0
+58,Aspectos basicos del diseno de la experiencia del usuario,Google,Course,1 - 4 Weeks,4.9,10.7k,Beginner,https://www.coursera.org/learn/aspectos-basicos-del-diseno-de-la-experiencia-del-usuario-ux,110266.0
+59,"Aspectos basicos Datos, datos, en todas partes",Google,Course,1 - 3 Months,4.9,2.5k,Beginner,https://www.coursera.org/learn/aspectos-basicos-datos-datos-en-todas-partes,51857.0
+60,Assess for Success Marketing Analytics and Measurement,Google,Course,1 - 4 Weeks,4.8,4.8k,Beginner,https://www.coursera.org/learn/assess-for-success,93593.0
+61,Assets in Accounting,Intuit,Course,1 - 4 Weeks,4.6,1k,Beginner,https://www.coursera.org/learn/accounting-assets,87946.0
+62,"Assets, Threats, and Vulnerabilities",Google,Course,1 - 4 Weeks,4.4,822,Beginner,https://www.coursera.org/learn/assets-threats-and-vulnerabilities,37403.0
+63,Astronomy Exploring Time and Space,University of Arizona,Course,1 - 3 Months,4.8,909,Beginner,https://www.coursera.org/learn/astro,66581.0
+64,Attract and Engage Customers with Digital Marketing,Google,Course,1 - 4 Weeks,4.8,3.5k,Beginner,https://www.coursera.org/learn/attract-and-engage-customers,223416.0
+65,Autodesk CADCAMCAE for Mechanical Engineering,Autodesk,Specialization,3 - 6 Months,4.7,517,Intermediate,https://www.coursera.org/specializations/autodesk-cad-cam-cae-mechanical-engineering,44843.0
+66,Autodesk Certified Professional AutoCAD for Design and Drafting Exam Prep,Autodesk,Course,1 - 4 Weeks,4.8,4.8k,Advanced,https://www.coursera.org/learn/autodesk-autocad-design-drafting,54405.0
+67,Autodesk Certified Professional Revit for Architectural Design Exam Prep,Autodesk,Course,1 - 4 Weeks,4.7,2.5k,Advanced,https://www.coursera.org/learn/autodesk-revit-architectural-design,150097.0
+68,Automate Cybersecurity Tasks with Python,Google,Course,1 - 4 Weeks,4.7,915,Beginner,https://www.coursera.org/learn/automate-cybersecurity-tasks-with-python,68630.0
+69,"BI Foundations with SQL, ETL and Data Warehousing",IBM,Specialization,3 - 6 Months,4.8,665,Beginner,https://www.coursera.org/specializations/bi-foundations-sql-etl-data-warehouse,56137.0
+70,BIM Fundamentals for Engineers,National Taiwan University,Course,1 - 3 Months,4.6,19.5k,Beginner,https://www.coursera.org/learn/bim-fundamentals,5940.0
+71,Battery Technologies,Arizona State University,Specialization,3 - 6 Months,4.7,1.6k,Beginner,https://www.coursera.org/specializations/battery-technologies,73495.0
+72,Bayesian Statistics,"University of California, Santa Cruz",Specialization,3 - 6 Months,4.7,30,Intermediate,https://www.coursera.org/specializations/bayesian-statistics,47565.0
+73,Become a Journalist Report the News,Michigan State University,Specialization,3 - 6 Months,4.6,184,Beginner,https://www.coursera.org/specializations/become-a-journalist,3045.0
+74,Become an EMT,University of Colorado System,Specialization,3 - 6 Months,4.7,1.6k,Beginner,https://www.coursera.org/specializations/become-an-emt,25510.0
+75,Behavioral Finance,Duke University,Course,1 - 4 Weeks,4.8,2.3k,Beginner,https://www.coursera.org/learn/duke-behavioral-finance,35474.0
+76,Bioinformatics,University of California San Diego,Specialization,3 - 6 Months,4.4,3.8k,Beginner,https://www.coursera.org/specializations/bioinformatics,141892.0
+77,Biology Meets Programming Bioinformatics for Beginners,University of California San Diego,Course,1 - 4 Weeks,4.5,13.6k,Beginner,https://www.coursera.org/learn/bioinformatics,128012.0
+78,Biostatistics in Public Health,Johns Hopkins University,Specialization,3 - 6 Months,4.3,1.2k,Beginner,https://www.coursera.org/specializations/biostatistics-public-health,60232.0
+79,Blockchain Revolution in Financial Services,INSEAD,Specialization,3 - 6 Months,4.6,8.6k,Beginner,https://www.coursera.org/specializations/blockchain-financial-services,108717.0
+80,Bookkeeping Basics,Intuit,Course,1 - 4 Weeks,4.7,2.9k,Beginner,https://www.coursera.org/learn/bookkeeping-basics,35909.0
+81,"Brand Management Aligning Business, Brand and Behaviour",University of London,Course,1 - 3 Months,4.7,919,Beginner,https://www.coursera.org/learn/brand,15439.0
+82,Branding The Creative Journey,IE Business School,Specialization,3 - 6 Months,4.6,3.9k,Beginner,https://www.coursera.org/specializations/branding-the-creative-journey,129803.0
+83,Build Basic Generative Adversarial Networks (GANs),DeepLearning.AI,Course,1 - 4 Weeks,4.9,6.9k,Intermediate,https://www.coursera.org/learn/build-basic-generative-adversarial-networks-gans,408994.0
+84,Build Dynamic User Interfaces (UI) for Websites,Google,Course,1 - 3 Months,4.6,1.4k,Beginner,https://www.coursera.org/learn/responsive-web-design-adobe-xd,41736.0
+85,Build Wireframes and Low-Fidelity Prototypes,Google,Course,1 - 4 Weeks,4.7,1.8k,Beginner,https://www.coursera.org/learn/wireframes-low-fidelity-prototypes,58050.0
+86,Build a Modern Computer from First Principles From Nand to Tetris (Project-Centered Course),Hebrew University of Jerusalem,Course,1 - 3 Months,4.8,2.7k,Mixed,https://www.coursera.org/learn/build-a-computer,150886.0
+87,Building Cloud Computing Solutions at Scale,Duke University,Specialization,3 - 6 Months,4.9,3.4k,Intermediate,https://www.coursera.org/specializations/building-cloud-computing-solutions-at-scale,185537.0
+88,Building No-Code Apps with AppSheet,Google Cloud,Specialization,3 - 6 Months,4.8,2.5k,Beginner,https://www.coursera.org/specializations/building-no-code-apps-with-appsheet,57583.0
+89,Business Analytics,University of Illinois at Urbana-Champaign,Specialization,3 - 6 Months,4.4,346,Beginner,https://www.coursera.org/specializations/analytics,11461.0
+90,Business Analytics,University of Pennsylvania,Specialization,3 - 6 Months,4.7,123,Beginner,https://www.coursera.org/specializations/business-analytics,2032.0
+91,Business Analytics with Excel Elementary to Advanced,Johns Hopkins University,Course,1 - 3 Months,4.6,17.7k,Intermediate,https://www.coursera.org/learn/business-analytics-excel,174950.0
+92,Business Data Management and Communication,University of Illinois at Urbana-Champaign,Specialization,3 - 6 Months,4.6,890,Intermediate,https://www.coursera.org/specializations/business-data-management-communication,11336.0
+93,Business English Communication Skills,University of Washington,Specialization,3 - 6 Months,4.8,1k,Intermediate,https://www.coursera.org/specializations/business-english,211794.0
+94,Business Foundations,University of Pennsylvania,Specialization,3 - 6 Months,4.7,5.8k,Beginner,https://www.coursera.org/specializations/wharton-business-foundations,2166.0
+95,Business Model Innovation,HEC Paris,Course,1 - 3 Months,4.7,2.2k,Mixed,https://www.coursera.org/learn/business-model,35919.0
+96,Business Statistics and Analysis,Rice University,Specialization,3 - 6 Months,4.8,4.4k,Beginner,https://www.coursera.org/specializations/business-statistics-analysis,127935.0
+97,Business Strategies for A Better World,University of Pennsylvania,Specialization,3 - 6 Months,4.7,24.1k,Beginner,https://www.coursera.org/specializations/wharton-global-business-strategy,179483.0
+98,Business Strategy,University of Virginia,Specialization,3 - 6 Months,4.8,529,Beginner,https://www.coursera.org/specializations/business-strategy,42066.0
+99,Business Value and Project Management,University of Illinois at Urbana-Champaign,Specialization,3 - 6 Months,4.7,1.7k,Beginner,https://www.coursera.org/specializations/business-value-project-management,14607.0
+100,Business Writing,University of Colorado Boulder,Course,1 - 4 Weeks,4.8,4k,Beginner,https://www.coursera.org/learn/writing-for-business,61794.0
+101,Business and Financial Modeling,University of Pennsylvania,Specialization,3 - 6 Months,4.5,160,Beginner,https://www.coursera.org/specializations/wharton-business-financial-modeling,17159.0
+102,C Programming with Linux,Dartmouth College,Specialization,3 - 6 Months,4.8,4.5k,Beginner,https://www.coursera.org/specializations/c-programming-linux,169504.0
+103,C Programming for Unity Game Development,University of Colorado System,Specialization,3 - 6 Months,4.5,10.5k,Beginner,https://www.coursera.org/specializations/programming-unity-game-development,81559.0
+104,C Programming for Unreal Game Development,University of Colorado System,Specialization,3 - 6 Months,4.4,124,Intermediate,https://www.coursera.org/specializations/cplusplusunrealgamedevelopment,5255.0
+105,CAD and Digital Manufacturing,Autodesk,Specialization,3 - 6 Months,4.6,246,Intermediate,https://www.coursera.org/specializations/cad-design-digital-manufacturing,6815.0
+106,COBOL Programming with VSCode,IBM,Course,1 - 4 Weeks,4.6,2.5k,Beginner,https://www.coursera.org/learn/cobol-programming-vscode,15586.0
+107,COVID-19 Contact Tracing,Johns Hopkins University,Course,1 - 3 Months,4.5,158,Beginner,https://www.coursera.org/learn/covid-19-contact-tracing,8038.0
+108,CVS Health Call Center Customer Service,CVS Health,Professional Certificate,3 - 6 Months,4.7,5k,Beginner,https://www.coursera.org/professional-certificates/cvshealth-call-center-customer-service,47335.0
+109,CVS Health Retail Customer Service,CVS Health,Professional Certificate,3 - 6 Months,4.7,168,Beginner,https://www.coursera.org/professional-certificates/cvshealth-retail-customer-service,9709.0
+110,Calculus for Machine Learning and Data Science,DeepLearning.AI,Course,1 - 4 Weeks,4.9,94.9k,Beginner,https://www.coursera.org/learn/machine-learning-calculus,1403637.0
+111,Cancer Biology,Johns Hopkins University,Specialization,3 - 6 Months,4.6,44,Beginner,https://www.coursera.org/specializations/cancer-biology,2011.0
+112,Capstone Applying Project Management in the Real World,Google,Course,1 - 4 Weeks,4.7,38,Beginner,https://www.coursera.org/learn/applying-project-management,47565.0
+113,Career Success,"University of California, Irvine",Specialization,3 - 6 Months,4.8,374,Beginner,https://www.coursera.org/specializations/career-success,30301.0
+114,Certified in Cybersecurity,ISC2,Specialization,3 - 6 Months,4.8,9k,Beginner,https://www.coursera.org/specializations/certified-in-cybersecurity,19720.0
+115,ChatGPT Advanced Data Analysis,Vanderbilt University,Course,1 - 3 Months,4.8,6.7k,Beginner,https://www.coursera.org/learn/chatgpt-advanced-data-analysis,224299.0
+116,Child Nutrition and Cooking,Stanford University,Course,1 - 3 Months,4.7,22,Beginner,https://www.coursera.org/learn/childnutrition,47565.0
+117,Chinese for Beginners,Peking University,Course,1 - 3 Months,4.6,20,Mixed,https://www.coursera.org/learn/learn-chinese,1566.0
+118,Ciberseguridad de Google,Google,Professional Certificate,3 - 6 Months,4.7,1.2k,Beginner,https://www.coursera.org/professional-certificates/ciberseguridad-de-google,68816.0
+119,Circular Economy - Sustainable Materials Management,Lund University,Course,1 - 3 Months,4.8,9.9k,Beginner,https://www.coursera.org/learn/circular-economy,488791.0
+120,Claves de la Direccion de Empresas,IESE Business School,Specialization,3 - 6 Months,4.8,18.7k,Beginner,https://www.coursera.org/specializations/direccion-empresas,1250286.0
+121,Climate Change and Sustainable Investing,EDHEC Business School,Specialization,3 - 6 Months,4.9,788,Beginner,https://www.coursera.org/specializations/climatechangeandsustainableinvesting,10344.0
+122,Clinical Terminology for International and U.S. Students,University of Pittsburgh,Course,1 - 3 Months,4.8,1.8k,Beginner,https://www.coursera.org/learn/clinical-terminology,63731.0
+123,Clinical Trials Operations,Johns Hopkins University,Specialization,3 - 6 Months,4.8,3.2k,Beginner,https://www.coursera.org/specializations/clinical-trials-operations,13679.0
+124,Cloud Application Development Foundations,IBM,Specialization,3 - 6 Months,4.7,277,Beginner,https://www.coursera.org/specializations/ibm-cloud-application-development-foundations,6028.0
+125,Cloud Computing Law,Queen Mary University of London,Specialization,1 - 3 Months,4.8,3k,Beginner,https://www.coursera.org/specializations/cloud-computing-law,113313.0
+126,Cloud-Native Development with OpenShift and Kubernetes,Red Hat,Specialization,3 - 6 Months,4.8,207,Intermediate,https://www.coursera.org/specializations/cloud-native-development-openshift-kubernetes,7750.0
+127,Coaching Skills for Managers,"University of California, Davis",Specialization,3 - 6 Months,4.6,6k,Intermediate,https://www.coursera.org/specializations/coaching-skills-manager,6923.0
+128,Coding for Everyone C and C,"University of California, Santa Cruz",Specialization,3 - 6 Months,4.6,98,Beginner,https://www.coursera.org/specializations/coding-for-everyone,3053.0
+129,Communication Strategies for a Virtual Age,University of Toronto,Course,1 - 4 Weeks,4.8,2.5k,Beginner,https://www.coursera.org/learn/communication-strategies-virtual-age,27416.0
+130,CompTIA a_ cyber,CompTIA,Specialization,1 - 3 Months,3.0,17,Beginner,https://www.coursera.org/specializations/comptia-aplus-cyber,47565.0
+131,CompTIA a_ network,CompTIA,Specialization,1 - 3 Months,4.5,8.9k,Beginner,https://www.coursera.org/specializations/comptia-aplus-network,111718.0
+132,Competitive Strategy and Organization Design,Ludwig-Maximilians-Universitat Munchen (LMU),Specialization,3 - 6 Months,4.8,4.2k,Intermediate,https://www.coursera.org/specializations/competitive-strategy,185821.0
+133,Computational Neuroscience,University of Washington,Course,1 - 3 Months,5.0,6,Beginner,https://www.coursera.org/learn/computational-neuroscience,47565.0
+134,Computational Thinking for Problem Solving,University of Pennsylvania,Course,1 - 4 Weeks,4.7,3.6k,Beginner,https://www.coursera.org/learn/computational-thinking-problem-solving,18422.0
+135,Computer Vision for Engineering and Science,MathWorks,Specialization,1 - 3 Months,4.6,1k,Intermediate,https://www.coursera.org/specializations/computer-vision,123903.0
+136,"Concepts, Strategies, and Analytics in Performance Marketing and Digital Advertising",University of Colorado Boulder,Specialization,3 - 6 Months,4.6,909,Beginner,https://www.coursera.org/specializations/digital-advertising-strategy,11233.0
+137,Conduct UX Research and Test Early Concepts,Google,Course,1 - 4 Weeks,4.7,1.3k,Beginner,https://www.coursera.org/learn/conduct-ux-research,105366.0
+138,Conflict Management,"University of California, Irvine",Specialization,3 - 6 Months,4.8,49,Beginner,https://www.coursera.org/specializations/conflict-management,3182.0
+139,Connect and Protect Networks and Network Security,Google,Course,1 - 4 Weeks,4.5,647,Beginner,https://www.coursera.org/learn/networks-and-network-security,26028.0
+140,Connected Leadership,Yale University,Course,1 - 3 Months,4.8,4.4k,Beginner,https://www.coursera.org/learn/connected-leadership,197629.0
+141,Construction Management,Columbia University,Specialization,3 - 6 Months,4.4,2k,Beginner,https://www.coursera.org/specializations/construction-management,26711.0
+142,Construction Project Management,Columbia University,Course,1 - 3 Months,4.8,1.8k,Beginner,https://www.coursera.org/learn/construction-project-management,105546.0
+143,Contabilidad para no contadores,Universidad Nacional Autonoma de Mexico,Course,1 - 3 Months,4.8,238,Beginner,https://www.coursera.org/learn/contabilidad,41943.0
+144,Convolutional Neural Networks,DeepLearning.AI,Course,1 - 4 Weeks,4.7,8k,Intermediate,https://www.coursera.org/learn/convolutional-neural-networks,52327.0
+145,Convolutional Neural Networks in TensorFlow,DeepLearning.AI,Course,1 - 4 Weeks,4.8,6.3k,Intermediate,https://www.coursera.org/learn/convolutional-neural-networks-tensorflow,122100.0
+146,Cost Accounting,Technische Universitat Munchen (TUM),Specialization,1 - 3 Months,4.8,1.1k,Beginner,https://www.coursera.org/specializations/costaccounting,44541.0
+147,Cost and Economics in Pricing Strategy,University of Virginia,Course,1 - 4 Weeks,4.8,1.9k,Beginner,https://www.coursera.org/learn/uva-darden-bcg-pricing-strategy-cost-economics,75557.0
+148,Country Level Economics Macroeconomic Variables and Markets,University of Illinois at Urbana-Champaign,Course,1 - 3 Months,4.6,746,Intermediate,https://www.coursera.org/learn/country-level-economics,40679.0
+149,Crash Course on Python,Google,Course,1 - 3 Months,4.6,134,Beginner,https://www.coursera.org/learn/python-crash-course,4250.0
+150,Create High-Fidelity Designs and Prototypes in Figma,Google,Course,1 - 3 Months,4.8,649,Beginner,https://www.coursera.org/learn/high-fidelity-designs-prototype,30189.0
+151,Creative Thinking Techniques and Tools for Success,Imperial College London,Course,1 - 3 Months,4.8,34.3k,Beginner,https://www.coursera.org/learn/creative-thinking-techniques-and-tools-for-success,956993.0
+152,Creative Writing,Wesleyan University,Specialization,3 - 6 Months,4.8,3.4k,Beginner,https://www.coursera.org/specializations/creative-writing,183827.0
+153,Creative Writing The Craft of Plot,Wesleyan University,Course,1 - 4 Weeks,4.7,1k,Mixed,https://www.coursera.org/learn/craft-of-plot,6150.0
+154,Creativity and AI,"Parsons School of Design, The New School",Specialization,3 - 6 Months,4.7,4k,Intermediate,https://www.coursera.org/specializations/creativity-ai,311461.0
+155,Cryptography I,Stanford University,Course,1 - 3 Months,4.6,5.8k,Mixed,https://www.coursera.org/learn/crypto,118242.0
+156,Culture-Driven Team Building,University of Pennsylvania,Specialization,3 - 6 Months,4.5,58,Beginner,https://www.coursera.org/specializations/team-building,3625.0
+157,"Custom Models, Layers, and Loss Functions with TensorFlow",DeepLearning.AI,Course,1 - 3 Months,4.7,263,Intermediate,https://www.coursera.org/learn/custom-models-layers-loss-functions-with-tensorflow,12799.0
+158,Customer Analytics,University of Pennsylvania,Course,1 - 3 Months,4.6,885,Mixed,https://www.coursera.org/learn/wharton-customer-analytics,9892.0
+159,Customer Experiences with Contact Center AI - Dialogflow CX,Google Cloud,Specialization,3 - 6 Months,4.7,211,Beginner,https://www.coursera.org/specializations/customer-experiences-with-contact-center-ai-dialogflow-cx,24633.0
+160,Customer Service Fundamentals,Knowledge Accelerators,Course,1 - 4 Weeks,4.6,11.6k,Beginner,https://www.coursera.org/learn/customer-service-fundamentals,274118.0
+161,Cybersecurity,"University of Maryland, College Park",Specialization,3 - 6 Months,4.5,205,Intermediate,https://www.coursera.org/specializations/cyber-security,1806.0
+162,Cybersecurity Attack and Defense Fundamentals,EC-Council,Specialization,3 - 6 Months,4.8,1.5k,Beginner,https://www.coursera.org/specializations/cybersecurity-attack-and-defense,29593.0
+163,Cybersecurity Operations Fundamentals,Cisco Learning and Certifications,Specialization,3 - 6 Months,4.6,5.3k,Beginner,https://www.coursera.org/specializations/cbrops,87224.0
+164,Cybersecurity Risk Management Frameworks,University System of Georgia,Specialization,3 - 6 Months,4.6,271,Beginner,https://www.coursera.org/specializations/cybersecurity-risk-management-frameworks,11296.0
+165,Cybersecurite Google,Google,Professional Certificate,3 - 6 Months,4.6,105,Beginner,https://www.coursera.org/professional-certificates/cybersecurite-google,2134.0
+166,Data Analysis and Presentation Skills the PwC Approach,PwC,Specialization,3 - 6 Months,4.6,5.2k,Beginner,https://www.coursera.org/specializations/pwc-analytics,118882.0
+167,Data Analysis and Visualization Foundations,IBM,Specialization,3 - 6 Months,4.7,1.1k,Beginner,https://www.coursera.org/specializations/data-analysis-visualization-foundations,184475.0
+168,Data Analysis with Python,IBM,Course,1 - 3 Months,4.7,20,Beginner,https://www.coursera.org/learn/data-analysis-with-python,47565.0
+169,Data Analysis with R,Duke University,Specialization,3 - 6 Months,4.6,10.6k,Beginner,https://www.coursera.org/specializations/statistics,153804.0
+170,Data Analysis with R Programming,Google,Course,1 - 3 Months,4.7,19k,Beginner,https://www.coursera.org/learn/data-analysis-r,15691.0
+171,Data Analytics in the Public Sector with R,University of Michigan,Specialization,3 - 6 Months,4.7,17.3k,Intermediate,https://www.coursera.org/specializations/data-analytics-in-the-public-sector-with-r,377468.0
+172,Data Engineering Foundations,IBM,Specialization,3 - 6 Months,4.7,7.1k,Beginner,https://www.coursera.org/specializations/data-engineering-foundations,22831.0
+173,"Data Engineering, Big Data, and Machine Learning on GCP",Google Cloud,Specialization,3 - 6 Months,4.8,8.6k,Intermediate,https://www.coursera.org/specializations/gcp-data-machine-learning,450552.0
+174,Data Literacy,Johns Hopkins University,Specialization,3 - 6 Months,4.7,33,Beginner,https://www.coursera.org/specializations/data-literacy,3654.0
+175,Data Management for Clinical Research,Vanderbilt University,Course,1 - 3 Months,4.6,44.8k,Beginner,https://www.coursera.org/learn/clinical-data-management,11630.0
+176,Data Mining,University of Illinois at Urbana-Champaign,Specialization,3 - 6 Months,4.6,17.8k,Intermediate,https://www.coursera.org/specializations/data-mining,57016.0
+177,Data Science,Johns Hopkins University,Specialization,3 - 6 Months,4.6,204,Beginner,https://www.coursera.org/specializations/jhu-data-science,3919.0
+178,Data Science Foundations Statistical Inference,University of Colorado Boulder,Specialization,3 - 6 Months,4.7,1.5k,Intermediate,https://www.coursera.org/specializations/statistical-inference-for-data-science-applications,108397.0
+179,Data Science Fundamentals with Python and SQL,IBM,Specialization,3 - 6 Months,4.5,2.9k,Beginner,https://www.coursera.org/specializations/data-science-fundamentals-python-sql,58550.0
+180,Data Science Math Skills,Duke University,Course,1 - 3 Months,4.5,50.3k,Beginner,https://www.coursera.org/learn/datasciencemathskills,482014.0
+181,Data Science Methodology,IBM,Course,1 - 4 Weeks,4.4,177,Beginner,https://www.coursera.org/learn/data-science-methodology,8330.0
+182,Data Science with Databricks for Data Analysts,Databricks,Specialization,3 - 6 Months,4.6,58.9k,Intermediate,https://www.coursera.org/specializations/data-science-with-databricks-for-data-analysts,38441.0
+183,Data Science Foundations using R,Johns Hopkins University,Specialization,3 - 6 Months,4.5,11.4k,Beginner,https://www.coursera.org/specializations/data-science-foundations-r,397523.0
+184,Data Science Statistics and Machine Learning,Johns Hopkins University,Specialization,3 - 6 Months,4.6,19.5k,Intermediate,https://www.coursera.org/specializations/data-science-statistics-machine-learning,267763.0
+185,Data Structures and Algorithms,University of California San Diego,Specialization,3 - 6 Months,4.5,522,Intermediate,https://www.coursera.org/specializations/data-structures-algorithms,13769.0
+186,Data Visualization Dashboarding with R,Johns Hopkins University,Specialization,3 - 6 Months,4.6,47.7k,Beginner,https://www.coursera.org/specializations/jhu-data-visualization-dashboarding-with-r,101470.0
+187,Data Visualization and Dashboards with Excel and Cognos,IBM,Course,1 - 4 Weeks,4.4,7.1k,Beginner,https://www.coursera.org/learn/data-visualization-dashboards-excel-cognos,34483.0
+188,Data Visualization with Python,IBM,Course,1 - 3 Months,4.6,16.2k,Intermediate,https://www.coursera.org/learn/python-for-data-visualization,320613.0
+189,Data Visualization with Tableau,"University of California, Davis",Specialization,3 - 6 Months,4.8,349,Beginner,https://www.coursera.org/specializations/data-visualization,10329.0
+190,Data Warehousing for Business Intelligence,University of Colorado System,Specialization,3 - 6 Months,4.7,3.1k,Advanced,https://www.coursera.org/specializations/data-warehousing,105799.0
+191,Data-driven Decision Making,PwC,Course,1 - 4 Weeks,4.5,11.3k,Beginner,https://www.coursera.org/learn/decision-making,241022.0
+192,Databases and SQL for Data Science with Python,IBM,Course,1 - 3 Months,4.5,7.8k,Beginner,https://www.coursera.org/learn/sql-data-science,143648.0
+193,Decentralized Finance (DeFi) The Future of Finance,Duke University,Specialization,3 - 6 Months,4.5,3.9k,Intermediate,https://www.coursera.org/specializations/decentralized-finance-duke,60101.0
+194,"Decisions, Decisions Dashboards and Reports",Google,Course,1 - 3 Months,4.6,6k,Advanced,https://www.coursera.org/learn/decisions-decisions-dashboards-and-reports,179076.0
+195,Deep Learning,DeepLearning.AI,Specialization,3 - 6 Months,4.6,18.5k,Intermediate,https://www.coursera.org/specializations/deep-learning,383947.0
+196,DeepLearning.AI TensorFlow Developer,DeepLearning.AI,Professional Certificate,3 - 6 Months,4.8,335,Intermediate,https://www.coursera.org/professional-certificates/tensorflow-in-practice,15467.0
+197,Deploying Machine Learning Models in Production,DeepLearning.AI,Course,1 - 4 Weeks,4.8,141.3k,Advanced,https://www.coursera.org/learn/deploying-machine-learning-models-in-production,808743.0
+198,Desarrollador front-end de Meta,Meta,Professional Certificate,3 - 6 Months,4.4,1.5k,Beginner,https://www.coursera.org/professional-certificates/meta-front-end-developer-es,54602.0
+199,Design Thinking,University of Virginia,Specialization,3 - 6 Months,4.7,24.2k,Beginner,https://www.coursera.org/specializations/uva-darden-design-thinking,188692.0
+200,Design a User Experience for Social Good Prepare for Jobs,Google,Course,1 - 3 Months,4.5,285,Beginner,https://www.coursera.org/learn/ux-design-jobs,27902.0
+201,Design and Interpretation of Clinical Trials,Johns Hopkins University,Course,1 - 3 Months,4.6,66,Mixed,https://www.coursera.org/learn/clinical-trials,47565.0
+202,DevOps on AWS,Amazon Web Services,Specialization,1 - 3 Months,4.6,69,Intermediate,https://www.coursera.org/specializations/aws-devops,3201.0
+203,"DevOps, Cloud, and Agile Foundations",IBM,Specialization,3 - 6 Months,4.9,2.8k,Beginner,https://www.coursera.org/specializations/devops-cloud-and-agile-foundations,130698.0
+204,Developing AI Applications with Python and Flask,IBM,Course,1 - 4 Weeks,4.7,4.2k,Intermediate,https://www.coursera.org/learn/python-project-for-ai-application-development,138690.0
+205,Developing APIs with Google Cloud's Apigee API Platform,Google Cloud,Specialization,3 - 6 Months,4.8,4.5k,Intermediate,https://www.coursera.org/specializations/apigee-api-gcp,28860.0
+206,Developing Applications with Google Cloud,Google Cloud,Specialization,3 - 6 Months,4.7,7.5k,Intermediate,https://www.coursera.org/specializations/developing-apps-gcp,12137.0
+207,Developing Front-End Apps with React,IBM,Course,1 - 4 Weeks,4.4,490,Intermediate,https://www.coursera.org/learn/developing-frontend-apps-with-react,44985.0
+208,Devenir entrepreneur du changement,HEC Paris,Course,1 - 3 Months,4.7,2.8k,Mixed,https://www.coursera.org/learn/entrepreneur-changement,13389.0
+209,Digital Fashion Innovation,"Parsons School of Design, The New School",Specialization,1 - 3 Months,4.7,48.2k,Intermediate,https://www.coursera.org/specializations/digitalfashioninnovation,77875.0
+210,Digital Manufacturing Design Technology,University at Buffalo,Specialization,3 - 6 Months,4.7,595,Beginner,https://www.coursera.org/specializations/digital-manufacturing-design-technology,79172.0
+211,Digital Marketing,University of Illinois at Urbana-Champaign,Specialization,3 - 6 Months,4.6,117,Beginner,https://www.coursera.org/specializations/digital-marketing,3680.0
+212,Digital Marketing Strategy and Planning,Digital Marketing Institute,Specialization,1 - 3 Months,4.5,206,Beginner,https://www.coursera.org/specializations/digital-marketing-strategy-planning,6933.0
+213,Digital Product Management,University of Virginia,Specialization,3 - 6 Months,4.6,6.5k,Beginner,https://www.coursera.org/specializations/uva-darden-digital-product-management,33032.0
+214,Digital Product Management Modern Fundamentals,University of Virginia,Course,1 - 4 Weeks,4.7,22.3k,Beginner,https://www.coursera.org/learn/uva-darden-digital-product-management,44260.0
+215,Digital Signal Processing,Ecole Polytechnique Federale de Lausanne,Specialization,3 - 6 Months,4.6,341,Intermediate,https://www.coursera.org/specializations/digital-signal-processing,15919.0
+216,Digital Technologies and the Future of Manufacturing,University of Michigan,Specialization,1 - 3 Months,4.7,9.1k,Beginner,https://www.coursera.org/specializations/digital-technologies-future-of-manufacturing,55794.0
+217,Digital Transformation Using AIML with Google Cloud,Google Cloud,Specialization,3 - 6 Months,4.7,5k,Beginner,https://www.coursera.org/specializations/digital-transformation-using-ai-ml-with-google-cloud,179980.0
+218,Dino 101 Dinosaur Paleobiology,University of Alberta,Course,1 - 3 Months,4.6,194,Beginner,https://www.coursera.org/learn/dino101,5172.0
+219,Diseno Instruccional Aprendizaje activo y Pedagogia digital,Tecnologico de Monterrey,Specialization,3 - 6 Months,4.7,6.2k,Beginner,https://www.coursera.org/specializations/diseno-instruccional,7144.0
+220,Diseno de Experiencia del Usuario (UX) de Google,Google,Professional Certificate,3 - 6 Months,4.6,379,Beginner,https://www.coursera.org/professional-certificates/diseno-de-experiencia-del-usuario-ux-de-google,6420.0
+221,"Divide and Conquer, Sorting and Searching, and Randomized Algorithms",Stanford University,Course,1 - 4 Weeks,4.8,3.1k,Intermediate,https://www.coursera.org/learn/algorithms-divide-conquer,46980.0
+222,Django for Everybody,University of Michigan,Specialization,3 - 6 Months,4.7,904,Intermediate,https://www.coursera.org/specializations/django,50277.0
+223,Dog Emotion and Cognition,Duke University,Course,1 - 3 Months,4.9,8,Mixed,https://www.coursera.org/learn/dog-emotion-and-cognition,47565.0
+224,Drug Development Product Management,University of California San Diego,Specialization,3 - 6 Months,4.7,2.3k,Beginner,https://www.coursera.org/specializations/drug-development-product-management,70023.0
+225,Drug Discovery,University of California San Diego,Course,1 - 3 Months,4.7,4.5k,Beginner,https://www.coursera.org/learn/drug-discovery,206064.0
+226,Dynamic Public Speaking,University of Washington,Specialization,3 - 6 Months,4.8,1.2k,Beginner,https://www.coursera.org/specializations/public-speaking,41963.0
+227,"Effective Communication Writing, Design, and Presentation",University of Colorado Boulder,Specialization,3 - 6 Months,4.7,2.4k,Beginner,https://www.coursera.org/specializations/effective-business-communication,71730.0
+228,Electronic Music Production,Berklee,Specialization,3 - 6 Months,4.6,514,Intermediate,https://www.coursera.org/specializations/electronic-music-production,18607.0
+229,Embedding Sensors and Motors,University of Colorado Boulder,Specialization,3 - 6 Months,4.9,1.5k,Intermediate,https://www.coursera.org/specializations/embedding-sensors-motors,157815.0
+230,Emotional Intelligence Cultivating Immensely Human Interactions,University of Michigan,Course,1 - 4 Weeks,4.8,10.9k,Intermediate,https://www.coursera.org/learn/emotional-intelligence-cultivating-immensely-human-interactions,96049.0
+231,Engineering Project Management,Rice University,Specialization,3 - 6 Months,4.8,2.2k,Beginner,https://www.coursera.org/specializations/engineering-project-management,15969.0
+232,English for Business and Entrepreneurship,University of Pennsylvania,Course,1 - 3 Months,4.6,2.6k,Beginner,https://www.coursera.org/learn/business,27517.0
+233,English for Career Development,University of Pennsylvania,Course,1 - 3 Months,4.7,232,Mixed,https://www.coursera.org/learn/careerdevelopment,41808.0
+234,English for Journalism,University of Pennsylvania,Course,1 - 3 Months,4.7,10.3k,Mixed,https://www.coursera.org/learn/journalism,50619.0
+235,Entrepreneurial Finance Strategy and Innovation,Duke University,Specialization,3 - 6 Months,4.7,4.2k,Intermediate,https://www.coursera.org/specializations/entrepreneurial-finance,55842.0
+236,Entrepreneurship,University of Pennsylvania,Specialization,3 - 6 Months,4.8,4.6k,Beginner,https://www.coursera.org/specializations/wharton-entrepreneurship,461650.0
+237,Entrepreneurship 1 Developing the Opportunity,University of Pennsylvania,Course,1 - 3 Months,4.8,14.6k,Mixed,https://www.coursera.org/learn/wharton-entrepreneurship-opportunity,2248113.0
+238,Entrepreneurship Growing Your Business,University of Virginia,Specialization,3 - 6 Months,4.5,1.3k,Beginner,https://www.coursera.org/specializations/entrepreneurship-growing-your-business,25965.0
+239,Epidemiology in Public Health Practice,Johns Hopkins University,Specialization,3 - 6 Months,4.8,5.3k,Beginner,https://www.coursera.org/specializations/professional-epidemiology,59402.0
+240,Essentials in Clinical Simulations Across the Health Professions,The George Washington University,Course,1 - 3 Months,4.8,873,Intermediate,https://www.coursera.org/learn/clinicalsimulations,46526.0
+241,Ethical Leadership,The University of Notre Dame,Specialization,3 - 6 Months,4.7,4.2k,Beginner,https://www.coursera.org/specializations/ethical-leadership,40370.0
+242,European Business Law,Lund University,Specialization,3 - 6 Months,4.8,967,Beginner,https://www.coursera.org/specializations/european-business-law,18683.0
+243,Everyday Excel,University of Colorado Boulder,Specialization,3 - 6 Months,4.8,50,Beginner,https://www.coursera.org/specializations/everyday-excel,1586.0
+244,"Everyday Excel, Part 1",University of Colorado Boulder,Course,1 - 3 Months,4.7,701,Beginner,https://www.coursera.org/learn/everyday-excel-part-1,26909.0
+245,Exam Prep MLS-C01 AWS Certified Specialty Machine Learning,Whizlabs,Specialization,1 - 3 Months,4.5,170,Beginner,https://www.coursera.org/specializations/exam-prep-mls-c01-aws-certified-machine-learning-specialty,10246.0
+246,Excel Basics for Data Analysis,IBM,Course,1 - 3 Months,4.7,3.6k,Beginner,https://www.coursera.org/learn/excel-basics-data-analysis-ibm,57089.0
+247,Excel Fundamentals for Data Analysis,Macquarie University,Course,1 - 3 Months,4.7,3.2k,Intermediate,https://www.coursera.org/learn/excel-data-analysis-fundamentals,236143.0
+248,Excel Skills for Business,Macquarie University,Specialization,3 - 6 Months,4.9,2.8k,Beginner,https://www.coursera.org/specializations/excel,203729.0
+249,Excel Skills for Business Essentials,Macquarie University,Course,1 - 3 Months,2.8,6,Beginner,https://www.coursera.org/learn/excel-essentials,47565.0
+250,Excel Skills for Business Intermediate I,Macquarie University,Course,1 - 3 Months,4.8,6.6k,Intermediate,https://www.coursera.org/learn/excel-intermediate-1,246896.0
+251,Excel Skills for Data Analytics and Visualization,Macquarie University,Specialization,3 - 6 Months,4.8,3.5k,Intermediate,https://www.coursera.org/specializations/excel-data-analytics-visualization,145303.0
+252,Excel to MySQL Analytic Techniques for Business,Duke University,Specialization,3 - 6 Months,4.9,16.5k,Beginner,https://www.coursera.org/specializations/excel-mysql,320976.0
+253,ExcelVBA for Creative Problem Solving,University of Colorado Boulder,Specialization,3 - 6 Months,4.8,4.7k,Beginner,https://www.coursera.org/specializations/excel-vba-creative-problem-solving,72468.0
+254,Executive Data Science,Johns Hopkins University,Specialization,1 - 3 Months,4.6,55,Beginner,https://www.coursera.org/specializations/executive-data-science,4486.0
+255,Exploratory Data Analysis for Machine Learning,IBM,Course,1 - 3 Months,4.6,52,Intermediate,https://www.coursera.org/learn/ibm-exploratory-data-analysis-for-machine-learning,8117.0
+256,Expressway to Data Science Essential Math,University of Colorado Boulder,Specialization,3 - 6 Months,4.6,15.1k,Intermediate,https://www.coursera.org/specializations/expressway-to-data-science-essential-math,214073.0
+257,Expressway to Data Science Python Programming,University of Colorado Boulder,Specialization,1 - 3 Months,4.8,4.5k,Beginner,https://www.coursera.org/specializations/python-programming-data-science,64800.0
+258,Extended Reality for Everybody,University of Michigan,Specialization,1 - 3 Months,4.6,1.4k,Beginner,https://www.coursera.org/specializations/extended-reality-for-everybody,75014.0
+259,"Extract, Transform and Load Data in Power BI",Microsoft,Course,1 - 4 Weeks,4.5,300,Beginner,https://www.coursera.org/learn/extract-transform-and-load-data-in-power-bi,6334.0
+260,FPGA Design for Embedded Systems,University of Colorado Boulder,Specialization,3 - 6 Months,4.6,416,Intermediate,https://www.coursera.org/specializations/fpga-design,12049.0
+261,Finance Quantitative Modeling for Analysts,University of Pennsylvania,Specialization,3 - 6 Months,4.9,597,Beginner,https://www.coursera.org/specializations/finance-quantitative-modeling-analysts,29968.0
+262,Finance for Non-Finance Professionals,Rice University,Course,1 - 3 Months,4.6,2.3k,Beginner,https://www.coursera.org/learn/finance-for-non-finance,49957.0
+263,Finance for Non-Financial Managers,Emory University,Course,1 - 3 Months,4.5,15.6k,Intermediate,https://www.coursera.org/learn/finance-for-non-financial-managers,33173.0
+264,Finance for Technical Managers,University of Colorado Boulder,Specialization,3 - 6 Months,4.8,2.6k,Beginner,https://www.coursera.org/specializations/finance-for-technical-managers,165806.0
+265,Financial Accounting Fundamentals,University of Virginia,Course,1 - 3 Months,4.4,384,Beginner,https://www.coursera.org/learn/uva-darden-financial-accounting,26520.0
+266,Financial Analysis - Skills for Success,University of Illinois at Urbana-Champaign,Specialization,1 - 3 Months,4.8,2.5k,Beginner,https://www.coursera.org/specializations/financial-analysis-skills-for-success,140351.0
+267,Financial Engineering and Risk Management,Columbia University,Specialization,3 - 6 Months,4.5,884,Intermediate,https://www.coursera.org/specializations/financialengineering,33709.0
+268,Financial Management,University of Illinois at Urbana-Champaign,Specialization,3 - 6 Months,4.7,152,Intermediate,https://www.coursera.org/specializations/financial-management,7075.0
+269,Financial Markets,Yale University,Course,1 - 3 Months,4.5,202,Beginner,https://www.coursera.org/learn/financial-markets-global,17578.0
+270,Financial Planning for Young Adults,University of Illinois at Urbana-Champaign,Course,1 - 3 Months,4.7,6.4k,Beginner,https://www.coursera.org/learn/financial-planning,72898.0
+271,Financial Reporting,University of Illinois at Urbana-Champaign,Specialization,3 - 6 Months,4.8,26k,Intermediate,https://www.coursera.org/specializations/financial-reporting,1713399.0
+272,Financial Technology (Fintech) Innovations,University of Michigan,Specialization,3 - 6 Months,4.6,1.3k,Beginner,https://www.coursera.org/specializations/financialtechnology,136571.0
+273,Financing and Investing in Infrastructure,Universita Bocconi,Course,1 - 3 Months,4.7,787,Mixed,https://www.coursera.org/learn/infrastructure-investing,17743.0
+274,Finanzas corporativas,Universidad Nacional Autonoma de Mexico,Specialization,3 - 6 Months,4.7,2.4k,Intermediate,https://www.coursera.org/specializations/finanzascorporativas,29088.0
+275,Finding Purpose and Meaning In Life Living for What Matters Most,University of Michigan,Course,1 - 4 Weeks,4.8,1.9k,Beginner,https://www.coursera.org/learn/finding-purpose-and-meaning-in-life,52576.0
+276,Finding Your Professional Voice Confidence Impact,University of London,Course,1 - 4 Weeks,4.8,2.2k,Beginner,https://www.coursera.org/learn/finding-your-professional-voice,213625.0
+277,Fintech Foundations Applications of Financial Technology,University of Pennsylvania,Specialization,3 - 6 Months,4.8,219,Beginner,https://www.coursera.org/specializations/wharton-fintech,38838.0
+278,First Principles of Computer Vision,Columbia University,Specialization,3 - 6 Months,4.6,3.4k,Beginner,https://www.coursera.org/specializations/firstprinciplesofcomputervision,41644.0
+279,First Step Korean,Yonsei University,Course,1 - 3 Months,4.7,143,Beginner,https://www.coursera.org/learn/learn-korean,6364.0
+280,Fondamentaux de la cybersecurite,Google,Course,1 - 4 Weeks,4.9,48.5k,Beginner,https://www.coursera.org/learn/fondamentaux-de-la-cybersecurite,1443574.0
+281,Food Beverage Management,Universita Bocconi,Course,1 - 3 Months,4.7,18,Mixed,https://www.coursera.org/learn/food-beverage-management,47565.0
+282,"Food Sustainability, Mindful Eating, and Healthy Cooking",Stanford University,Specialization,1 - 3 Months,4.8,4.3k,Beginner,https://www.coursera.org/specializations/food-sustainability-mindful-eating-healthy-cooking,137227.0
+283,Forensic Accounting and Fraud Examination,West Virginia University,Course,1 - 3 Months,4.8,419,Mixed,https://www.coursera.org/learn/forensic-accounting,6402.0
+284,Foundational Finance for Strategic Decision Making,University of Michigan,Specialization,3 - 6 Months,4.8,357,Beginner,https://www.coursera.org/specializations/foundational-finance,13365.0
+285,Foundations of Business Intelligence,Google,Course,1 - 4 Weeks,4.8,356,Advanced,https://www.coursera.org/learn/foundations-of-business-intelligence,17984.0
+286,Foundations of Business Strategy,University of Virginia,Course,1 - 4 Weeks,4.8,636,Beginner,https://www.coursera.org/learn/uva-darden-foundations-business-strategy,53120.0
+287,Foundations of Cybersecurity,Google,Course,1 - 4 Weeks,4.8,2.9k,Beginner,https://www.coursera.org/learn/foundations-of-cybersecurity,132355.0
+288,Foundations of Data Science,Google,Course,1 - 3 Months,4.9,11k,Advanced,https://www.coursera.org/learn/foundations-of-data-science,364927.0
+289,Foundations of Data Structures and Algorithms,University of Colorado Boulder,Specialization,3 - 6 Months,4.7,1.2k,Advanced,https://www.coursera.org/specializations/boulder-data-structures-algorithms,75444.0
+290,Foundations of Digital Marketing and E-commerce,Google,Course,1 - 4 Weeks,4.6,363,Beginner,https://www.coursera.org/learn/foundations-of-digital-marketing-and-e-commerce,2930.0
+291,Foundations of Management,IESE Business School,Specialization,3 - 6 Months,4.8,15.2k,Beginner,https://www.coursera.org/specializations/foundations-management,645611.0
+292,Foundations of Positive Psychology,University of Pennsylvania,Specialization,3 - 6 Months,4.8,4.6k,Beginner,https://www.coursera.org/specializations/positivepsychology,31755.0
+293,Foundations of Project Management,Google,Course,1 - 4 Weeks,4.8,7.4k,Beginner,https://www.coursera.org/learn/project-management-foundations,63204.0
+294,Foundations of Software Testing and Validation,University of Leeds,Course,1 - 4 Weeks,4.8,511,Beginner,https://www.coursera.org/learn/foundations-of-software-testing-and-validation,15685.0
+295,Foundations of Teaching for Learning Introduction,Commonwealth Education Trust,Course,1 - 4 Weeks,4.7,56,Mixed,https://www.coursera.org/learn/teaching,3682.0
+296,Foundations of User Experience (UX) Design,Google,Course,1 - 4 Weeks,4.6,742,Beginner,https://www.coursera.org/learn/foundations-user-experience-design,63452.0
+297,"Foundations Data, Data, Everywhere",Google,Course,1 - 3 Months,4.8,59.9k,Beginner,https://www.coursera.org/learn/foundations-data,1077990.0
+298,Fractal Data Science,Fractal Analytics,Professional Certificate,3 - 6 Months,4.8,93.1k,Beginner,https://www.coursera.org/professional-certificates/fractal-data-science,2182786.0
+299,From Data to Insights with Google Cloud,Google Cloud,Specialization,3 - 6 Months,4.8,6,Beginner,https://www.coursera.org/specializations/from-data-to-insights-google-cloud-platform,47565.0
+300,From Excel to Power BI,Knowledge Accelerators,Course,1 - 4 Weeks,4.6,4.6k,Beginner,https://www.coursera.org/learn/from-excel-to-power-bi,45829.0
+301,From Likes to Leads Interact with Customers Online,Google,Course,1 - 3 Months,4.4,131,Beginner,https://www.coursera.org/learn/from-likes-to-leads,27553.0
+302,Functional Programming in Scala,Ecole Polytechnique Federale de Lausanne,Specialization,3 - 6 Months,4.8,2.1k,Intermediate,https://www.coursera.org/specializations/scala,116552.0
+303,Fundamentals of Accounting,University of Illinois at Urbana-Champaign,Specialization,3 - 6 Months,4.7,10.6k,Beginner,https://www.coursera.org/specializations/accounting-fundamentals,70385.0
+304,Fundamentals of Computing,Rice University,Specialization,3 - 6 Months,4.7,1.9k,Beginner,https://www.coursera.org/specializations/computer-fundamentals,27875.0
+305,Fundamentals of Flight mechanics,ISAE-SUPAERO,Specialization,3 - 6 Months,3.9,817,Beginner,https://www.coursera.org/specializations/flight-mechanics-fundamentals,82288.0
+306,Fundamentals of GIS,"University of California, Davis",Course,1 - 4 Weeks,4.7,341,Beginner,https://www.coursera.org/learn/gis,4896.0
+307,Fundamentals of Graphic Design,California Institute of the Arts,Course,1 - 3 Months,4.8,5.4k,Beginner,https://www.coursera.org/learn/fundamentals-of-graphic-design,156015.0
+308,Fundamentals of Music Theory,The University of Edinburgh,Course,1 - 3 Months,4.8,347,Beginner,https://www.coursera.org/learn/edinburgh-music-theory,18504.0
+309,Fundamentals of Project Planning and Management,University of Virginia,Course,1 - 4 Weeks,4.5,1.7k,Beginner,https://www.coursera.org/learn/uva-darden-project-management,334604.0
+310,Fundamentals of Quantitative Modeling,University of Pennsylvania,Course,1 - 4 Weeks,4.7,9.2k,Mixed,https://www.coursera.org/learn/wharton-quantitative-modeling,312961.0
+311,Fundamentals of Reinforcement Learning,University of Alberta,Course,1 - 3 Months,4.6,8.6k,Intermediate,https://www.coursera.org/learn/fundamentals-of-reinforcement-learning,206775.0
+312,Fundamentals of Social Media Advertising,Meta,Course,1 - 3 Months,4.8,2.7k,Beginner,https://www.coursera.org/learn/social-media-advertising-fundamentals,81488.0
+313,Fundamentals of Technology Sales,"University of Maryland, College Park",Course,1 - 3 Months,4.8,2.1k,Beginner,https://www.coursera.org/learn/fundamentals-of-technology-sales,80997.0
+314,Fundamentos de la ciberseguridad,Google,Course,1 - 4 Weeks,4.6,65,Beginner,https://www.coursera.org/learn/fundamentos-de-la-ciberseguridad,5831.0
+315,Fundamentos de la gestion de proyectos,Google,Course,1 - 4 Weeks,4.9,677,Beginner,https://www.coursera.org/learn/fundamentos-de-la-gestion-de-proyectos,11297.0
+316,Fundamentos del marketing digital y comercio electronico,Google,Course,1 - 4 Weeks,4.9,4.6k,Beginner,https://www.coursera.org/learn/fundamentos-del-marketing-digital-y-comercio-electronico,74386.0
+317,Futures Thinking,Institute for the Future,Specialization,3 - 6 Months,4.6,308,Beginner,https://www.coursera.org/specializations/futures-thinking,12011.0
+318,"GIS, Mapping, and Spatial Analysis",University of Toronto,Specialization,3 - 6 Months,4.8,1.6k,Beginner,https://www.coursera.org/specializations/gis-mapping-spatial-analysis,23162.0
+319,GPU Programming,Johns Hopkins University,Specialization,3 - 6 Months,4.9,2.7k,Intermediate,https://www.coursera.org/specializations/gpu-programming,43857.0
+320,Game Design and Development with Unity 2020,Michigan State University,Specialization,3 - 6 Months,2.7,65,Beginner,https://www.coursera.org/specializations/game-design-and-development,4234.0
+321,Game Design Art and Concepts,California Institute of the Arts,Specialization,3 - 6 Months,4.7,508,Beginner,https://www.coursera.org/specializations/game-design,16335.0
+322,Game Theory,Stanford University,Course,1 - 3 Months,4.7,3.8k,Beginner,https://www.coursera.org/learn/game-theory-1,42313.0
+323,Gamification,University of Pennsylvania,Course,1 - 3 Months,4.6,4.5k,Mixed,https://www.coursera.org/learn/gamification,483528.0
+324,Generative AI Primer,Vanderbilt University,Course,1 - 4 Weeks,4.8,2.4k,Beginner,https://www.coursera.org/learn/generative-ai,151571.0
+325,Generative AI for Everyone,DeepLearning.AI,Course,1 - 4 Weeks,4.6,19,Beginner,https://www.coursera.org/learn/generative-ai-for-everyone,2202.0
+326,Generative AI with Large Language Models,DeepLearning.AI,Course,1 - 4 Weeks,5.0,29,Intermediate,https://www.coursera.org/learn/generative-ai-with-llms,38552.0
+327,Generative Adversarial Networks (GANs),DeepLearning.AI,Specialization,1 - 3 Months,4.8,1.2k,Intermediate,https://www.coursera.org/specializations/generative-adversarial-networks-gans,132760.0
+328,Genomic Data Science,Johns Hopkins University,Specialization,3 - 6 Months,4.7,2.1k,Intermediate,https://www.coursera.org/specializations/genomic-data-science,36982.0
+329,Gestion de projet de Google,Google,Professional Certificate,3 - 6 Months,4.8,5.8k,Beginner,https://www.coursera.org/professional-certificates/gestion-de-projet-de-google,47565.0
+330,Gestion de Proyectos de Google,Google,Professional Certificate,3 - 6 Months,4.5,19,Beginner,https://www.coursera.org/professional-certificates/gestion-de-proyectos-de-google,47565.0
+331,Get Started with Python,Google,Course,1 - 3 Months,4.9,5.8k,Advanced,https://www.coursera.org/learn/get-started-with-python,65379.0
+332,Getting Started with AI using IBM Watson,IBM,Course,1 - 4 Weeks,4.8,609,Beginner,https://www.coursera.org/learn/ai-with-ibm-watson,42699.0
+333,Getting Started with Git and GitHub,IBM,Course,1 - 4 Weeks,4.5,2.8k,Beginner,https://www.coursera.org/learn/getting-started-with-git-and-github,52966.0
+334,Getting Started with SAS Programming,SAS,Course,1 - 3 Months,4.7,3.5k,Beginner,https://www.coursera.org/learn/sas-programming-basics,91929.0
+335,Giving Helpful Feedback,University of Colorado Boulder,Course,1 - 3 Months,4.7,1.3k,Beginner,https://www.coursera.org/learn/feedback,3725.0
+336,Global Diplomacy Diplomacy in the Modern World,University of London,Course,1 - 3 Months,4.8,1.7k,Mixed,https://www.coursera.org/learn/global-diplomacy,47240.0
+337,Global Procurement and Sourcing,Rutgers the State University of New Jersey,Specialization,3 - 6 Months,4.7,1.5k,Beginner,https://www.coursera.org/specializations/procurement-sourcing,76360.0
+338,Go Beyond the Numbers Translate Data into Insights,Google,Course,1 - 3 Months,4.7,1.8k,Advanced,https://www.coursera.org/learn/go-beyond-the-numbers-translate-data-into-insight,23479.0
+339,Good with Words Writing and Editing,University of Michigan,Specialization,3 - 6 Months,4.7,297,Beginner,https://www.coursera.org/specializations/good-with-words,24438.0
+340,Goodwill Career Coach and Navigator,Goodwill Industries International,Professional Certificate,3 - 6 Months,4.7,2.2k,Beginner,https://www.coursera.org/professional-certificates/goodwill-career-coach-and-navigator,62339.0
+341,Google Advanced Data Analytics,Google,Professional Certificate,3 - 6 Months,4.7,102,Advanced,https://www.coursera.org/professional-certificates/google-advanced-data-analytics,5764.0
+342,Google Business Intelligence,Google,Professional Certificate,3 - 6 Months,4.7,2.1k,Advanced,https://www.coursera.org/professional-certificates/google-business-intelligence,54602.0
+343,Google Cloud Big Data and Machine Learning Fundamentals,Google Cloud,Course,1 - 3 Months,4.7,879,Beginner,https://www.coursera.org/learn/gcp-big-data-ml-fundamentals,37959.0
+344,Google Cloud Fundamentals Core Infrastructure,Google Cloud,Course,1 - 3 Months,4.7,3.6k,Beginner,https://www.coursera.org/learn/gcp-fundamentals,40408.0
+345,Google Cybersecurity,Google,Professional Certificate,3 - 6 Months,4.7,47.3k,Beginner,https://www.coursera.org/professional-certificates/google-cybersecurity,700909.0
+346,Google Data Analytics,Google,Professional Certificate,3 - 6 Months,4.8,15.2k,Beginner,https://www.coursera.org/professional-certificates/google-data-analytics,229865.0
+347,Google Data Analytics,Google,Professional Certificate,3 - 6 Months,4.8,132k,Beginner,https://www.coursera.org/professional-certificates/analytique-des-donnees-google,1847607.0
+348,Google Data Analytics (DE),Google,Professional Certificate,3 - 6 Months,4.5,109,Beginner,https://www.coursera.org/professional-certificates/google-data-analytics-de,5104.0
+349,Google Data Analytics (PT),Google,Professional Certificate,3 - 6 Months,4.4,27,Beginner,https://www.coursera.org/professional-certificates/analise-de-dados-do-google,47565.0
+350,Google Data Analytics Capstone Complete a Case Study,Google,Course,1 - 4 Weeks,4.9,2.8k,Beginner,https://www.coursera.org/learn/google-data-analytics-capstone,46522.0
+351,Google Digital Marketing E-commerce,Google,Professional Certificate,3 - 6 Months,4.8,12.4k,Beginner,https://www.coursera.org/professional-certificates/google-digital-marketing-ecommerce,384238.0
+352,Google IT Automation with Python,Google,Professional Certificate,3 - 6 Months,4.8,20.8k,Beginner,https://www.coursera.org/professional-certificates/google-it-automation,472123.0
+353,Google IT Support,Google,Professional Certificate,3 - 6 Months,4.7,41.8k,Beginner,https://www.coursera.org/professional-certificates/support-informatique-google,634525.0
+354,Google IT Support,Google,Professional Certificate,3 - 6 Months,4.8,180.7k,Beginner,https://www.coursera.org/professional-certificates/google-it-support,1375710.0
+355,Google IT Support (Deutsch),Google,Professional Certificate,3 - 6 Months,4.5,156,Beginner,https://www.coursera.org/professional-certificates/google-it-de,5262.0
+356,Google Marketing Digital e E-Commerce,Google,Professional Certificate,3 - 6 Months,4.7,187,Beginner,https://www.coursera.org/professional-certificates/certificado-de-carrera-de-google-marketing-digital-e-e-commerce,2738.0
+357,Google Project Management,Google,Professional Certificate,3 - 6 Months,4.7,2.8k,Beginner,https://www.coursera.org/professional-certificates/gestion-de-projet-google,26993.0
+358,Google Project Management (DE),Google,Professional Certificate,3 - 6 Months,4.6,137,Beginner,https://www.coursera.org/professional-certificates/google-project-management-de,5841.0
+359,Google Project Management (PT),Google,Professional Certificate,3 - 6 Months,4.2,51,Beginner,https://www.coursera.org/professional-certificates/gestao-de-projetos-do-google,1962.0
+360,Google Project Management,Google,Professional Certificate,3 - 6 Months,4.9,1.8k,Beginner,https://www.coursera.org/professional-certificates/google-project-management,29702.0
+361,Google UX Design,Google,Professional Certificate,3 - 6 Months,4.8,96.3k,Beginner,https://www.coursera.org/professional-certificates/google-ux-design,1297487.0
+362,Google UX Design,Google,Professional Certificate,3 - 6 Months,4.6,59,Beginner,https://www.coursera.org/professional-certificates/conception-ux-google,3647.0
+363,Google UX Design (DE),Google,Professional Certificate,3 - 6 Months,4.8,73k,Beginner,https://www.coursera.org/professional-certificates/google-ux-design-de,885742.0
+364,Google UX Design (PT),Google,Professional Certificate,3 - 6 Months,4.4,37,Beginner,https://www.coursera.org/professional-certificates/ux-design-do-google,47565.0
+365,Graphic Design,California Institute of the Arts,Specialization,3 - 6 Months,4.7,,Beginner,https://www.coursera.org/specializations/graphic-design,47565.0
+366,HRCI Human Resource Associate,HRCI,Professional Certificate,3 - 6 Months,4.7,19.9k,Beginner,https://www.coursera.org/professional-certificates/hrci-human-resource-associate,349644.0
+367,HTML and CSS in depth,Meta,Course,1 - 4 Weeks,4.8,282,Beginner,https://www.coursera.org/learn/html-and-css-in-depth,15312.0
+368,"HTML, CSS, and Javascript for Web Developers",Johns Hopkins University,Course,1 - 3 Months,4.7,1.1k,Mixed,https://www.coursera.org/learn/html-css-javascript-for-web-developers,72882.0
+369,Habilidades Gerenciales,Universidad Nacional Autonoma de Mexico,Specialization,3 - 6 Months,4.7,15.8k,Beginner,https://www.coursera.org/specializations/habilidades,1021620.0
+370,Hands-on Introduction to Linux Commands and Shell Scripting,IBM,Course,1 - 4 Weeks,4.8,5.4k,Beginner,https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting,27594.0
+371,Harnessing the Power of Data with Power BI,Microsoft,Course,1 - 4 Weeks,4.7,908,Beginner,https://www.coursera.org/learn/harnessing-the-power-of-data-with-power-bi,69380.0
+372,Healing with the Arts,University of Florida,Course,1 - 3 Months,4.5,159,Mixed,https://www.coursera.org/learn/healing-with-the-arts,12527.0
+373,Health Behavior Change From Evidence to Action,Yale University,Course,1 - 3 Months,4.6,862,Beginner,https://www.coursera.org/learn/health-behavior-change,91770.0
+374,Health Informatics,Johns Hopkins University,Specialization,3 - 6 Months,4.8,348,Beginner,https://www.coursera.org/specializations/health-informatics,39296.0
+375,Health Information Literacy for Data Analytics,"University of California, Davis",Specialization,3 - 6 Months,4.4,744,Intermediate,https://www.coursera.org/specializations/healthcare-information-literacy-data-analytics,25139.0
+376,Healthcare IT Support,Johns Hopkins University,Specialization,3 - 6 Months,4.4,200,Beginner,https://www.coursera.org/specializations/healthcare-it,9689.0
+377,Healthcare Law,University of Pennsylvania,Specialization,3 - 6 Months,4.7,943,Intermediate,https://www.coursera.org/specializations/healthcare-law,14962.0
+378,Healthcare Organization Operations,Rutgers the State University of New Jersey,Specialization,3 - 6 Months,4.7,407,Beginner,https://www.coursera.org/specializations/healthcare-organization-operations,7143.0
+379,Healthier Materials and Sustainable Building,"Parsons School of Design, The New School",Specialization,1 - 3 Months,5.0,9,Intermediate,https://www.coursera.org/specializations/healthier-materials-and-sustainable-building,47565.0
+380,Healthy and Sustainable Foods and Products,University of Michigan,Specialization,3 - 6 Months,3.9,24,Intermediate,https://www.coursera.org/specializations/healthy-sustainable-foods-products,1755.0
+381,"Hotel Management Distribution, Revenue and Demand Management",ESSEC Business School,Specialization,3 - 6 Months,4.6,2k,Beginner,https://www.coursera.org/specializations/hotel-management,25938.0
+382,How to Play Guitar,Berklee,Specialization,3 - 6 Months,4.8,2.5k,Beginner,https://www.coursera.org/specializations/play-guitar,31713.0
+383,Human Anatomy and Medical Terminology Fundamentals,MedCerts,Specialization,3 - 6 Months,4.7,29,Beginner,https://www.coursera.org/specializations/human-anatomy-medical-terminology-fundamentals,47565.0
+384,Human Resource Management HR for People Managers,University of Minnesota,Specialization,3 - 6 Months,4.8,13.8k,Beginner,https://www.coursera.org/specializations/human-resource-management,174464.0
+385,Human Resources Analytics,"University of California, Irvine",Course,1 - 4 Weeks,4.6,1.4k,Mixed,https://www.coursera.org/learn/human-resources-analytics,82073.0
+386,IBM Darden Digital Strategy,University of Virginia Darden School Foundation,Specialization,3 - 6 Months,4.7,29.3k,Beginner,https://www.coursera.org/specializations/digital-strategy,4285.0
+387,IBM AI Enterprise Workflow,IBM,Specialization,3 - 6 Months,4.3,258,Advanced,https://www.coursera.org/specializations/ibm-ai-workflow,4619.0
+388,IBM AI Foundations for Business,IBM,Specialization,1 - 3 Months,4.7,76.9k,Beginner,https://www.coursera.org/specializations/ibm-ai-foundations-for-business,12897.0
+389,IBM Applied AI,IBM,Professional Certificate,3 - 6 Months,4.6,46.8k,Beginner,https://www.coursera.org/professional-certificates/applied-artifical-intelligence-ibm-watson-ai,31078.0
+390,IBM Cybersecurity Analyst,IBM,Professional Certificate,3 - 6 Months,4.6,21.6k,Beginner,https://www.coursera.org/professional-certificates/ibm-cybersecurity-analyst,170606.0
+391,IBM Data Analyst,IBM,Professional Certificate,3 - 6 Months,4.6,70.9k,Beginner,https://www.coursera.org/professional-certificates/ibm-data-analyst,173574.0
+392,IBM Data Analytics with Excel and R,IBM,Professional Certificate,3 - 6 Months,4.7,19.7k,Beginner,https://www.coursera.org/professional-certificates/ibm-data-analyst-r-excel,18769.0
+393,IBM Data Engineering,IBM,Professional Certificate,3 - 6 Months,4.6,45.9k,Beginner,https://www.coursera.org/professional-certificates/ibm-data-engineer,7979.0
+394,IBM Data Science,IBM,Professional Certificate,3 - 6 Months,4.6,118.3k,Beginner,https://www.coursera.org/professional-certificates/ibm-data-science,239622.0
+395,IBM Data Warehouse Engineer,IBM,Professional Certificate,3 - 6 Months,4.7,3.6k,Beginner,https://www.coursera.org/professional-certificates/data-warehouse-engineering,4055.0
+396,IBM Front-End Developer,IBM,Professional Certificate,3 - 6 Months,4.6,1.5k,Beginner,https://www.coursera.org/professional-certificates/ibm-frontend-developer,47565.0
+397,IBM Full Stack Software Developer,IBM,Professional Certificate,3 - 6 Months,4.6,40.8k,Beginner,https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer,57396.0
+398,IBM IT Project Manager,SkillUp EdTech,Professional Certificate,3 - 6 Months,4.8,2.3k,Beginner,https://www.coursera.org/professional-certificates/ibm-it-project-manager,9049.0
+399,IBM IT Scrum Master,SkillUp EdTech,Professional Certificate,3 - 6 Months,4.8,3.7k,Beginner,https://www.coursera.org/professional-certificates/ibm-it-scrum-master,1954.0
+400,IBM Introduction to Machine Learning,IBM,Specialization,3 - 6 Months,4.6,1.8k,Intermediate,https://www.coursera.org/specializations/ibm-intro-machine-learning,7705.0
+401,IBM Machine Learning,IBM,Professional Certificate,3 - 6 Months,4.6,1.9k,Intermediate,https://www.coursera.org/professional-certificates/ibm-machine-learning,22376.0
+402,IBM Mainframe Developer,IBM,Professional Certificate,3 - 6 Months,4.6,932,Intermediate,https://www.coursera.org/professional-certificates/ibm-mainframe-developer,3063.0
+403,IBM Project Manager,SkillUp EdTech,Professional Certificate,3 - 6 Months,4.8,1.8k,Beginner,https://www.coursera.org/professional-certificates/ibm-project-manager,5661.0
+404,IBM zOS Mainframe Practitioner,IBM,Professional Certificate,1 - 3 Months,4.7,1.1k,Intermediate,https://www.coursera.org/professional-certificates/ibm-z-mainframe,7305.0
+405,IT Fundamentals for Cybersecurity,IBM,Specialization,3 - 6 Months,4.6,19.5k,Beginner,https://www.coursera.org/specializations/it-fundamentals-cybersecurity,54320.0
+406,IT Security Defense against the digital dark arts,Google,Course,1 - 3 Months,4.8,20.8k,Beginner,https://www.coursera.org/learn/it-security,354658.0
+407,IT Support Google,Google,Professional Certificate,3 - 6 Months,4.9,5.2k,Beginner,https://www.coursera.org/professional-certificates/sertifikat-it-support-profesional-google,29843.0
+408,ITIL 4 Exam Preparation,LearnQuest,Course,1 - 3 Months,4.7,936,Mixed,https://www.coursera.org/learn/itil-4-exam-preparation,42890.0
+409,Immunology The Immune System and its Failures,Imperial College London,Specialization,3 - 6 Months,4.7,116,Intermediate,https://www.coursera.org/specializations/immunology-the-immune-system-and-its-failures,2861.0
+410,Improve Your English Communication Skills,Georgia Institute of Technology,Specialization,3 - 6 Months,4.7,25.8k,Beginner,https://www.coursera.org/specializations/improve-english,610452.0
+411,Improving Communication Skills,University of Pennsylvania,Course,1 - 4 Weeks,4.7,1.9k,Beginner,https://www.coursera.org/learn/wharton-communication-skills,135437.0
+412,"Improving Deep Neural Networks Hyperparameter Tuning, Regularization and Optimization",DeepLearning.AI,Course,1 - 4 Weeks,4.9,62.5k,Intermediate,https://www.coursera.org/learn/deep-neural-network,520132.0
+413,Improving Leadership Governance in Nonprofit Organizations,University at Buffalo,Specialization,3 - 6 Months,4.4,222,Beginner,https://www.coursera.org/specializations/nonprofit,12699.0
+414,In the Studio Postwar Abstract Painting,The Museum of Modern Art,Course,1 - 3 Months,4.9,1.4k,Beginner,https://www.coursera.org/learn/painting,133585.0
+415,Inclusive Leadership The Power of Workplace Diversity,University of Colorado System,Course,1 - 4 Weeks,4.9,1.7k,Beginner,https://www.coursera.org/learn/inclusiveleadership,56242.0
+416,Indigenous Canada,University of Alberta,Course,1 - 3 Months,4.8,21.5k,Mixed,https://www.coursera.org/learn/indigenous-canada,572934.0
+417,Infectious Disease Modelling,Imperial College London,Specialization,1 - 3 Months,4.8,277,Intermediate,https://www.coursera.org/specializations/infectious-disease-modelling,7330.0
+418,"Influencing Storytelling, Change Management and Governance",Macquarie University,Specialization,3 - 6 Months,4.8,3.5k,Beginner,https://www.coursera.org/specializations/influencing-storytelling-change-management,30414.0
+419,"Information Systems Auditing, Controls and Assurance",The Hong Kong University of Science and Technology,Course,1 - 4 Weeks,4.7,3.1k,Beginner,https://www.coursera.org/learn/information-systems-audit,78740.0
+420,Information Systems,University of Minnesota,Specialization,3 - 6 Months,4.8,1.8k,Beginner,https://www.coursera.org/specializations/information-systems,36209.0
+421,Innovation Management,Erasmus University Rotterdam,Course,1 - 3 Months,4.7,1.9k,Beginner,https://www.coursera.org/learn/innovation-management,106267.0
+422,Innovation From Creativity to Entrepreneurship,University of Illinois at Urbana-Champaign,Specialization,3 - 6 Months,4.8,3.2k,Beginner,https://www.coursera.org/specializations/innovation-creativity-entrepreneurship,31488.0
+423,Innovative Teaching with ChatGPT,Vanderbilt University,Course,1 - 4 Weeks,4.7,30,Beginner,https://www.coursera.org/learn/chatgpt-innovative-teaching,3012.0
+424,Inspired Leadership,Case Western Reserve University,Specialization,3 - 6 Months,4.7,2.3k,Intermediate,https://www.coursera.org/specializations/inspired-leadership,31785.0
+425,Inspiring and Motivating Individuals,University of Michigan,Course,1 - 4 Weeks,4.8,5.4k,Beginner,https://www.coursera.org/learn/motivate-people-teams,216376.0
+426,Instructional Design Foundations and Applications,University of Illinois at Urbana-Champaign,Course,1 - 3 Months,4.0,635,Mixed,https://www.coursera.org/learn/instructional-design-foundations-applications,48396.0
+427,Instructional Methods in Health Professions Education,University of Michigan,Course,1 - 3 Months,4.7,439,Intermediate,https://www.coursera.org/learn/instructional-methods-education,20933.0
+428,Integrative Health and Medicine,University of Minnesota,Specialization,3 - 6 Months,4.8,1.6k,Beginner,https://www.coursera.org/specializations/integrative-health-and-medicine,22857.0
+429,Integrative Nursing,University of Minnesota,Specialization,3 - 6 Months,4.8,786,Beginner,https://www.coursera.org/specializations/integrative-nursing,2247.0
+430,Intellectual Property Law,University of Pennsylvania,Specialization,3 - 6 Months,4.8,1.2k,Intermediate,https://www.coursera.org/specializations/introduction-intellectual-property,19911.0
+431,Interaction Design,University of California San Diego,Specialization,3 - 6 Months,4.5,3.9k,Intermediate,https://www.coursera.org/specializations/interaction-design,61409.0
+432,International Business Essentials,University of London,Specialization,3 - 6 Months,4.6,1.8k,Intermediate,https://www.coursera.org/specializations/mba,26569.0
+433,International Humanitarian Law in Theory and Practice,Universiteit Leiden,Course,1 - 3 Months,4.8,1.6k,Beginner,https://www.coursera.org/learn/international-humanitarian-law,58456.0
+434,International Law In Action Investigating and Prosecuting International Crimes,Universiteit Leiden,Course,1 - 3 Months,4.8,610,Mixed,https://www.coursera.org/learn/international-law-in-action-2,39061.0
+435,International Leadership and Organizational Behavior,Universita Bocconi,Course,1 - 3 Months,4.8,3.1k,Mixed,https://www.coursera.org/learn/organizational-behavior,123968.0
+436,International Marketing Cross Industry Growth,Yonsei University,Specialization,3 - 6 Months,4.7,2.2k,Beginner,https://www.coursera.org/specializations/international-marketing,20943.0
+437,International Women's Health and Human Rights,Stanford University,Course,3 - 6 Months,4.9,1.5k,Beginner,https://www.coursera.org/learn/womens-health-human-rights,109215.0
+438,Introduccion a la programacion en Python I Aprendiendo a programar con Python,Pontificia Universidad Catolica de Chile,Course,1 - 3 Months,4.6,496,Beginner,https://www.coursera.org/learn/aprendiendo-programar-python,2802.0
+439,Introduction to AI in the Data Center,NVIDIA,Course,1 - 4 Weeks,4.4,4.2k,Beginner,https://www.coursera.org/learn/introduction-to-ai-in-the-data-center,283226.0
+440,Introduction to Agile Development and Scrum,IBM,Course,1 - 4 Weeks,4.7,25,Beginner,https://www.coursera.org/learn/agile-development-and-scrum,3068.0
+441,Introduction to Artificial Intelligence (AI),IBM,Course,1 - 4 Weeks,4.9,1.4k,Beginner,https://www.coursera.org/learn/introduction-to-ai,47937.0
+442,"Introduction to Biology Ecology, Evolution, Biodiversity",Rice University,Specialization,3 - 6 Months,4.8,2.5k,Beginner,https://www.coursera.org/specializations/introduction-to-biology,103381.0
+443,Introduction to Business,"University of California, Irvine",Specialization,1 - 3 Months,4.9,75,Beginner,https://www.coursera.org/specializations/business-introduction,2881.0
+444,Introduction to Calculus,The University of Sydney,Course,1 - 3 Months,4.7,235,Intermediate,https://www.coursera.org/learn/introduction-to-calculus,7594.0
+445,Introduction to Cloud Computing,IBM,Course,1 - 3 Months,4.6,247,Beginner,https://www.coursera.org/learn/introduction-to-cloud,15934.0
+446,Introduction to Computer Science and Programming,University of London,Specialization,3 - 6 Months,4.6,4.6k,Beginner,https://www.coursera.org/specializations/introduction-computer-science-programming,242241.0
+447,Introduction to Computer Vision and Image Processing,IBM,Course,1 - 3 Months,4.2,1.3k,Beginner,https://www.coursera.org/learn/introduction-computer-vision-watson-opencv,41469.0
+448,Introduction to Computers and Operating Systems and Security,Microsoft,Course,1 - 4 Weeks,4.3,1k,Beginner,https://www.coursera.org/learn/introduction-to-computers-and-operating-systems-and-security,55849.0
+449,Introduction to Corporate Finance,University of Pennsylvania,Course,1 - 4 Weeks,4.8,397,Mixed,https://www.coursera.org/learn/wharton-finance,34188.0
+450,Introduction to Cyber Security,New York University,Specialization,3 - 6 Months,4.6,5.8k,Beginner,https://www.coursera.org/specializations/intro-cyber-security,206926.0
+451,Introduction to Cybersecurity Tools Cyber Attacks,IBM,Course,1 - 4 Weeks,4.7,3.4k,Beginner,https://www.coursera.org/learn/introduction-cybersecurity-cyber-attacks,54196.0
+452,Introduction to Data Analytics,IBM,Course,1 - 3 Months,4.6,14.6k,Beginner,https://www.coursera.org/learn/introduction-to-data-analytics,391280.0
+453,Introduction to Data Engineering,IBM,Course,1 - 4 Weeks,4.8,13.3k,Beginner,https://www.coursera.org/learn/introduction-to-data-engineering,407164.0
+454,Introduction to Data Science,IBM,Specialization,3 - 6 Months,4.7,2.1k,Beginner,https://www.coursera.org/specializations/introduction-data-science,104084.0
+455,Introduction to Data Science in Python,University of Michigan,Course,1 - 4 Weeks,4.6,84.6k,Intermediate,https://www.coursera.org/learn/python-data-analysis,82392.0
+456,Introduction to Deep Learning Neural Networks with Keras,IBM,Course,1 - 3 Months,4.5,26.8k,Intermediate,https://www.coursera.org/learn/introduction-to-deep-learning-with-keras,756398.0
+457,Introduction to DevOps,IBM,Course,1 - 3 Months,4.8,1.4k,Beginner,https://www.coursera.org/learn/intro-to-devops,62379.0
+458,Introduction to Discrete Mathematics for Computer Science,University of California San Diego,Specialization,3 - 6 Months,4.8,2.1k,Beginner,https://www.coursera.org/specializations/discrete-mathematics,87314.0
+459,Introduction to Embedded Systems Software and Development Environments,University of Colorado Boulder,Course,1 - 4 Weeks,4.7,2.4k,Intermediate,https://www.coursera.org/learn/introduction-embedded-systems,212687.0
+460,Introduction to Environmental Law and Policy,The University of North Carolina at Chapel Hill,Course,1 - 3 Months,4.8,1.7k,Mixed,https://www.coursera.org/learn/environmental-law,91436.0
+461,Introduction to Finance and Accounting,University of Pennsylvania,Specialization,3 - 6 Months,4.7,51,Beginner,https://www.coursera.org/specializations/finance-accounting,1717.0
+462,Introduction to Finance The Basics,University of Illinois at Urbana-Champaign,Course,1 - 3 Months,4.6,12.9k,Beginner,https://www.coursera.org/learn/introduction-to-finance-the-basics,55989.0
+463,Introduction to Financial Accounting,University of Pennsylvania,Course,1 - 4 Weeks,4.7,304,Mixed,https://www.coursera.org/learn/wharton-accounting,41537.0
+464,"Introduction to Financial Analysis - The ""Why""",University of Illinois at Urbana-Champaign,Course,1 - 4 Weeks,4.7,503,Beginner,https://www.coursera.org/learn/introduction-to-financial-analysis-the-why,7282.0
+465,Introduction to Financial Engineering and Risk Management,Columbia University,Course,1 - 3 Months,4.7,103,Intermediate,https://www.coursera.org/learn/financial-engineering-intro,8383.0
+466,Introduction to Front-End Development,Meta,Course,1 - 4 Weeks,4.9,2.2k,Beginner,https://www.coursera.org/learn/introduction-to-front-end-development,140407.0
+467,Introduction to Git and GitHub,Google,Course,1 - 4 Weeks,4.6,1.8k,Beginner,https://www.coursera.org/learn/introduction-git-github,108747.0
+468,Introduction to Good Clinical Practice,Novartis,Course,1 - 4 Weeks,4.8,7k,Beginner,https://www.coursera.org/learn/good-clinical-practice-novartis,242703.0
+469,Introduction to Google SEO,"University of California, Davis",Course,1 - 4 Weeks,4.6,34,Beginner,https://www.coursera.org/learn/search-engine-optimization,2554.0
+470,Introduction to Hardware and Operating Systems,IBM,Course,1 - 3 Months,4.6,9.7k,Beginner,https://www.coursera.org/learn/introduction-to-hardware-and-operating-systems,282429.0
+471,Introduction to Industrial Bioprocess Development,Technical University of Denmark (DTU),Course,1 - 3 Months,4.8,767,Beginner,https://www.coursera.org/learn/industrial-bioprocess-development,37298.0
+472,Introduction to Logic and Critical Thinking,Duke University,Specialization,3 - 6 Months,4.2,154,Beginner,https://www.coursera.org/specializations/logic-critical-thinking-duke,12291.0
+473,Introduction to Machine Learning,Duke University,Course,1 - 4 Weeks,4.6,3.2k,Intermediate,https://www.coursera.org/learn/machine-learning-duke,35393.0
+474,Introduction to Machine Learning in Production,DeepLearning.AI,Course,1 - 4 Weeks,4.7,3.4k,Advanced,https://www.coursera.org/learn/introduction-to-machine-learning-in-production,193442.0
+475,Introduction to Marketing,University of Pennsylvania,Course,1 - 3 Months,4.8,2.6k,Mixed,https://www.coursera.org/learn/wharton-marketing,93061.0
+476,Introduction to Mathematical Thinking,Stanford University,Course,1 - 3 Months,4.8,12.5k,Intermediate,https://www.coursera.org/learn/mathematical-thinking,369571.0
+477,Introduction to Microsoft Azure Cloud Services,Microsoft,Course,1 - 4 Weeks,4.8,2.6k,Beginner,https://www.coursera.org/learn/microsoft-azure-cloud-services,461103.0
+478,Introduction to Negotiation A Strategic Playbook for Becoming a Principled and Persuasive Negotiator,Yale University,Course,1 - 3 Months,4.6,1.8k,Mixed,https://www.coursera.org/learn/negotiation,93726.0
+479,Introduction to Operations Management,University of Pennsylvania,Course,1 - 4 Weeks,4.9,4.7k,Beginner,https://www.coursera.org/learn/wharton-operations,538610.0
+480,Introduction to Probability and Data with R,Duke University,Course,1 - 3 Months,4.7,9k,Beginner,https://www.coursera.org/learn/probability-intro,641170.0
+481,Introduction to Programming with MATLAB,Vanderbilt University,Course,1 - 3 Months,4.7,5.5k,Beginner,https://www.coursera.org/learn/matlab,272508.0
+482,Introduction to Programming with Python and Java,University of Pennsylvania,Specialization,3 - 6 Months,4.8,17.2k,Beginner,https://www.coursera.org/specializations/programming-python-java,475272.0
+483,Introduction to Project Management,IBM,Course,1 - 3 Months,4.4,1.5k,Beginner,https://www.coursera.org/learn/introduction-to-project-management,45593.0
+484,Introduction to Psychology,University of Toronto,Course,1 - 3 Months,4.8,336,Mixed,https://www.coursera.org/learn/introduction-psych,20219.0
+485,Introduction to Psychology,Yale University,Course,1 - 3 Months,4.9,4.9k,Beginner,https://www.coursera.org/learn/introduction-psychology,466038.0
+486,Introduction to Public Relations and the Media,University of Colorado Boulder,Specialization,3 - 6 Months,4.9,27k,Beginner,https://www.coursera.org/specializations/introduction-to-public-relations-and-the-media,1205091.0
+487,Introduction to Python Programming,University of Pennsylvania,Course,1 - 4 Weeks,4.7,356,Beginner,https://www.coursera.org/learn/python-programming-intro,7846.0
+488,Introduction to Scripting in Python,Rice University,Specialization,3 - 6 Months,4.6,43,Beginner,https://www.coursera.org/specializations/introduction-scripting-in-python,2769.0
+489,Introduction to Social Media Marketing,Meta,Course,1 - 3 Months,4.7,2.8k,Beginner,https://www.coursera.org/learn/social-media-marketing-introduction,136896.0
+490,Introduction to Software Engineering,IBM,Course,1 - 3 Months,4.8,12.4k,Beginner,https://www.coursera.org/learn/introduction-to-software-engineering,375663.0
+491,Introduction to Spreadsheets and Models,University of Pennsylvania,Course,1 - 4 Weeks,4.7,535,Mixed,https://www.coursera.org/learn/wharton-introduction-spreadsheets-models,43318.0
+492,Introduction to Technical Support,IBM,Course,1 - 3 Months,4.7,735,Beginner,https://www.coursera.org/learn/introduction-to-technical-support,68507.0
+493,"Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning",DeepLearning.AI,Course,1 - 4 Weeks,4.8,582,Intermediate,https://www.coursera.org/learn/introduction-tensorflow,25439.0
+494,Introduction to User Experience Design,Georgia Institute of Technology,Course,1 - 3 Months,4.8,19k,Beginner,https://www.coursera.org/learn/user-experience-design,353393.0
+495,Introduction to Web Development,"University of California, Davis",Course,1 - 3 Months,4.5,7.9k,Beginner,https://www.coursera.org/learn/web-development,420249.0
+496,"Introduction to Web Development with HTML, CSS, JavaScript",IBM,Course,1 - 3 Months,4.7,3.6k,Beginner,https://www.coursera.org/learn/introduction-to-web-development-with-html-css-javacript,230386.0
+497,Introductory C Programming,Duke University,Specialization,3 - 6 Months,4.6,1.6k,Beginner,https://www.coursera.org/specializations/c-programming,110691.0
+498,Introductory Human Physiology,Duke University,Course,1 - 3 Months,4.6,7.1k,Beginner,https://www.coursera.org/learn/physiology,103010.0
+499,Intuit Academy Bookkeeping,Intuit,Professional Certificate,3 - 6 Months,4.8,4.7k,Beginner,https://www.coursera.org/professional-certificates/intuit-bookkeeping,468701.0
+500,Investment Management,University of Geneva,Specialization,3 - 6 Months,4.6,4.8k,Beginner,https://www.coursera.org/specializations/investment-management,109804.0
+501,Investment Management with Python and Machine Learning,EDHEC Business School,Specialization,3 - 6 Months,4.7,7.2k,Beginner,https://www.coursera.org/specializations/investment-management-python-machine-learning,82673.0
+502,Investment and Portfolio Management,Rice University,Specialization,3 - 6 Months,4.6,1.6k,Beginner,https://www.coursera.org/specializations/investment-portolio-management,37314.0
+503,Java FullStack Developer,Board Infinity,Specialization,1 - 3 Months,4.5,2.4k,Intermediate,https://www.coursera.org/specializations/java-fullstack,62704.0
+504,Java Programming and Software Engineering Fundamentals,Duke University,Specialization,3 - 6 Months,4.3,60,Beginner,https://www.coursera.org/specializations/java-programming,3516.0
+505,JavaScript for Beginners,"University of California, Davis",Specialization,3 - 6 Months,4.6,21.4k,Beginner,https://www.coursera.org/specializations/javascript-beginner,300317.0
+506,Key Technologies for Business,IBM,Specialization,1 - 3 Months,4.7,915,Beginner,https://www.coursera.org/specializations/key-technologies-for-business,32301.0
+507,Leadership Skills,IIMA - IIM Ahmedabad,Course,1 - 3 Months,4.7,81k,Beginner,https://www.coursera.org/learn/leadershipskills,16737.0
+508,Leadership in 21st Century Organizations,Copenhagen Business School,Course,3 - 6 Months,4.8,820,Mixed,https://www.coursera.org/learn/leadership-21st-century,116836.0
+509,Leading Diverse Teams Organizations,University of Michigan,Course,1 - 4 Weeks,4.7,1k,Beginner,https://www.coursera.org/learn/leading-diverse-teams-and-organizations,79013.0
+510,Leading People and Teams,University of Michigan,Specialization,3 - 6 Months,4.8,1.2k,Beginner,https://www.coursera.org/specializations/leading-teams,47949.0
+511,Leading the Modern Day Business,University of Virginia,Specialization,3 - 6 Months,4.7,10.2k,Beginner,https://www.coursera.org/specializations/leading-modern-day-business,131103.0
+512,Leading Human Resource Management and Leadership,Macquarie University,Specialization,3 - 6 Months,4.7,19.2k,Intermediate,https://www.coursera.org/specializations/hr-management-leadership,44430.0
+513,Learn Chinese HSK Test Preparation,Peking University,Specialization,3 - 6 Months,4.8,3.2k,Beginner,https://www.coursera.org/specializations/hsk-learn-chinese,39888.0
+514,Learn English Advanced Academic Speaking and Listening,"University of California, Irvine",Specialization,3 - 6 Months,4.5,1.3k,Intermediate,https://www.coursera.org/specializations/speaklistenenglish,72915.0
+515,Learn English Advanced Grammar and Punctuation,"University of California, Irvine",Specialization,3 - 6 Months,4.8,2.5k,Advanced,https://www.coursera.org/specializations/advanced-grammar-punctuation,74301.0
+516,Learn English Intermediate Grammar,"University of California, Irvine",Specialization,3 - 6 Months,4.8,5.1k,Intermediate,https://www.coursera.org/specializations/intermediate-grammar,121485.0
+517,Learn SQL Basics for Data Science,"University of California, Davis",Specialization,3 - 6 Months,4.6,16.6k,Beginner,https://www.coursera.org/specializations/learn-sql-basics-data-science,226926.0
+518,Learn to Program The Fundamentals,University of Toronto,Course,1 - 3 Months,4.7,6.2k,Beginner,https://www.coursera.org/learn/learn-to-program,421737.0
+519,Learning How to Learn Powerful mental tools to help you master tough subjects,Deep Teaching Solutions,Course,1 - 4 Weeks,4.8,87.9k,Beginner,https://www.coursera.org/learn/learning-how-to-learn,3641053.0
+520,Learning Linux for LFCA Certification,LearnQuest,Specialization,3 - 6 Months,4.5,807,Beginner,https://www.coursera.org/specializations/linux-for-lfca-certification,14893.0
+521,Learning and Development,HRCI,Course,1 - 4 Weeks,4.8,84,Beginner,https://www.coursera.org/learn/learning-and-development,4817.0
+522,Leverage Data Science for a More Agile Supply Chain,"University of California, Irvine",Specialization,1 - 3 Months,4.5,158,Intermediate,https://www.coursera.org/specializations/leverage-data-science-agile-supply-chain,4041.0
+523,Linear Algebra for Machine Learning and Data Science,DeepLearning.AI,Course,1 - 4 Weeks,4.5,908,Beginner,https://www.coursera.org/learn/machine-learning-linear-algebra,68047.0
+524,Linux and Private Cloud Administration on IBM Power Systems,Red Hat,Specialization,3 - 6 Months,4.8,921,Intermediate,https://www.coursera.org/specializations/linux-private-cloud-administration-power-systems,10280.0
+525,MATLAB Programming for Engineers and Scientists,Vanderbilt University,Specialization,3 - 6 Months,4.8,17.5k,Beginner,https://www.coursera.org/specializations/matlab-programming-engineers-scientists,79656.0
+526,MLOps Machine Learning Operations,Duke University,Specialization,3 - 6 Months,4.0,115,Advanced,https://www.coursera.org/specializations/mlops-machine-learning-duke,5105.0
+527,Machine Learning,University of Washington,Specialization,3 - 6 Months,4.6,16k,Intermediate,https://www.coursera.org/specializations/machine-learning,201871.0
+528,Machine Learning,Multiple educators,Specialization,1 - 3 Months,4.9,17.3k,Beginner,https://www.coursera.org/specializations/machine-learning-introduction,297365.0
+529,Machine Learning Data Lifecycle in Production,DeepLearning.AI,Course,1 - 4 Weeks,4.3,746,Advanced,https://www.coursera.org/learn/machine-learning-data-lifecycle-in-production,38883.0
+530,Machine Learning Engineering for Production (MLOps),DeepLearning.AI,Specialization,3 - 6 Months,4.7,3.3k,Advanced,https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops,60425.0
+531,Machine Learning Foundations for Product Managers,Duke University,Course,1 - 3 Months,4.7,253,Beginner,https://www.coursera.org/learn/machine-learning-foundations-for-product-managers,25169.0
+532,Machine Learning Modeling Pipelines in Production,DeepLearning.AI,Course,1 - 3 Months,4.3,373,Advanced,https://www.coursera.org/learn/machine-learning-modeling-pipelines-in-production,27489.0
+533,Machine Learning and Reinforcement Learning in Finance,New York University,Specialization,3 - 6 Months,3.7,788,Intermediate,https://www.coursera.org/specializations/machine-learning-reinforcement-finance,19145.0
+534,Machine Learning for Trading,Google Cloud,Specialization,1 - 3 Months,3.9,1k,Intermediate,https://www.coursera.org/specializations/machine-learning-trading,26628.0
+535,Machine Learning on Google Cloud,Google Cloud,Specialization,3 - 6 Months,4.5,9.5k,Intermediate,https://www.coursera.org/specializations/machine-learning-tensorflow-gcp,90040.0
+536,Machine Learning with Python,IBM,Course,1 - 3 Months,4.7,14.7k,Intermediate,https://www.coursera.org/learn/machine-learning-with-python,376933.0
+537,"Make the Sale Build, Launch, and Manage E-commerce Stores",Google,Course,1 - 4 Weeks,4.8,878,Beginner,https://www.coursera.org/learn/make-the-sale,81460.0
+538,Management Consulting,Emory University,Specialization,3 - 6 Months,4.8,517,Beginner,https://www.coursera.org/specializations/managementconsulting,9868.0
+539,Management of Fashion and Luxury Companies,Universita Bocconi,Course,1 - 3 Months,4.7,5.6k,Mixed,https://www.coursera.org/learn/mafash,256877.0
+540,Managerial Economics and Business Analysis,University of Illinois at Urbana-Champaign,Specialization,3 - 6 Months,4.8,3.8k,Beginner,https://www.coursera.org/specializations/managerial-economics-business-analysis,2341.0
+541,Managing Cybersecurity,University System of Georgia,Specialization,3 - 6 Months,4.8,1k,Beginner,https://www.coursera.org/specializations/managing-cybersecurity,12099.0
+542,Managing the Company of the Future,University of London,Course,1 - 3 Months,4.8,3.4k,Mixed,https://www.coursera.org/learn/company-future-management,117869.0
+543,Market Research,"University of California, Davis",Specialization,3 - 6 Months,4.6,1.3k,Beginner,https://www.coursera.org/specializations/market-research,38925.0
+544,Marketing Analytics,University of Virginia,Course,1 - 3 Months,4.7,6.3k,Beginner,https://www.coursera.org/learn/uva-darden-market-analytics,324410.0
+545,Marketing Digital,Universidade de Sao Paulo,Course,1 - 3 Months,4.8,2.1k,Beginner,https://www.coursera.org/learn/estrategia-marketing-digital,224172.0
+546,Marketing Mix Implementation,IE Business School,Specialization,3 - 6 Months,4.7,5.6k,Beginner,https://www.coursera.org/specializations/marketing-mix,54635.0
+547,Marketing Strategy,IE Business School,Specialization,3 - 6 Months,4.5,5.8k,Beginner,https://www.coursera.org/specializations/marketing-strategy,58470.0
+548,Marketing digital e e-commerce do Google,Google,Professional Certificate,3 - 6 Months,4.9,79,Beginner,https://www.coursera.org/professional-certificates/marketing-digital-e-e-commerce-do-google,3679.0
+549,Marketing en redes sociales de Meta,Meta,Professional Certificate,3 - 6 Months,4.9,863,Beginner,https://www.coursera.org/professional-certificates/marketing-en-redes-sociales-de-facebook,8319.0
+550,Marketing with TikTok,Aptly,Specialization,1 - 3 Months,4.7,86,Beginner,https://www.coursera.org/specializations/marketing-with-tiktok,3370.0
+551,Mastering Final Cut Pro,LearnQuest,Course,1 - 3 Months,4.5,197,Beginner,https://www.coursera.org/learn/mastering-final-cut-pro,43149.0
+552,Mathematics for Engineers,The Hong Kong University of Science and Technology,Specialization,3 - 6 Months,4.8,6.9k,Beginner,https://www.coursera.org/specializations/mathematics-engineers,13578.0
+553,Mathematics for Machine Learning,Imperial College London,Specialization,3 - 6 Months,4.6,14k,Beginner,https://www.coursera.org/specializations/mathematics-machine-learning,193262.0
+554,Mathematics for Machine Learning and Data Science,DeepLearning.AI,Specialization,1 - 3 Months,4.6,1.2k,Beginner,https://www.coursera.org/specializations/mathematics-for-machine-learning-and-data-science,46591.0
+555,Mathematics for Machine Learning Linear Algebra,Imperial College London,Course,1 - 3 Months,4.7,11.8k,Beginner,https://www.coursera.org/learn/linear-algebra-machine-learning,352572.0
+556,Medical Billing and Coding Fundamentals,MedCerts,Specialization,3 - 6 Months,4.8,161,Beginner,https://www.coursera.org/specializations/medical-billing-coding-fundamentals,5094.0
+557,Medical Neuroscience,Duke University,Course,3 - 6 Months,4.9,2.7k,Advanced,https://www.coursera.org/learn/medical-neuroscience,329225.0
+558,Medical Terminology,Rice University,Specialization,3 - 6 Months,4.9,393,Beginner,https://www.coursera.org/specializations/medicalterminology,11968.0
+559,Memoir and Personal Essay Write About Yourself,Wesleyan University,Specialization,3 - 6 Months,4.4,397,Beginner,https://www.coursera.org/specializations/memoir-personal-essay,15101.0
+560,Mercados financieros,Yale University,Course,1 - 3 Months,4.9,334,Beginner,https://www.coursera.org/learn/financial-markets-global-es,38185.0
+561,Mergers and Acquisitions,University of Illinois at Urbana-Champaign,Specialization,3 - 6 Months,4.6,239,Intermediate,https://www.coursera.org/specializations/mergersandacquisitions,8222.0
+562,Meta AR Developer,Meta,Professional Certificate,3 - 6 Months,4.6,80,Intermediate,https://www.coursera.org/professional-certificates/meta-ar-developer,5333.0
+563,Meta Android Developer,Meta,Professional Certificate,3 - 6 Months,4.7,5k,Beginner,https://www.coursera.org/professional-certificates/meta-android-developer,21100.0
+564,Meta Back-End Developer,Meta,Professional Certificate,3 - 6 Months,4.7,5.9k,Beginner,https://www.coursera.org/professional-certificates/meta-back-end-developer,56242.0
+565,Meta Database Engineer,Meta,Professional Certificate,3 - 6 Months,4.6,4.3k,Beginner,https://www.coursera.org/professional-certificates/meta-database-engineer,36481.0
+566,Meta Front-End Developer,Meta,Professional Certificate,3 - 6 Months,4.7,14.3k,Beginner,https://www.coursera.org/professional-certificates/meta-front-end-developer,210765.0
+567,Meta Marketing Analytics,Meta,Professional Certificate,3 - 6 Months,4.7,2.1k,Beginner,https://www.coursera.org/professional-certificates/facebook-marketing-analytics,3424.0
+568,Meta Social Media Marketing,Meta,Professional Certificate,3 - 6 Months,4.8,17.3k,Beginner,https://www.coursera.org/professional-certificates/facebook-social-media-marketing,258931.0
+569,Meta iOS Developer,Meta,Professional Certificate,3 - 6 Months,4.7,4.8k,Beginner,https://www.coursera.org/professional-certificates/meta-ios-developer,18200.0
+570,Methods and Statistics in Social Sciences,University of Amsterdam,Specialization,3 - 6 Months,4.6,7.3k,Beginner,https://www.coursera.org/specializations/social-science,96190.0
+571,Microeconomics Principles,University of Illinois at Urbana-Champaign,Course,1 - 3 Months,4.8,2.9k,Beginner,https://www.coursera.org/learn/microeconomics,169189.0
+572,Microeconomics The Power of Markets,University of Pennsylvania,Course,1 - 3 Months,4.7,1.4k,Mixed,https://www.coursera.org/learn/microeconomics-part1,66119.0
+573,Microsoft 365 Fundamentals,Microsoft,Specialization,3 - 6 Months,4.7,2.6k,Beginner,https://www.coursera.org/specializations/microsoft-365-fundamentals,67979.0
+574,Microsoft Azure AI Fundamentals AI-900 Exam Prep,Microsoft,Specialization,3 - 6 Months,4.6,508,Beginner,https://www.coursera.org/specializations/microsoft-azure-ai-900-ai-fundamentals,11582.0
+575,Microsoft Azure Data Engineering Associate (DP-203),Microsoft,Professional Certificate,3 - 6 Months,4.4,777,Intermediate,https://www.coursera.org/professional-certificates/microsoft-azure-dp-203-data-engineering,25321.0
+576,Microsoft Azure Data Fundamentals DP-900 Exam Prep,Microsoft,Specialization,3 - 6 Months,4.7,546,Beginner,https://www.coursera.org/specializations/microsoft-azure-dp-900-data-fundamentals,15021.0
+577,Microsoft Azure Data Scientist Associate (DP-100),Microsoft,Professional Certificate,3 - 6 Months,4.4,277,Intermediate,https://www.coursera.org/professional-certificates/azure-data-scientist,14258.0
+578,Microsoft Azure Developer Associate (AZ-204),Microsoft,Professional Certificate,3 - 6 Months,4.6,121,Intermediate,https://www.coursera.org/professional-certificates/azure-developer-associate,9199.0
+579,Microsoft Azure Fundamentals AZ-900 Exam Prep,Microsoft,Specialization,3 - 6 Months,4.6,2.3k,Beginner,https://www.coursera.org/specializations/microsoft-azure-fundamentals-az-900,65678.0
+580,Microsoft Cybersecurity Analyst,Microsoft,Professional Certificate,3 - 6 Months,4.8,506,Beginner,https://www.coursera.org/professional-certificates/microsoft-cybersecurity-analyst,31727.0
+581,Microsoft Power BI Data Analyst,Microsoft,Professional Certificate,3 - 6 Months,4.6,735,Beginner,https://www.coursera.org/professional-certificates/microsoft-power-bi-data-analyst,37537.0
+582,Microsoft Power Platform Fundamentals,Microsoft,Course,1 - 3 Months,4.2,96,Beginner,https://www.coursera.org/learn/microsoft-power-platform-fundamentals,27017.0
+583,Miracles of Human Language An Introduction to Linguistics,Universiteit Leiden,Course,1 - 3 Months,4.8,967,Beginner,https://www.coursera.org/learn/human-language,6344.0
+584,Model Thinking,University of Michigan,Course,1 - 3 Months,4.7,2.3k,Intermediate,https://www.coursera.org/learn/model-thinking,193098.0
+585,Modern Project Management,SkillUp EdTech,Specialization,3 - 6 Months,4.8,2.2k,Beginner,https://www.coursera.org/specializations/skillup-edtech-modern-project-management,195766.0
+586,Modern and Contemporary Art and Design,The Museum of Modern Art,Specialization,3 - 6 Months,4.7,1k,Beginner,https://www.coursera.org/specializations/modern-contemporary-art-design,26206.0
+587,Music Business,Berklee,Specialization,3 - 6 Months,4.9,5.5k,Beginner,https://www.coursera.org/specializations/music-business,208022.0
+588,Music Education for Teachers,Berklee,Specialization,3 - 6 Months,4.8,3.2k,Intermediate,https://www.coursera.org/specializations/music-education,15961.0
+589,Music Production,Berklee,Specialization,3 - 6 Months,4.8,2.8k,Beginner,https://www.coursera.org/specializations/music-production,4779.0
+590,Narrative Economics,Yale University,Course,1 - 4 Weeks,4.8,2.8k,Beginner,https://www.coursera.org/learn/narrative-economics,44895.0
+591,Natural Language Processing,DeepLearning.AI,Specialization,3 - 6 Months,4.8,327,Intermediate,https://www.coursera.org/specializations/natural-language-processing,22160.0
+592,Natural Language Processing in TensorFlow,DeepLearning.AI,Course,1 - 4 Weeks,4.6,5.4k,Intermediate,https://www.coursera.org/learn/natural-language-processing-tensorflow,113524.0
+593,Natural Language Processing with Attention Models,DeepLearning.AI,Course,1 - 4 Weeks,4.6,6.3k,Intermediate,https://www.coursera.org/learn/attention-models-in-nlp,131516.0
+594,Natural Language Processing with Classification and Vector Spaces,DeepLearning.AI,Course,1 - 4 Weeks,4.4,927,Intermediate,https://www.coursera.org/learn/classification-vector-spaces-in-nlp,63912.0
+595,Natural Language Processing with Probabilistic Models,DeepLearning.AI,Course,1 - 4 Weeks,4.6,4.1k,Intermediate,https://www.coursera.org/learn/probabilistic-models-in-nlp,156198.0
+596,Natural Language Processing with Sequence Models,DeepLearning.AI,Course,1 - 4 Weeks,4.7,1.6k,Intermediate,https://www.coursera.org/learn/sequence-models-in-nlp,67360.0
+597,"Negotiation, Mediation and Conflict Resolution",ESSEC Business School,Specialization,3 - 6 Months,4.5,1.1k,Beginner,https://www.coursera.org/specializations/negotiation-mediation-conflict-resolution,58484.0
+598,Network Automation Engineering Fundamentals,Cisco Learning and Certifications,Specialization,3 - 6 Months,4.5,31,Beginner,https://www.coursera.org/specializations/networkautomation,6285.0
+599,Networking in Google Cloud,Google Cloud,Specialization,3 - 6 Months,4.5,26,Intermediate,https://www.coursera.org/specializations/networking-google-cloud-platform,47565.0
+600,Neural Networks and Deep Learning,DeepLearning.AI,Course,1 - 4 Weeks,4.7,48.1k,Intermediate,https://www.coursera.org/learn/neural-networks-deep-learning,38677.0
+601,Neuroscience and Neuroimaging,Johns Hopkins University,Specialization,3 - 6 Months,4.9,119.9k,Intermediate,https://www.coursera.org/specializations/computational-neuroscience,1248073.0
+602,OKR Certification Leadership and Goal Setting,Measure What Matters,Course,1 - 4 Weeks,4.9,91,Beginner,https://www.coursera.org/learn/okr,4921.0
+603,Object Oriented Java Programming Data Structures and Beyond,University of California San Diego,Specialization,3 - 6 Months,4.9,308,Intermediate,https://www.coursera.org/specializations/java-object-oriented,18584.0
+604,Object Oriented Programming in Java,Multiple educators,Specialization,3 - 6 Months,4.7,7.1k,Beginner,https://www.coursera.org/specializations/object-oriented-programming,71713.0
+605,Oil Gas Industry Operations and Markets,Duke University,Course,1 - 4 Weeks,4.7,2.8k,Mixed,https://www.coursera.org/learn/oilandgas,97809.0
+606,Omnichannel Retail Strategy,University of Pennsylvania,Specialization,1 - 3 Months,4.8,5.7k,Beginner,https://www.coursera.org/specializations/wharton-retail-strategy,130861.0
+607,Operating Systems and You Becoming a Power User,Google,Course,1 - 3 Months,4.7,285,Beginner,https://www.coursera.org/learn/os-power-user,4964.0
+608,Optical Engineering,University of Colorado Boulder,Specialization,3 - 6 Months,4.7,26.4k,Advanced,https://www.coursera.org/specializations/optical-engineering,449305.0
+609,Oracle SQL Databases,LearnQuest,Specialization,3 - 6 Months,4.4,329,Beginner,https://www.coursera.org/specializations/oracle-sql-databases,10912.0
+610,Organizational Analysis,Stanford University,Course,1 - 3 Months,4.6,581,Beginner,https://www.coursera.org/learn/organizational-analysis,12067.0
+611,Organizational Change and Culture for Adopting Google Cloud,Google Cloud,Specialization,3 - 6 Months,4.6,1.4k,Beginner,https://www.coursera.org/specializations/organizational-change-and-culture-for-adopting-google-cloud,167794.0
+612,Organizational Leadership,Northwestern University,Specialization,3 - 6 Months,4.7,3.5k,Intermediate,https://www.coursera.org/specializations/organizational-leadership,4612.0
+613,"Organizational Leadership in Diversity, Equity Inclusion",Rice University,Specialization,3 - 6 Months,4.7,4.5k,Intermediate,https://www.coursera.org/specializations/organizational-leadership-in-diversity-equity-and-inclusion,43814.0
+614,Overcoming Dyslexia,Yale University,Course,1 - 3 Months,4.8,184,Beginner,https://www.coursera.org/learn/dyslexia,3983.0
+615,Palliative Care Always,Stanford University,Specialization,3 - 6 Months,4.8,443,Beginner,https://www.coursera.org/specializations/palliative-care-always,36152.0
+616,Patient Safety,Johns Hopkins University,Specialization,3 - 6 Months,4.6,88,Beginner,https://www.coursera.org/specializations/patient-safety,3061.0
+617,People Analytics,University of Pennsylvania,Course,1 - 4 Weeks,4.8,1.6k,Mixed,https://www.coursera.org/learn/wharton-people-analytics,19182.0
+618,People and Soft Skills for Professional and Personal Success,IBM,Specialization,1 - 3 Months,4.6,5.9k,Beginner,https://www.coursera.org/specializations/people-and-soft-skills-for-professional-success,132652.0
+619,Personal Branding Stand Out and Succeed,University of Michigan,Course,1 - 4 Weeks,4.6,621,Beginner,https://www.coursera.org/learn/personal-branding-success,12933.0
+620,Pharmacy Technician Fundamentals,MedCerts,Specialization,3 - 6 Months,4.7,,Beginner,https://www.coursera.org/specializations/pharmacy-technician-fundamentals,47565.0
+621,Photography Basics and Beyond From Smartphone to DSLR,Michigan State University,Specialization,3 - 6 Months,4.7,106,Beginner,https://www.coursera.org/specializations/photography-basics,47565.0
+622,Plant Bioinformatic Methods,University of Toronto,Specialization,3 - 6 Months,4.7,6.2k,Beginner,https://www.coursera.org/specializations/plant-bioinformatic-methods,122177.0
+623,Play It Safe Manage Security Risks,Google,Course,1 - 4 Weeks,4.7,2k,Beginner,https://www.coursera.org/learn/manage-security-risks,14514.0
+624,Positive Psychology Martin E. P. Seligmans Visionary Science,University of Pennsylvania,Course,1 - 4 Weeks,4.8,3.4k,Beginner,https://www.coursera.org/learn/positive-psychology-visionary-science,260125.0
+625,PostgreSQL for Everybody,University of Michigan,Specialization,3 - 6 Months,4.9,5.7k,Intermediate,https://www.coursera.org/specializations/postgresql-for-everybody,105323.0
+626,Power Electronics,University of Colorado Boulder,Specialization,3 - 6 Months,4.7,1k,Intermediate,https://www.coursera.org/specializations/power-electronics,22570.0
+627,Practical Data Science on the AWS Cloud,Multiple educators,Specialization,1 - 3 Months,4.7,4k,Advanced,https://www.coursera.org/specializations/practical-data-science,42211.0
+628,Practical Data Science with MATLAB,MathWorks,Specialization,3 - 6 Months,4.5,520,Beginner,https://www.coursera.org/specializations/practical-data-science-matlab,19450.0
+629,Practical Guide to Trading,Interactive Brokers,Specialization,3 - 6 Months,4.4,483,Beginner,https://www.coursera.org/specializations/financial-instruments-trading-investing,23652.0
+630,Pre-MBA Statistics,IIMA - IIM Ahmedabad,Course,1 - 3 Months,4.5,141,Beginner,https://www.coursera.org/learn/pre-mbastatistics,83943.0
+631,Prepare Data for Exploration,Google,Course,1 - 3 Months,4.8,17.2k,Beginner,https://www.coursera.org/learn/data-preparation,645914.0
+632,Preparing Data for Analysis with Microsoft Excel,Microsoft,Course,1 - 4 Weeks,4.7,554,Beginner,https://www.coursera.org/learn/preparing-data-for-analysis-with-microsoft-excel,41610.0
+633,Preparing for Google Cloud Certification Cloud Architect,Google Cloud,Professional Certificate,3 - 6 Months,4.7,57.8k,Intermediate,https://www.coursera.org/professional-certificates/gcp-cloud-architect,50502.0
+634,Preparing for Google Cloud Certification Cloud Data Engineer,Google Cloud,Professional Certificate,3 - 6 Months,4.6,18.1k,Intermediate,https://www.coursera.org/professional-certificates/gcp-data-engineering,81451.0
+635,Preparing for Google Cloud Certification Cloud DevOps Engineer,Google Cloud,Professional Certificate,3 - 6 Months,4.7,52.7k,Beginner,https://www.coursera.org/professional-certificates/sre-devops-engineer-google-cloud,32789.0
+636,Preparing for Google Cloud Certification Cloud Developer,Google Cloud,Professional Certificate,3 - 6 Months,4.7,51.1k,Intermediate,https://www.coursera.org/professional-certificates/google-cloud-developer,6709.0
+637,Preparing for Google Cloud Certification Cloud Engineer,Google Cloud,Professional Certificate,3 - 6 Months,4.7,57.6k,Intermediate,https://www.coursera.org/professional-certificates/cloud-engineering-gcp,46038.0
+638,Preparing for Google Cloud Certification Cloud Network Engineer,Google Cloud,Professional Certificate,3 - 6 Months,4.7,48.1k,Intermediate,https://www.coursera.org/professional-certificates/google-cloud-networking,13907.0
+639,Preparing for Google Cloud Certification Machine Learning Engineer,Google Cloud,Professional Certificate,3 - 6 Months,4.6,25.4k,Intermediate,https://www.coursera.org/professional-certificates/preparing-for-google-cloud-machine-learning-engineer-professional-certificate,36932.0
+640,Pricing Strategy Optimization,University of Virginia,Specialization,3 - 6 Months,4.8,864,Beginner,https://www.coursera.org/specializations/uva-darden-bcg-pricing-strategy,16149.0
+641,Principles of Management,Johns Hopkins University,Course,1 - 4 Weeks,4.7,198,Mixed,https://www.coursera.org/learn/principles-of-management,28407.0
+642,Private Equity and Venture Capital,Universita Bocconi,Course,1 - 3 Months,4.8,7.8k,Mixed,https://www.coursera.org/learn/private-equity,237964.0
+643,Probabilistic Graphical Models,Stanford University,Specialization,3 - 6 Months,4.6,1.5k,Advanced,https://www.coursera.org/specializations/probabilistic-graphical-models,24547.0
+644,Probability Statistics for Machine Learning Data Science,DeepLearning.AI,Course,1 - 4 Weeks,4.6,170,Beginner,https://www.coursera.org/learn/machine-learning-probability-and-statistics,28290.0
+645,Process Data from Dirty to Clean,Google,Course,1 - 3 Months,4.8,13.1k,Beginner,https://www.coursera.org/learn/process-data,540235.0
+646,"Product Ideation, Design, and Management","University of Maryland, College Park",Specialization,3 - 6 Months,4.5,463,Beginner,https://www.coursera.org/specializations/product-ideation-design-and-management,13644.0
+647,Professional Skills for the Workplace,"University of California, Davis",Specialization,3 - 6 Months,4.7,2.4k,Beginner,https://www.coursera.org/specializations/professional-skills-for-the-workplace,18037.0
+648,Professionalism in Allied Health,MedCerts,Course,1 - 3 Months,4.8,82,Beginner,https://www.coursera.org/learn/professionalism-allied-health,4853.0
+649,"Programming Languages, Part A",University of Washington,Course,1 - 3 Months,4.9,1.8k,Intermediate,https://www.coursera.org/learn/programming-languages,172217.0
+650,Programming for Everybody (Getting Started with Python),University of Michigan,Course,1 - 3 Months,4.8,224.7k,Beginner,https://www.coursera.org/learn/python,2977587.0
+651,Programming in C A Hands-on Introduction,Codio,Specialization,3 - 6 Months,4.6,899,Beginner,https://www.coursera.org/specializations/hands-on-cpp,21364.0
+652,Programming with JavaScript,Meta,Course,1 - 3 Months,4.7,3k,Beginner,https://www.coursera.org/learn/programming-with-javascript,125088.0
+653,Project Execution Running the Project,Google,Course,1 - 3 Months,4.8,7k,Beginner,https://www.coursera.org/learn/project-execution-google,274698.0
+654,Project Initiation Starting a Successful Project,Google,Course,1 - 4 Weeks,4.8,17.6k,Beginner,https://www.coursera.org/learn/project-initiation-google,548356.0
+655,Project Launch,"University of California, Irvine",Course,1 - 3 Months,4.7,238,Beginner,https://www.coursera.org/learn/project-management,1544.0
+656,Project Management,University of Colorado Boulder,Specialization,1 - 3 Months,4.8,438,Beginner,https://www.coursera.org/specializations/meem-project-management,11334.0
+657,Project Management Other Tools for Career Development,"University of California, Irvine",Specialization,3 - 6 Months,4.7,34.8k,Beginner,https://www.coursera.org/specializations/project-management-success,88273.0
+658,"Project Management Foundations, Initiation, and Planning",SkillUp EdTech,Course,1 - 3 Months,4.6,67,Beginner,https://www.coursera.org/learn/project-management-foundations-initiation-and-planning,5815.0
+659,Project Management Principles and Practices,"University of California, Irvine",Specialization,3 - 6 Months,4.7,28.8k,Beginner,https://www.coursera.org/specializations/project-management,199781.0
+660,Project Management Foundations and Initiation,University of Colorado Boulder,Course,1 - 4 Weeks,4.8,290,Beginner,https://www.coursera.org/learn/project-management-foundations-initiation,14254.0
+661,Project Planning Putting It All Together,Google,Course,1 - 3 Months,4.8,10.5k,Beginner,https://www.coursera.org/learn/project-planning-google,347717.0
+662,Prompt Engineering for ChatGPT,Vanderbilt University,Course,1 - 3 Months,4.8,1.6k,Beginner,https://www.coursera.org/learn/prompt-engineering,176842.0
+663,Psychological First Aid,Johns Hopkins University,Course,1 - 3 Months,4.8,18.4k,Mixed,https://www.coursera.org/learn/psychological-first-aid,506226.0
+664,Psychological Research,American Psychological Association,Specialization,3 - 6 Months,4.5,13,Beginner,https://www.coursera.org/specializations/psychological-research,47565.0
+665,Put It to Work Prepare for Cybersecurity Jobs,Google,Course,1 - 3 Months,4.9,856,Beginner,https://www.coursera.org/learn/prepare-for-cybersecurity-jobs,50164.0
+666,PwC GST Taxation Executive,PwC India,Professional Certificate,3 - 6 Months,4.6,50,Beginner,https://www.coursera.org/professional-certificates/pwc-gst-taxation-executive,3429.0
+667,Python 3 Programming,University of Michigan,Specialization,3 - 6 Months,4.7,21.2k,Beginner,https://www.coursera.org/specializations/python-3-programming,215354.0
+668,Python Basics,University of Michigan,Course,1 - 4 Weeks,4.8,16.9k,Beginner,https://www.coursera.org/learn/python-basics,400399.0
+669,Python Data Structures,University of Michigan,Course,1 - 3 Months,4.9,93.9k,Beginner,https://www.coursera.org/learn/python-data,996497.0
+670,"Python Functions, Files, and Dictionaries",University of Michigan,Course,1 - 3 Months,4.9,5.1k,Beginner,https://www.coursera.org/learn/python-functions-files-dictionaries,111924.0
+671,Python Programming Fundamentals,Duke University,Course,1 - 4 Weeks,4.3,6,Beginner,https://www.coursera.org/learn/python-programming-fundamentals,4889.0
+672,Python Project for Data Engineering,IBM,Course,1 - 4 Weeks,4.6,473,Intermediate,https://www.coursera.org/learn/python-project-for-data-engineering,32522.0
+673,Python Project for Data Science,IBM,Course,1 - 4 Weeks,4.5,3.7k,Intermediate,https://www.coursera.org/learn/python-project-for-data-science,165927.0
+674,Python and Statistics for Financial Analysis,The Hong Kong University of Science and Technology,Course,1 - 4 Weeks,4.4,3.9k,Intermediate,https://www.coursera.org/learn/python-statistics-financial-analysis,205510.0
+675,Python for Cybersecurity,Infosec,Specialization,3 - 6 Months,4.5,328,Intermediate,https://www.coursera.org/specializations/pythonforcybersecurity,12936.0
+676,"Python for Data Science, AI Development",IBM,Course,1 - 3 Months,4.6,33.8k,Beginner,https://www.coursera.org/learn/python-for-applied-data-science-ai,671781.0
+677,Python for Everybody,University of Michigan,Specialization,3 - 6 Months,4.8,268.2k,Beginner,https://www.coursera.org/specializations/python,1560414.0
+678,"Python, Bash and SQL Essentials for Data Engineering",Duke University,Specialization,3 - 6 Months,4.5,292,Beginner,https://www.coursera.org/specializations/python-bash-sql-data-engineering-duke,12589.0
+679,Qualitative Research Design and Methods for Public Health,Emory University,Specialization,3 - 6 Months,4.7,165,Beginner,https://www.coursera.org/specializations/qualitative-research-design-and-methods-for-public-health,6803.0
+680,React Basics,Meta,Course,1 - 4 Weeks,4.7,1.3k,Beginner,https://www.coursera.org/learn/react-basics,87777.0
+681,Real-World Product Management,Advancing Women in Tech,Specialization,3 - 6 Months,4.5,787,Beginner,https://www.coursera.org/specializations/real-world-product-management,18964.0
+682,Reducing Gun Violence in America Evidence for Change,Johns Hopkins University,Course,1 - 3 Months,4.7,257,Beginner,https://www.coursera.org/learn/gun-violence,10852.0
+683,Regression Analysis Simplify Complex Data Relationships,Google,Course,1 - 3 Months,4.7,175,Advanced,https://www.coursera.org/learn/regression-analysis-simplify-complex-data-relationships,17632.0
+684,Regulatory Compliance,University of Pennsylvania,Specialization,3 - 6 Months,4.8,2k,Intermediate,https://www.coursera.org/specializations/regulatory-compliance,25738.0
+685,Reinforcement Learning,University of Alberta,Specialization,3 - 6 Months,4.7,3.3k,Intermediate,https://www.coursera.org/specializations/reinforcement-learning,47795.0
+686,Renewable Energy,University of Colorado Boulder,Specialization,3 - 6 Months,4.8,695,Beginner,https://www.coursera.org/specializations/renewable-energy,10096.0
+687,Risk Management,New York Institute of Finance,Specialization,3 - 6 Months,4.6,654,Beginner,https://www.coursera.org/specializations/risk-management,15411.0
+688,Reussir le Changement,ESSEC Business School,Course,1 - 3 Months,4.5,1.9k,Mixed,https://www.coursera.org/learn/reussir-le-changement,48460.0
+689,SAP Professional Fundamentals,SAP,Course,1 - 3 Months,4.7,347,Beginner,https://www.coursera.org/learn/sap-professional-fundamentals,40679.0
+690,SAP Technology Consultant,SAP,Professional Certificate,3 - 6 Months,4.7,469,Beginner,https://www.coursera.org/professional-certificates/sap-technology-consultant,27742.0
+691,SAS Programmer,SAS,Professional Certificate,3 - 6 Months,4.8,3.3k,Beginner,https://www.coursera.org/professional-certificates/sas-programming,32474.0
+692,SAS Visual Business Analytics,SAS,Professional Certificate,3 - 6 Months,4.7,1k,Beginner,https://www.coursera.org/professional-certificates/sas-visual-business-analytics,20355.0
+693,SQL for Data Science,"University of California, Davis",Course,1 - 4 Weeks,4.6,15.6k,Beginner,https://www.coursera.org/learn/sql-for-data-science,562911.0
+694,Sales Training for High Performing Teams,HubSpot Academy,Specialization,1 - 3 Months,4.7,952,Beginner,https://www.coursera.org/specializations/sales-training-high-performing-teams,13320.0
+695,Sales and CRM Overview,Salesforce,Course,1 - 4 Weeks,4.5,806,Beginner,https://www.coursera.org/learn/sales-and-crm-overview,46977.0
+696,Salesforce Sales Development Representative,Salesforce,Professional Certificate,3 - 6 Months,4.5,393,Beginner,https://www.coursera.org/professional-certificates/sales-development-representative,32074.0
+697,Salesforce Sales Operations,Salesforce,Professional Certificate,3 - 6 Months,4.6,1.1k,Beginner,https://www.coursera.org/professional-certificates/salesforce-sales-operations,38660.0
+698,Satisfaction Guaranteed Develop Customer Loyalty Online,Google,Course,1 - 4 Weeks,4.8,2k,Beginner,https://www.coursera.org/learn/satisfaction-guaranteed,69735.0
+699,School Health for Children and Adolescents,University of Colorado System,Specialization,3 - 6 Months,4.8,2.7k,Beginner,https://www.coursera.org/specializations/school-health-for-children-and-adolescents,19120.0
+700,Science of Exercise,University of Colorado Boulder,Course,1 - 4 Weeks,4.8,4.4k,Beginner,https://www.coursera.org/learn/science-exercise,330501.0
+701,Scrum Master,SkillUp EdTech,Specialization,3 - 6 Months,4.6,64,Beginner,https://www.coursera.org/specializations/skillup-edtech-scrummaster,47565.0
+702,Security Analyst Fundamentals,IBM,Specialization,3 - 6 Months,4.7,3.6k,Beginner,https://www.coursera.org/specializations/security-analyst-fundamentals,9872.0
+703,Security Principles,ISC2,Course,1 - 3 Months,4.7,166,Beginner,https://www.coursera.org/learn/-security-principles,10313.0
+704,Security in Google Cloud,Google Cloud,Specialization,3 - 6 Months,4.7,48k,Intermediate,https://www.coursera.org/specializations/security-google-cloud-platform,21352.0
+705,Sequence Models,DeepLearning.AI,Course,1 - 4 Weeks,4.8,29.6k,Intermediate,https://www.coursera.org/learn/nlp-sequence-models,386657.0
+706,"Sequences, Time Series and Prediction",DeepLearning.AI,Course,1 - 4 Weeks,4.7,4.9k,Intermediate,https://www.coursera.org/learn/tensorflow-sequences-time-series-and-prediction,125323.0
+707,Share Data Through the Art of Visualization,Google,Course,1 - 4 Weeks,4.6,7.6k,Beginner,https://www.coursera.org/learn/visualize-data,430820.0
+708,Six Sigma Black Belt,University System of Georgia,Specialization,3 - 6 Months,4.6,448,Intermediate,https://www.coursera.org/specializations/six-sigma-black-belt,13523.0
+709,Six Sigma Green Belt,University System of Georgia,Specialization,3 - 6 Months,4.7,4k,Intermediate,https://www.coursera.org/specializations/six-sigma-green-belt,59371.0
+710,Six Sigma Yellow Belt,University System of Georgia,Specialization,3 - 6 Months,4.6,8.9k,Beginner,https://www.coursera.org/specializations/six-sigma-fundamentals,100147.0
+711,Social Media Management,Meta,Course,1 - 4 Weeks,4.9,4.5k,Beginner,https://www.coursera.org/learn/social-media-management,155982.0
+712,Social Media Marketing,Northwestern University,Specialization,3 - 6 Months,4.6,5.3k,Beginner,https://www.coursera.org/specializations/social-media-marketing,101702.0
+713,Social Media Marketing in Practice,Digital Marketing Institute,Specialization,3 - 6 Months,4.5,304,Beginner,https://www.coursera.org/specializations/social-media-marketing-practice,15323.0
+714,Social and Economic Networks Models and Analysis,Stanford University,Course,1 - 3 Months,4.8,712,Advanced,https://www.coursera.org/learn/social-economic-networks,67579.0
+715,Software Architecture for Big Data,University of Colorado Boulder,Specialization,1 - 3 Months,3.3,31,Advanced,https://www.coursera.org/specializations/software-architecture-big-data,2433.0
+716,Software Design and Architecture,University of Alberta,Specialization,3 - 6 Months,4.6,3.6k,Beginner,https://www.coursera.org/specializations/software-design-architecture,66856.0
+717,Software Development Lifecycle,University of Minnesota,Specialization,3 - 6 Months,4.7,9k,Intermediate,https://www.coursera.org/specializations/software-development-lifecycle,53694.0
+718,Software Product Management,University of Alberta,Specialization,3 - 6 Months,4.7,11.3k,Beginner,https://www.coursera.org/specializations/product-management,75657.0
+719,Software Testing and Automation,University of Minnesota,Specialization,3 - 6 Months,4.3,763,Intermediate,https://www.coursera.org/specializations/software-testing-automation,53838.0
+720,Solar Energy Basics,The State University of New York,Course,1 - 3 Months,4.8,2.3k,Beginner,https://www.coursera.org/learn/solar-energy-basics,96030.0
+721,"Songwriting Writing, Arranging, and Producing Music",Berklee,Specialization,3 - 6 Months,4.8,2k,Beginner,https://www.coursera.org/specializations/songwriting,9978.0
+722,Soporte de Tecnologias de la Informacion de Google,Google,Professional Certificate,3 - 6 Months,4.9,14.5k,Beginner,https://www.coursera.org/professional-certificates/soporte-de-tecnologias-de-informacion-google,91508.0
+723,Sound the Alarm Detection and Response,Google,Course,1 - 4 Weeks,4.8,671,Beginner,https://www.coursera.org/learn/detection-and-response,57310.0
+724,"Spark, Hadoop, and Snowflake for Data Engineering",Duke University,Course,1 - 4 Weeks,4.7,,Advanced,https://www.coursera.org/learn/spark-hadoop-snowflake-data-engineering,47565.0
+725,"Speak English Professionally In Person, Online On the Phone",Georgia Institute of Technology,Course,1 - 3 Months,4.7,9.9k,Mixed,https://www.coursera.org/learn/speak-english-professionally,891265.0
+726,Sports Performance Analytics,University of Michigan,Specialization,3 - 6 Months,4.5,203,Intermediate,https://www.coursera.org/specializations/sports-analytics,11091.0
+727,Spring Framework,LearnQuest,Specialization,1 - 3 Months,3.9,460,Beginner,https://www.coursera.org/specializations/spring-framework,15250.0
+728,Stanford Introduction to Food and Health,Stanford University,Course,1 - 3 Months,4.7,30.2k,Beginner,https://www.coursera.org/learn/food-and-health,867047.0
+729,"Start the UX Design Process Empathize, Define, and Ideate",Google,Course,1 - 4 Weeks,4.8,13.3k,Beginner,https://www.coursera.org/learn/start-ux-design-process,423355.0
+730,Statistical Analysis with R for Public Health,Imperial College London,Specialization,3 - 6 Months,4.7,1.8k,Beginner,https://www.coursera.org/specializations/statistical-analysis-r-public-health,30316.0
+731,Statistics with Python,University of Michigan,Specialization,1 - 3 Months,4.6,3.1k,Beginner,https://www.coursera.org/specializations/statistics-with-python,77446.0
+732,Strategic Leadership and Management,University of Illinois at Urbana-Champaign,Specialization,3 - 6 Months,4.8,8.7k,Beginner,https://www.coursera.org/specializations/strategic-leadership,108408.0
+733,"Strategic Leadership Impact, Change, and Decision-Making",Dartmouth College,Specialization,3 - 6 Months,4.8,319,Beginner,https://www.coursera.org/specializations/strategic-leadership-impact-change-decision-making,9599.0
+734,Strategic Management and Innovation,Copenhagen Business School,Specialization,3 - 6 Months,4.7,4.8k,Beginner,https://www.coursera.org/specializations/strategic-management,49516.0
+735,Strategic Sales Management,Fundacao Instituto de Administracao,Specialization,3 - 6 Months,4.5,425,Intermediate,https://www.coursera.org/specializations/sales-management-bridging-gap-strategy-sales,12184.0
+736,Structuring Machine Learning Projects,DeepLearning.AI,Course,1 - 4 Weeks,4.8,49.4k,Beginner,https://www.coursera.org/learn/machine-learning-projects,436780.0
+737,Successful Negotiation Essential Strategies and Skills,University of Michigan,Course,1 - 3 Months,4.8,18.7k,Beginner,https://www.coursera.org/learn/negotiation-skills,1471908.0
+738,Supervised Machine Learning Regression and Classification,DeepLearning.AI,Course,1 - 4 Weeks,4.9,14.7k,Beginner,https://www.coursera.org/learn/machine-learning,468943.0
+739,Suporte em TI do Google,Google,Professional Certificate,3 - 6 Months,4.9,6k,Beginner,https://www.coursera.org/professional-certificates/suporte-em-ti-do-google,48447.0
+740,Supply Chain Analytics,Rutgers the State University of New Jersey,Specialization,3 - 6 Months,4.6,1.9k,Beginner,https://www.coursera.org/specializations/supply-chain-analytics,47565.0
+741,Supply Chain Logistics,Rutgers the State University of New Jersey,Course,1 - 4 Weeks,4.8,10.2k,Beginner,https://www.coursera.org/learn/supply-chain-logistics,241914.0
+742,Supply Chain Management,Rutgers the State University of New Jersey,Specialization,3 - 6 Months,4.7,13.8k,Beginner,https://www.coursera.org/specializations/supply-chain-management,162899.0
+743,Supply Chain Principles,Georgia Institute of Technology,Course,1 - 3 Months,4.6,2k,Mixed,https://www.coursera.org/learn/supply-chain-principles,86164.0
+744,Survey Data Collection and Analytics,"University of Maryland, College Park",Specialization,3 - 6 Months,4.3,1.3k,Beginner,https://www.coursera.org/specializations/data-collection,18545.0
+745,System Administration and IT Infrastructure Services,Google,Course,1 - 3 Months,4.7,23.6k,Beginner,https://www.coursera.org/learn/system-administration-it-infrastructure-services,389938.0
+746,Systems Biology and Biotechnology,Icahn School of Medicine at Mount Sinai,Specialization,3 - 6 Months,4.4,929,Intermediate,https://www.coursera.org/specializations/systems-biology,22565.0
+747,"TESOL Certificate, Part 1 Teach English Now",Arizona State University,Specialization,3 - 6 Months,4.9,16.9k,Beginner,https://www.coursera.org/specializations/tesol,76383.0
+748,"TESOL Certificate, Part 2 Teach English Now",Arizona State University,Specialization,3 - 6 Months,4.9,3.7k,Beginner,https://www.coursera.org/specializations/tesol-certificate-2,28610.0
+749,Tableau Business Intelligence Analyst,Tableau Learning Partner,Professional Certificate,3 - 6 Months,4.8,72,Beginner,https://www.coursera.org/professional-certificates/tableau-business-intelligence-analyst,5132.0
+750,Talent Acquisition,HRCI,Course,1 - 4 Weeks,4.8,188,Beginner,https://www.coursera.org/learn/talent-acquisition,15469.0
+751,Tally Bookkeeper,Tally Education,Professional Certificate,3 - 6 Months,4.5,90,Beginner,https://www.coursera.org/professional-certificates/tally-bookkeeper,6996.0
+752,Teamwork Skills Communicating Effectively in Groups,University of Colorado Boulder,Course,1 - 4 Weeks,4.7,3.2k,Beginner,https://www.coursera.org/learn/teamwork-skills-effective-communication,199099.0
+753,Technical Support Fundamentals,Google,Course,1 - 3 Months,4.8,145.1k,Beginner,https://www.coursera.org/learn/technical-support-fundamentals,1619616.0
+754,TensorFlow Advanced Techniques,DeepLearning.AI,Specialization,3 - 6 Months,4.8,1.4k,Intermediate,https://www.coursera.org/specializations/tensorflow-advanced-techniques,25821.0
+755,TensorFlow Data and Deployment,DeepLearning.AI,Specialization,3 - 6 Months,4.6,1.3k,Intermediate,https://www.coursera.org/specializations/tensorflow-data-and-deployment,32969.0
+756,Terrorism and Counterterrorism Comparing Theory and Practice,Universiteit Leiden,Course,1 - 3 Months,4.8,3.1k,Beginner,https://www.coursera.org/learn/terrorism,118500.0
+757,The Art of Visual Storytelling,University of Colorado Boulder,Specialization,3 - 6 Months,4.6,28,Beginner,https://www.coursera.org/specializations/the-art-of-visual-storytelling,3908.0
+758,The Arts and Science of Relationships Understanding Human Needs,University of Toronto,Course,1 - 3 Months,4.5,1.6k,Beginner,https://www.coursera.org/learn/human-needs,206340.0
+759,The Bits and Bytes of Computer Networking,Google,Course,1 - 3 Months,4.7,46.2k,Beginner,https://www.coursera.org/learn/computer-networking,684788.0
+760,The Business of Health Care,University of Pennsylvania,Specialization,3 - 6 Months,4.6,1.7k,Beginner,https://www.coursera.org/specializations/healthcare-administration-management,18237.0
+761,The Business of Music Production,Berklee,Specialization,3 - 6 Months,4.8,4.9k,Beginner,https://www.coursera.org/specializations/business-music-production,9178.0
+762,The DIY Musician,Berklee,Specialization,3 - 6 Months,4.7,3.4k,Beginner,https://www.coursera.org/specializations/diy-musician,18128.0
+763,The Fundamentals of Personal Finance,SoFi,Specialization,3 - 6 Months,4.6,219,Beginner,https://www.coursera.org/specializations/personal-finance-fundamentals,9020.0
+764,The Manager's Toolkit A Practical Guide to Managing People at Work,University of London,Course,1 - 3 Months,4.7,3.6k,Mixed,https://www.coursera.org/learn/people-management,147248.0
+765,The Materiality of ESG Factors,University of Pennsylvania,Specialization,3 - 6 Months,4.7,858,Beginner,https://www.coursera.org/specializations/materiality-esg-factors,13321.0
+766,The Path to Insights Data Models and Pipelines,Google,Course,1 - 4 Weeks,4.7,249,Advanced,https://www.coursera.org/learn/the-path-to-insights-data-models-and-pipelines,18866.0
+767,The Power of Statistics,Google,Course,1 - 3 Months,4.8,270,Advanced,https://www.coursera.org/learn/the-power-of-statistics,22700.0
+768,The Pronunciation of American English,"University of California, Irvine",Specialization,3 - 6 Months,4.8,955,Beginner,https://www.coursera.org/specializations/american-english-pronunciation,36409.0
+769,The Science of Well-Being,Yale University,Course,1 - 3 Months,4.9,36.8k,Mixed,https://www.coursera.org/learn/the-science-of-well-being,4594817.0
+770,The Singer Songwriter,Berklee,Specialization,3 - 6 Months,4.8,4.1k,Beginner,https://www.coursera.org/specializations/singer-songwriter,22093.0
+771,The Strategy of Content Marketing,"University of California, Davis",Course,1 - 3 Months,4.5,4.2k,Intermediate,https://www.coursera.org/learn/content-marketing,484753.0
+772,The hidden value Lean in manufacturing and services,Ecole des Ponts ParisTech,Course,1 - 4 Weeks,4.8,772,Beginner,https://www.coursera.org/learn/lean-manufacturing-services,30952.0
+773,Think Outside the Inbox Email Marketing,Google,Course,1 - 3 Months,4.8,1.4k,Beginner,https://www.coursera.org/learn/think-outside-the-inbox,97239.0
+774,Think like a CFO,IESE Business School,Specialization,3 - 6 Months,4.8,5.7k,Beginner,https://www.coursera.org/specializations/thinklikeacfo,14114.0
+775,Tools for Data Science,IBM,Course,1 - 3 Months,4.5,27.5k,Beginner,https://www.coursera.org/learn/open-source-tools-for-data-science,417032.0
+776,Tools of the Trade Linux and SQL,Google,Course,1 - 4 Weeks,4.8,1.5k,Beginner,https://www.coursera.org/learn/linux-and-sql,83945.0
+777,Trading Strategies in Emerging Markets,Indian School of Business,Specialization,3 - 6 Months,4.2,2.6k,Beginner,https://www.coursera.org/specializations/trading-strategy,61143.0
+778,Transforming the Fashion Business,"Parsons School of Design, The New School",Specialization,1 - 3 Months,4.7,414,Intermediate,https://www.coursera.org/specializations/transforming-fashion-business,10969.0
+779,U.S. Federal Taxation,University of Illinois at Urbana-Champaign,Specialization,3 - 6 Months,4.8,820,Intermediate,https://www.coursera.org/specializations/united-states-federal-taxation,15895.0
+780,UCI Project Management,"University of California, Irvine",Professional Certificate,3 - 6 Months,4.7,276,Beginner,https://www.coursera.org/professional-certificate/applied-project-management,1638.0
+781,UI UX Design,California Institute of the Arts,Specialization,3 - 6 Months,4.7,7.2k,Beginner,https://www.coursera.org/specializations/ui-ux-design,168771.0
+782,Uncommon Sense Teaching,Deep Teaching Solutions,Specialization,1 - 3 Months,4.9,610,Beginner,https://www.coursera.org/specializations/uncommon-sense-teaching-certificate,3014.0
+783,Understanding Clinical Research Behind the Statistics,University of Cape Town,Course,1 - 3 Months,4.8,3.2k,Beginner,https://www.coursera.org/learn/clinical-research,157979.0
+784,Understanding the Brain The Neurobiology of Everyday Life,The University of Chicago,Course,1 - 3 Months,4.9,2.7k,Beginner,https://www.coursera.org/learn/neurobiology,314934.0
+785,"Unsupervised Learning, Recommenders, Reinforcement Learning",DeepLearning.AI,Course,1 - 4 Weeks,4.9,1.9k,Beginner,https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning,131435.0
+786,User Experience Research and Design,University of Michigan,Specialization,3 - 6 Months,4.7,2k,Beginner,https://www.coursera.org/specializations/michiganux,52910.0
+787,Using Public Policy for Social Change,University of Michigan,Course,1 - 4 Weeks,4.7,,Beginner,https://www.coursera.org/learn/using-public-policy-for-social-change,47565.0
+788,Using Python to Access Web Data,University of Michigan,Course,1 - 3 Months,4.8,43.7k,Beginner,https://www.coursera.org/learn/python-network-data,638109.0
+789,Using Python to Interact with the Operating System,Google,Course,1 - 3 Months,4.7,5.8k,Beginner,https://www.coursera.org/learn/python-operating-system,216381.0
+790,Value Chain Management,University of Illinois at Urbana-Champaign,Specialization,3 - 6 Months,4.7,4.8k,Intermediate,https://www.coursera.org/specializations/value-chain-management,39413.0
+791,Value-Based Care,University of Houston,Specialization,3 - 6 Months,4.7,231,Beginner,https://www.coursera.org/specializations/value-based-care,6467.0
+792,Version Control,Meta,Course,1 - 4 Weeks,4.6,2.4k,Beginner,https://www.coursera.org/learn/introduction-to-version-control,101652.0
+793,Viral Marketing and How to Craft Contagious Content,University of Pennsylvania,Course,1 - 4 Weeks,4.8,5.1k,Mixed,https://www.coursera.org/learn/wharton-contagious-viral-marketing,286276.0
+794,Visual Elements of User Interface Design,California Institute of the Arts,Course,1 - 3 Months,4.7,5.7k,Beginner,https://www.coursera.org/learn/visual-elements-user-interface-design,226254.0
+795,Visualizing the Living Body Diagnostic Imaging,Yale University,Course,1 - 3 Months,4.8,171,Intermediate,https://www.coursera.org/learn/diagnosticimaging,21131.0
+796,Vital Signs Understanding What the Body Is Telling Us,University of Pennsylvania,Course,1 - 3 Months,4.8,6k,Mixed,https://www.coursera.org/learn/vital-signs,349514.0
+797,Vivre avec le TDAH a travers les ages,University of Geneva,Course,1 - 3 Months,4.9,67,Beginner,https://www.coursera.org/learn/tdah,7016.0
+798,Water Cooperation and Diplomacy,University of Geneva,Course,1 - 3 Months,4.7,,Intermediate,https://www.coursera.org/learn/water-cooperation-and-diplomacy,47565.0
+799,Web Applications for Everybody,University of Michigan,Specialization,3 - 6 Months,4.7,8.9k,Intermediate,https://www.coursera.org/specializations/web-applications,117127.0
+800,Web Design for Everybody Basics of Web Development Coding,University of Michigan,Specialization,3 - 6 Months,4.7,34.1k,Beginner,https://www.coursera.org/specializations/web-design,295119.0
+801,What is Compliance,University of Pennsylvania,Course,1 - 4 Weeks,4.8,1.1k,Mixed,https://www.coursera.org/learn/what-is-compliance,28380.0
+802,What is Data Science,IBM,Course,1 - 4 Weeks,4.7,65.9k,Beginner,https://www.coursera.org/learn/what-is-datascience,871872.0
+803,Wind Energy,Technical University of Denmark (DTU),Course,3 - 6 Months,4.7,7k,Mixed,https://www.coursera.org/learn/wind-energy,157149.0
+804,Work Smarter with Microsoft Excel,Microsoft,Course,1 - 3 Months,4.7,1.4k,Beginner,https://www.coursera.org/learn/microsoft-excel-work-smarter,103317.0
+805,Work Smarter with Microsoft Word,Microsoft,Course,1 - 3 Months,4.7,936,Beginner,https://www.coursera.org/learn/microsoft-word-work-smarter,66198.0
+806,Write A Feature Length Screenplay For Film Or Television,Michigan State University,Course,3 - 6 Months,4.5,191,Beginner,https://www.coursera.org/learn/write-a-feature-length-screenplay-for-film-or-television,65654.0
+807,Write Professional Emails in English,Georgia Institute of Technology,Course,1 - 3 Months,4.8,16.7k,Mixed,https://www.coursera.org/learn/professional-emails-english,912865.0
+808,Write Your First Novel,Michigan State University,Course,3 - 6 Months,4.3,282,Beginner,https://www.coursera.org/learn/write-your-first-novel,143100.0
+809,Writing in the Sciences,Stanford University,Course,1 - 3 Months,4.9,8.1k,Beginner,https://www.coursera.org/learn/sciwrite,467216.0

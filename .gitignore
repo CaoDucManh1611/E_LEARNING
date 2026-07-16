@@ -1,0 +1,26 @@
+# Maven build output
+DoAnKPDL/doan/target/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/settings.json
+
+# Logs
+*.log
+logs/
+
+# Maven wrapper cache
+DoAnKPDL/doan/.mvn/wrapper/maven-wrapper.jar
+
+# Application secrets (nếu có)
+DoAnKPDL/doan/src/main/resources/application-prod.properties
+
+# Upload files
+uploads/
+
+# OS files
+Thumbs.db
+.DS_Store

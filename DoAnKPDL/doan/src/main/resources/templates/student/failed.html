@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Thanh Toán Thất Bại — EduRecommend</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        :root {
+            --bg:       #faf7f2;
+            --surface:  #ffffff;
+            --border:   #e4ddd3;
+            --green:    #2d6a4f;
+            --text:     #1c2b22;
+            --muted:    #7a8c80;
+            --red:      #dc2626;
+            --red-lt:   #fef2f2;
+            --shadow:   0 10px 30px rgba(45,106,79,.08);
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .failed-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            width: 100%;
+            max-width: 440px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .icon-wrap {
+            width: 72px; height: 72px;
+            background: var(--red-lt);
+            color: var(--red);
+            font-size: 2.2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-weight: 700;
+        }
+
+        .title {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--red);
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .desc {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+
+        .details-box {
+            background: #fafafa;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .details-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            padding: 6px 0;
+        }
+        .details-row span:first-child { color: var(--muted); font-weight: 500; }
+        .details-row span:last-child { color: var(--text); font-weight: 700; }
+
+        .btn {
+            display: block;
+            width: 100%;
+            background: #4b5563;
+            color: white;
+            padding: 13px;
+            border-radius: 11px;
+            font-size: 0.92rem;
+            font-weight: 800;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(75,85,99,0.25);
+            transition: all 0.15s;
+        }
+        .btn:hover { background: #374151; }
+    </style>
+</head>
+<body>
+
+<div class="failed-card">
+    <div class="icon-wrap">✕</div>
+    
+    <h1 class="title">Thanh Toán Thất Bại</h1>
+    <p class="desc">Giao dịch thanh toán đã bị hủy bỏ hoặc có lỗi xảy ra trong quá trình xử lý chuyển khoản.</p>
+    
+    <div class="details-box" th:if="${order != null}">
+        <div class="details-row">
+            <span>Mã đơn hàng:</span>
+            <span th:text="'#' + ${order.id}">#1</span>
+        </div>
+        <div class="details-row">
+            <span>Số tiền:</span>
+            <span th:text="${#numbers.formatDecimal(order.tongTien, 1, 'POINT', 0, 'COMMA')} + 'đ'">1.000.000đ</span>
+        </div>
+        <div class="details-row">
+            <span>Trạng thái giao dịch:</span>
+            <span style="color: var(--red);">Thất bại (Cancelled)</span>
+        </div>
+    </div>
+    
+    <a href="/student/courses" class="btn">Quay Lại Mua Sắm</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Thanh Toán Thành Công — EduRecommend</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        :root {
+            --bg:       #faf7f2;
+            --surface:  #ffffff;
+            --border:   #e4ddd3;
+            --green:    #2d6a4f;
+            --green2:   #40916c;
+            --green-lt: #d8f3dc;
+            --text:     #1c2b22;
+            --muted:    #7a8c80;
+            --shadow:   0 10px 30px rgba(45,106,79,.08);
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .success-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            width: 100%;
+            max-width: 440px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .icon-wrap {
+            width: 72px; height: 72px;
+            background: var(--green-lt);
+            color: var(--green);
+            font-size: 2.2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .title {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--green);
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .desc {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+
+        .details-box {
+            background: #fafafa;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .details-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            padding: 6px 0;
+        }
+        .details-row span:first-child { color: var(--muted); font-weight: 500; }
+        .details-row span:last-child { color: var(--text); font-weight: 700; }
+
+        .btn {
+            display: block;
+            width: 100%;
+            background: var(--green);
+            color: white;
+            padding: 13px;
+            border-radius: 11px;
+            font-size: 0.92rem;
+            font-weight: 800;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(45,106,79,0.25);
+            transition: all 0.15s;
+        }
+        .btn:hover { background: var(--green2); }
+    </style>
+</head>
+<body>
+
+<div class="success-card">
+    <div class="icon-wrap">✓</div>
+    
+    <h1 class="title">Thanh Toán Thành Công!</h1>
+    <p class="desc">Cảm ơn bạn đã mua sắm. Đơn hàng của bạn đã được thanh toán và kích hoạt quyền học tập thành công.</p>
+    
+    <div class="details-box">
+        <div class="details-row">
+            <span>Mã đơn hàng:</span>
+            <span th:text="'#' + ${order.id}">#1</span>
+        </div>
+        <div class="details-row">
+            <span>Số tiền đã thanh toán:</span>
+            <span th:text="${#numbers.formatDecimal(order.tongTien, 1, 'POINT', 0, 'COMMA')} + 'đ'">1.000.000đ</span>
+        </div>
+        <div class="details-row">
+            <span>Phương thức:</span>
+            <span>Chuyển khoản Ngân hàng</span>
+        </div>
+    </div>
+    
+    <a href="/student/courses" class="btn">Bắt Đầu Học Ngay</a>
+</div>
+
+</body>
+</html>

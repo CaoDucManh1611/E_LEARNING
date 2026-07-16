@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>Quản Lý Đăng Ký — EduRecommend</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg:       #faf7f2;
+            --bg2:      #f3ede4;
+            --surface:  #ffffff;
+            --border:   #e4ddd3;
+            --green:    #2d6a4f;
+            --green2:   #40916c;
+            --green3:   #52b788;
+            --green-lt: #d8f3dc;
+            --text:     #1c2b22;
+            --muted:    #7a8c80;
+            --accent:   #b7791f;
+            --red:      #dc2626;
+            --red-lt:   #fef2f2;
+            --shadow:   0 2px 16px rgba(45,106,79,.10);
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(250,247,242,.92);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 48px;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 64px;
+        }
+        .logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -.5px; color: var(--green); }
+        .logo em { font-style: normal; color: var(--accent); }
+        .nav-links { display: flex; gap: 6px; }
+        .nav-link {
+            color: var(--muted); text-decoration: none;
+            font-size: .85rem; font-weight: 500;
+            padding: 7px 16px; border-radius: 8px; transition: all .18s;
+        }
+        .nav-link:hover { color: var(--green); background: var(--green-lt); }
+        .nav-link.active { color: var(--green); background: var(--green-lt); font-weight: 600; }
+
+        /* ── MAIN ── */
+        .main { max-width: 1100px; margin: 0 auto; padding: 36px 48px 80px; }
+
+        /* ── PAGE HEADER ── */
+        .page-header { margin-bottom: 28px; }
+        .page-title { font-size: 1.6rem; font-weight: 800; letter-spacing: -.5px; color: var(--text); margin-bottom: 4px; }
+        .page-sub { font-size: .85rem; color: var(--muted); }
+
+        /* ── STATS ── */
+        .stats-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 28px; }
+        .stat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px; padding: 22px 24px;
+            transition: box-shadow .2s;
+        }
+        .stat-card:hover { box-shadow: var(--shadow); }
+        .stat-card .n { font-size: 2rem; font-weight: 800; letter-spacing: -1px; color: var(--green); }
+        .stat-card .l { font-size: .78rem; color: var(--muted); margin-top: 3px; font-weight: 500; }
+        .stat-card.amber .n { color: var(--accent); }
+        .stat-card.soft .n { color: var(--green2); }
+
+        /* ── TOOLBAR ── */
+        .toolbar { display: flex; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
+        .search-input {
+            flex: 1; min-width: 240px;
+            background: var(--surface); border: 1.5px solid var(--border);
+            border-radius: 11px; padding: 10px 16px;
+            color: var(--text); font-family: 'Inter', sans-serif; font-size: .88rem;
+            outline: none; transition: border-color .18s;
+        }
+        .search-input:focus { border-color: var(--green3); }
+        .search-input::placeholder { color: var(--muted); }
+        .btn-refresh {
+            background: var(--green-lt); border: 1px solid rgba(45,106,79,.2);
+            color: var(--green); border-radius: 11px; padding: 10px 20px;
+            font-size: .85rem; font-weight: 600; cursor: pointer;
+            font-family: 'Inter', sans-serif; transition: all .18s; white-space: nowrap;
+        }
+        .btn-refresh:hover { background: var(--green3); color: white; }
+
+        /* ── TABLE ── */
+        .table-wrap {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px; overflow: hidden;
+            box-shadow: 0 1px 8px rgba(45,106,79,.06);
+        }
+        table { width: 100%; border-collapse: collapse; }
+        thead { background: var(--bg2); }
+        th {
+            padding: 12px 18px; text-align: left;
+            font-size: .72rem; font-weight: 700;
+            color: var(--muted); letter-spacing: .6px; text-transform: uppercase;
+            border-bottom: 1px solid var(--border);
+        }
+        td {
+            padding: 14px 18px; font-size: .85rem;
+            border-bottom: 1px solid rgba(228,221,211,.6);
+        }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: rgba(216,243,220,.25); }
+
+        .td-name { font-weight: 600; color: var(--text); }
+        .td-email { color: var(--muted); font-size: .82rem; }
+        .td-phone { color: var(--muted); font-size: .8rem; }
+        .td-course {
+            max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+            font-size: .83rem;
+        }
+        .td-course a { color: var(--green); text-decoration: none; font-weight: 500; }
+        .td-course a:hover { text-decoration: underline; }
+        .td-time { color: var(--muted); font-size: .78rem; white-space: nowrap; }
+
+        .badge-no {
+            display: inline-flex; align-items: center; justify-content: center;
+            background: var(--green-lt); color: var(--green);
+            border-radius: 7px; padding: 2px 9px;
+            font-size: .73rem; font-weight: 700;
+        }
+
+        .btn-del {
+            background: var(--red-lt); border: 1px solid #fecaca;
+            color: var(--red); border-radius: 8px; padding: 5px 12px;
+            font-size: .75rem; font-weight: 600; cursor: pointer;
+            font-family: 'Inter', sans-serif; transition: all .18s;
+        }
+        .btn-del:hover { background: #fee2e2; border-color: #fca5a5; }
+
+        /* ── EMPTY / LOADING ── */
+        .empty-state { text-align: center; padding: 60px; color: var(--muted); }
+        .empty-icon { font-size: 2.5rem; margin-bottom: 12px; }
+        .loading-row td { text-align: center; padding: 48px; color: var(--muted); }
+
+        /* ── TOAST ── */
+        .toast {
+            position: fixed; bottom: 28px; right: 28px; z-index: 999;
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 13px; padding: 13px 20px; font-size: .84rem;
+            opacity: 0; transform: translateY(8px); transition: all .28s; pointer-events: none;
+            box-shadow: var(--shadow); font-weight: 500;
+        }
+        .toast.show { opacity: 1; transform: none; }
+        .toast.success { border-color: rgba(82,183,136,.4); color: var(--green); }
+        .toast.error   { border-color: #fecaca; color: var(--red); }
+
+        @media (max-width: 800px) {
+            nav { padding: 0 18px; }
+            .main { padding: 24px 18px 60px; }
+            .stats-row { grid-template-columns: 1fr 1fr; }
+            th:nth-child(4), td:nth-child(4) { display: none; }
+        }
+        @media (max-width: 520px) {
+            .stats-row { grid-template-columns: 1fr; }
+            th:nth-child(3), td:nth-child(3) { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Edu<em>Recommend</em></div>
+    <div class="nav-links">
+        <a href="/index.html" class="nav-link">Trang chủ</a>
+        <a href="/" class="nav-link">Gợi ý</a>
+        <a href="/admin.html" class="nav-link active">Quản lý</a>
+    </div>
+</nav>
+
+<div class="main">
+    <div class="page-header">
+        <div class="page-title">📋 Danh sách đăng ký</div>
+        <div class="page-sub">Sinh viên đã điền thông tin từ trang gợi ý khóa học</div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-row">
+        <div class="stat-card">
+            <div class="n" id="totalCount">—</div>
+            <div class="l">Tổng lượt đăng ký</div>
+        </div>
+        <div class="stat-card soft">
+            <div class="n" id="todayCount">—</div>
+            <div class="l">Đăng ký hôm nay</div>
+        </div>
+        <div class="stat-card amber">
+            <div class="n" id="courseCount">—</div>
+            <div class="l">Khóa học khác nhau</div>
+        </div>
+    </div>
+
+    <!-- TOOLBAR -->
+    <div class="toolbar">
+        <input type="text" class="search-input" id="searchInput" placeholder="🔍 Tìm theo tên, email, khóa học..."/>
+        <button class="btn-refresh" onclick="loadData()">↻ Làm mới</button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-wrap">
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Họ tên</th>
+                <th>Email</th>
+                <th>SĐT</th>
+                <th>Khóa học quan tâm</th>
+                <th>Thời gian</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody id="tableBody">
+            <tr class="loading-row"><td colspan="7">⏳ Đang tải...</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+    let allData = [];
+
+    function formatTime(str) {
+        if (!str) return '—';
+        const d = new Date(str);
+        return d.toLocaleDateString('vi-VN') + ' ' + d.toLocaleTimeString('vi-VN', {hour:'2-digit',minute:'2-digit'});
+    }
+
+    function isToday(str) {
+        if (!str) return false;
+        return new Date(str).toDateString() === new Date().toDateString();
+    }
+
+    function showToast(msg, type='success') {
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.className = `toast show ${type}`;
+        setTimeout(() => t.className = 'toast', 2600);
+    }
+
+    function renderTable(data) {
+        const tbody = document.getElementById('tableBody');
+        if (!data.length) {
+            tbody.innerHTML = `<tr><td colspan="7"><div class="empty-state"><div class="empty-icon">📭</div><div>Chưa có đăng ký nào</div></div></td></tr>`;
+            return;
+        }
+        tbody.innerHTML = data.map((s, i) => `
+      <tr>
+        <td><span class="badge-no">${i+1}</span></td>
+        <td class="td-name">${s.hoTen || '—'}</td>
+        <td class="td-email">${s.email || '—'}</td>
+        <td class="td-phone">${s.soDienThoai || '—'}</td>
+        <td class="td-course" title="${s.khoaHocQuan || ''}">
+          ${s.urlKhoaHoc
+            ? `<a href="${s.urlKhoaHoc}" target="_blank">${s.khoaHocQuan || '—'}</a>`
+            : (s.khoaHocQuan || '—')}
+        </td>
+        <td class="td-time">${formatTime(s.thoiGianDangKy)}</td>
+        <td><button class="btn-del" onclick="deleteRow(${s.id})">Xóa</button></td>
+      </tr>
+    `).join('');
+    }
+
+    async function loadData() {
+        document.getElementById('tableBody').innerHTML =
+            `<tr class="loading-row"><td colspan="7">⏳ Đang tải...</td></tr>`;
+        try {
+            const res = await fetch('/api/student-info/all');
+            allData = await res.json();
+
+            document.getElementById('totalCount').textContent = allData.length;
+            document.getElementById('todayCount').textContent = allData.filter(s => isToday(s.thoiGianDangKy)).length;
+            const uniqueCourses = new Set(allData.map(s => s.khoaHocQuan).filter(Boolean));
+            document.getElementById('courseCount').textContent = uniqueCourses.size;
+
+            renderTable(allData);
+        } catch(e) {
+            document.getElementById('tableBody').innerHTML =
+                `<tr class="loading-row"><td colspan="7" style="color:var(--red)">❌ Lỗi tải dữ liệu: ${e.message}</td></tr>`;
+        }
+    }
+
+    async function deleteRow(id) {
+        if (!confirm('Xóa bản ghi này?')) return;
+        try {
+            const res = await fetch(`/api/student-info/${id}`, {method:'DELETE'});
+            const json = await res.json();
+            if (json.success) { showToast('✅ Đã xóa!'); loadData(); }
+            else throw new Error(json.message);
+        } catch(e) {
+            showToast('❌ Lỗi: ' + e.message, 'error');
+        }
+    }
+
+    document.getElementById('searchInput').addEventListener('input', function() {
+        const q = this.value.toLowerCase();
+        const filtered = allData.filter(s =>
+            (s.hoTen||'').toLowerCase().includes(q) ||
+            (s.email||'').toLowerCase().includes(q) ||
+            (s.khoaHocQuan||'').toLowerCase().includes(q)
+        );
+        renderTable(filtered);
+    });
+
+    loadData();
+</script>
+</body>
+</html>

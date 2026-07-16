@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title th:text="${isUpdate} ? 'Cập Nhật Khóa Học — EduRecommend' : 'Thêm Khóa Học Mới — EduRecommend'">Khóa Học</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        :root {
+            --bg:       #faf7f2;
+            --surface:  #ffffff;
+            --border:   #e4ddd3;
+            --green:    #2d6a4f;
+            --green2:   #40916c;
+            --green-lt: #d8f3dc;
+            --text:     #1c2b22;
+            --muted:    #7a8c80;
+            --accent:   #b7791f;
+            --shadow:   0 10px 30px rgba(45,106,79,.08);
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .form-container {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 500px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 24px;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 14px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text);
+            outline: none;
+            transition: border-color 0.18s;
+        }
+
+        .form-group input[type="file"] {
+            background: transparent;
+            border: none;
+            padding: 4px 0;
+            cursor: pointer;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            border-color: var(--green2);
+            background: var(--surface);
+        }
+
+        .current-img-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 4px;
+        }
+        .current-img {
+            width: 64px;
+            height: 48px;
+            border-radius: 6px;
+            object-fit: cover;
+            border: 1px solid var(--border);
+        }
+        .current-img-lbl {
+            font-size: 0.78rem;
+            color: var(--muted);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 13px;
+            border-radius: 11px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.18s;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btn-submit {
+            background: var(--green);
+            color: white;
+            box-shadow: 0 4px 16px rgba(45,106,79,0.2);
+        }
+        .btn-submit:hover { background: var(--green2); }
+
+        .btn-cancel {
+            background: var(--border);
+            color: var(--text);
+        }
+        .btn-cancel:hover { background: #d7cdbe; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1 class="title" th:text="${isUpdate} ? 'Cập Nhật Khóa Học' : 'Thêm Khóa Học Mới'">Khóa Học</h1>
+
+    <form th:action="${isUpdate} ? @{/admin/courses/update} : @{/admin/courses/create}" 
+          th:object="${course}" method="POST" enctype="multipart/form-data">
+        
+        <input type="hidden" th:field="*{id}" th:if="${isUpdate}"/>
+
+        <div class="form-group">
+            <label for="tenKhoaHoc">Tên Khóa Học *</label>
+            <input type="text" id="tenKhoaHoc" th:field="*{tenKhoaHoc}" placeholder="Ví dụ: Lập trình Java từ cơ bản đến nâng cao" required autocomplete="off"/>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Danh Mục *</label>
+            <select id="category" th:field="*{category.id}" required>
+                <option value="" disabled selected>-- Chọn danh mục --</option>
+                <option th:each="cat : ${categories}" th:value="${cat.id}" th:text="${cat.tenDanhMuc}"></option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="gia">Giá Bán (VNĐ) *</label>
+            <input type="number" id="gia" th:field="*{gia}" placeholder="Ví dụ: 500000" min="0" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="capDo">Cấp Độ *</label>
+            <select id="capDo" th:field="*{capDo}" required>
+                <option value="Beginner" selected>Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="imageFile">Hình Ảnh Khóa Học *</label>
+            <!-- Cho phép chọn file cục bộ -->
+            <input type="file" id="imageFile" name="imageFile" accept="image/*" th:required="${!isUpdate}"/>
+            
+            <!-- Hiển thị ảnh hiện tại khi cập nhật -->
+            <div class="current-img-wrap" th:if="${isUpdate && course.hinhAnh != null && !#strings.isEmpty(course.hinhAnh)}">
+                <img th:src="${course.hinhAnh}" class="current-img" alt="Ảnh hiện tại"/>
+                <span class="current-img-lbl">(Hình ảnh hiện tại đang sử dụng)</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="trangThai">Trạng Thái *</label>
+            <select id="trangThai" th:field="*{trangThai}" required>
+                <option value="active" selected>Đang Bán (Active)</option>
+                <option value="hidden">Ẩn (Hidden)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="moTa">Mô Tả Khóa Học</label>
+            <textarea id="moTa" th:field="*{moTa}" placeholder="Nhập tóm tắt giới thiệu khóa học..."></textarea>
+        </div>
+
+        <div class="btn-group">
+            <a href="/admin/courses" class="btn btn-cancel">Hủy Bỏ</a>
+            <button type="submit" class="btn btn-submit">Lưu Lại</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

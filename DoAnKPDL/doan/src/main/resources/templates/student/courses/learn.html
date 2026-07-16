@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title th:text="'Đang học: ' + ${course.tenKhoaHoc} + ' — EduRecommend'">Lớp Học</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        :root {
+            --bg:       #111827;
+            --surface:  #1f2937;
+            --border:   #374151;
+            --green:    #10b981;
+            --green-bg: #064e3b;
+            --text:     #f9fafb;
+            --muted:    #9ca3af;
+            --accent:   #f59e0b;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* ── CLASSROOM HEADER ── */
+        header {
+            background: #1f2937;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+            z-index: 10;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .btn-back {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 8px 14px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.05);
+            transition: all 0.18s;
+        }
+        .btn-back:hover {
+            color: white;
+            background: rgba(255,255,255,0.1);
+        }
+        .course-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        /* Nút nhận chứng chỉ */
+        .btn-cert {
+            background: linear-gradient(135deg, var(--accent), #d97706);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(245,158,11,0.3);
+            transition: all 0.15s;
+            animation: pulse 2s infinite;
+        }
+        .btn-cert:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 18px rgba(245,158,11,0.5);
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        /* ── CLASSROOM MAIN ── */
+        .classroom-main {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* ── VIDEO CONTAINER ── */
+        .video-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg);
+            position: relative;
+            overflow-y: auto;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            outline: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .video-info-bar {
+            background: #1f2937;
+            padding: 16px 24px;
+            border-top: 1px solid var(--border);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .current-lesson-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        /* ── SYLLABUS SIDEBAR ── */
+        .syllabus-sidebar {
+            width: 320px;
+            background: #1f2937;
+            border-left: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+        
+        /* Progress Box */
+        .progress-box {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(255,255,255,0.01);
+        }
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--muted);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .progress-container-bar {
+            width: 100%;
+            height: 6px;
+            background: var(--bg);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background: var(--green);
+            width: 0%;
+            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .sidebar-title {
+            padding: 16px 24px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            border-bottom: 1px solid var(--border);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--green);
+        }
+
+        .lesson-list {
+            display: flex;
+            flex-direction: column;
+        }
+        .lesson-item {
+            padding: 18px 24px;
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.18s;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .lesson-item:hover {
+            background: rgba(255,255,255,0.03);
+        }
+        .lesson-item.active {
+            background: var(--green-bg);
+            border-left: 4px solid var(--green);
+        }
+        
+        .lesson-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Checkbox hoàn thành */
+        .progress-checkbox {
+            width: 16px; height: 16px;
+            accent-color: var(--green);
+            cursor: pointer;
+            margin-right: 2px;
+            flex-shrink: 0;
+        }
+
+        .lesson-badge {
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: var(--green);
+            background: rgba(16,185,129,0.15);
+            padding: 2px 6px;
+            border-radius: 4px;
+            min-width: 48px;
+            text-align: center;
+        }
+        .lesson-item.active .lesson-badge {
+            color: white;
+            background: var(--green);
+        }
+        .lesson-title-txt {
+            font-size: 0.88rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        .lesson-dur {
+            font-size: 0.78rem;
+            color: var(--muted);
+            margin-left: 84px;
+        }
+        .lesson-item.active .lesson-dur {
+            color: #a7f3d0;
+        }
+
+        .no-lesson-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            height: 100%;
+            color: var(--muted);
+        }
+        
+        .fade-out {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- CLASSROOM HEADER -->
+<header>
+    <div class="header-left">
+        <a th:href="@{/student/courses/{id}(id=${course.id})}" class="btn-back">← Chi Tiết Khóa Học</a>
+        <div class="course-title" th:text="${course.tenKhoaHoc}">Lập trình Java</div>
+    </div>
+    
+    <!-- Nút nhận chứng chỉ chỉ hiện khi 100% -->
+    <div id="certBtnWrap" th:style="${enrollment.tienDoPercent == 100} ? 'display: block' : 'display: none'">
+        <a th:href="@{/student/certificate/{id}(id=${enrollment.id})}" class="btn-cert">🎓 Nhận Chứng Chỉ Tốt Nghiệp</a>
+    </div>
+</header>
+
+<!-- CLASSROOM MAIN -->
+<div class="classroom-main">
+    
+    <!-- LEFT: VIDEO & CONTENT -->
+    <div class="video-container">
+        <!-- Nếu có bài học -->
+        <div class="video-wrapper" th:if="${!#lists.isEmpty(progressList)}">
+            <video id="videoPlayer" controls autoplay th:src="${progressList[0].lesson.videoUrl}">
+                Trình duyệt của bạn không hỗ trợ phát video HTML5.
+            </video>
+        </div>
+        
+        <!-- Khung hiển thị thông tin bài học -->
+        <div class="video-info-bar" th:if="${!#lists.isEmpty(progressList)}">
+            <div class="current-lesson-title" id="currentTitle" th:text="${progressList[0].lesson.tieuDe}">Bài 1: Giới thiệu khóa học</div>
+            <div style="font-size: 0.8rem; color: var(--muted);">EduRecommend Player</div>
+        </div>
+
+        <!-- Nếu chưa có bài học -->
+        <div class="no-lesson-container" th:unless="${!#lists.isEmpty(progressList)}">
+            <span style="font-size: 2.5rem;">📁</span>
+            <p>Khóa học hiện chưa được Admin thêm bài học nào.</p>
+        </div>
+        
+        <!-- KHUNG BÌNH LUẬN & HỎI ĐÁP BÀI GIẢNG -->
+        <div class="comments-container" th:if="${!#lists.isEmpty(progressList)}" style="margin: 30px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; box-shadow: var(--shadow); color: var(--text);">
+            <h3 style="font-size: 1.05rem; font-weight: 800; color: var(--green); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                <span>💬</span> Hỏi Đáp & Thảo Luận Bài Học
+            </h3>
+
+            <!-- Form gửi câu hỏi mới -->
+            <div class="comment-form" style="margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px;">
+                <textarea id="newCommentText" rows="3" placeholder="Đặt câu hỏi hoặc chia sẻ thắc mắc của bạn về bài giảng này..." 
+                          style="width: 100%; padding: 12px 16px; border: 1.5px solid var(--border); border-radius: 10px; outline: none; font-family: 'Inter', sans-serif; font-size: 0.88rem; background: var(--bg); color: var(--text); transition: all 0.15s; resize: vertical;"></textarea>
+                <div style="display: flex; justify-content: flex-end;">
+                    <button type="button" onclick="submitComment()" class="btn-cert" style="width: auto; padding: 10px 20px; font-size: 0.85rem; border-radius: 8px; margin-top: 0; background: var(--green); cursor: pointer;">Gửi câu hỏi</button>
+                </div>
+            </div>
+
+            <!-- Vùng danh sách bình luận (sẽ được tải qua AJAX) -->
+            <div id="commentsList" style="display: flex; flex-direction: column; gap: 16px; text-align: left;">
+                <!-- Bình luận sẽ được render bằng JS ở đây -->
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT: SYLLABUS -->
+    <div class="syllabus-sidebar">
+        
+        <!-- Hộp hiển thị tiến độ % -->
+        <div class="progress-box">
+            <div class="progress-header">
+                <span>Tiến Độ Học Tập</span>
+                <span id="progressText" th:text="${enrollment.tienDoPercent} + '% Hoàn thành'">0% Hoàn thành</span>
+            </div>
+            <div class="progress-container-bar">
+                <div class="progress-bar-fill" id="progressFill" th:style="'width: ' + ${enrollment.tienDoPercent} + '%'"></div>
+            </div>
+        </div>
+
+        <div class="sidebar-title">Danh sách bài học</div>
+        
+        <div class="lesson-list" th:if="${!#lists.isEmpty(progressList)}">
+            <div th:each="prog, stat : ${progressList}" 
+                 class="lesson-item" 
+                 th:classappend="${stat.first} ? 'active' : ''"
+                 th:attr="data-video-url=${prog.lesson.videoUrl}, data-title=${prog.lesson.tieuDe}, data-lesson-id=${prog.lesson.id}"
+                 onclick="selectLesson(this)">
+                
+                <div class="lesson-header">
+                    <!-- Checkbox hoàn thành bài học, tích AJAX -->
+                    <input type="checkbox" class="progress-checkbox" 
+                           th:checked="${prog.hoanThanh}" 
+                           th:onclick="'event.stopPropagation(); toggleProgress(this, ' + ${enrollment.id} + ', ' + ${prog.lesson.id} + ');'" />
+                    
+                    <span class="lesson-badge" th:text="'Bài ' + ${prog.lesson.thuTu}">Bài 1</span>
+                    <span class="lesson-title-txt" th:text="${prog.lesson.tieuDe}">Tiêu đề bài học</span>
+                </div>
+                <div class="lesson-dur" th:text="${prog.lesson.thoiLuongPhut != null ? prog.lesson.thoiLuongPhut + ' phút' : 'Chưa cập nhật'}">10 phút</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT FOR DYNAMIC LESSON SWITCHING & AJAX PROGRESS & COMMENTS -->
+<script>
+    let activeLessonId = null;
+
+    function selectLesson(element) {
+        const items = document.querySelectorAll('.lesson-item');
+        items.forEach(item => item.classList.remove('active'));
+        element.classList.add('active');
+
+        const videoUrl = element.getAttribute('data-video-url');
+        const title = element.getAttribute('data-title');
+        const lessonId = element.getAttribute('data-lesson-id');
+
+        const player = document.getElementById('videoPlayer');
+        const currentTitle = document.getElementById('currentTitle');
+
+        if (player && videoUrl) {
+            player.classList.add('fade-out');
+            setTimeout(() => {
+                player.src = videoUrl;
+                player.load();
+                player.play();
+                currentTitle.innerText = title;
+                player.classList.remove('fade-out');
+            }, 300);
+        }
+
+        // Tải bình luận cho bài học mới chọn
+        if (lessonId) {
+            loadComments(lessonId);
+        }
+    }
+
+    // GỌI AJAX TOGGLE PROGRESS
+    async function toggleProgress(checkbox, enrollmentId, lessonId) {
+        const isChecked = checkbox.checked;
+        
+        const formData = new FormData();
+        formData.append("enrollmentId", enrollmentId);
+        formData.append("lessonId", lessonId);
+        formData.append("hoanThanh", isChecked);
+
+        try {
+            const res = await fetch("/api/progress/toggle", {
+                method: "POST",
+                body: formData
+            });
+            const result = await res.json();
+            if (result.success) {
+                const newPercent = result.percent;
+                
+                // Cập nhật thanh tiến độ %
+                document.getElementById("progressFill").style.width = newPercent + "%";
+                document.getElementById("progressText").innerText = newPercent + "% Hoàn thành";
+
+                // Ẩn/Hiện nút nhận chứng chỉ
+                const certWrap = document.getElementById("certBtnWrap");
+                if (newPercent === 100) {
+                    certWrap.style.display = "block";
+                } else {
+                    certWrap.style.display = "none";
+                }
+            }
+        } catch (e) {
+            console.error(e);
+            alert("Không thể cập nhật tiến trình bài học.");
+            checkbox.checked = !isChecked; // Khôi phục trạng thái checkbox nếu lỗi
+        }
+    }
+
+    // TẢI BÌNH LUẬN Q&A BÀI HỌC QUA AJAX
+    async function loadComments(lessonId) {
+        activeLessonId = lessonId;
+        const container = document.getElementById("commentsList");
+        if (!container) return;
+
+        container.innerHTML = '<div style="text-align: center; color: var(--muted); padding: 15px; font-size: 0.88rem;">Đang tải hỏi đáp...</div>';
+
+        try {
+            const res = await fetch(`/api/lessons/${lessonId}/comments`);
+            const comments = await res.json();
+            container.innerHTML = "";
+
+            if (comments.length === 0) {
+                container.innerHTML = '<div style="color: var(--muted); text-align: center; font-style: italic; padding: 15px; font-size: 0.82rem;">Chưa có câu hỏi nào cho bài giảng này. Hãy là người đầu tiên thảo luận!</div>';
+                return;
+            }
+
+            comments.forEach(c => {
+                const commentEl = document.createElement("div");
+                commentEl.style.borderBottom = "1px solid var(--border)";
+                commentEl.style.paddingBottom = "14px";
+                commentEl.style.marginBottom = "14px";
+                commentEl.style.display = "flex";
+                commentEl.style.flexDirection = "column";
+                commentEl.style.gap = "6px";
+
+                const isTeacher = c.user.role === 'admin' ? '<span style="background: var(--accent); color: white; font-size: 0.65rem; font-weight: 800; padding: 2px 6px; border-radius: 4px; margin-left: 6px;">Giáo viên</span>' : '';
+                
+                commentEl.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <div style="background: var(--green-lt); color: var(--green); width: 26px; height: 26px; border-radius: 50%; font-size: 0.75rem; font-weight: 800; display: flex; align-items: center; justify-content: center;">
+                                ${c.user.hoTen.charAt(0).toUpperCase()}
+                            </div>
+                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--text);">${c.user.hoTen} ${isTeacher}</span>
+                        </div>
+                        <span style="font-size: 0.75rem; color: var(--muted);">${c.createdAt}</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text); line-height: 1.4; margin-left: 34px;">${c.noiDung}</p>
+                    <div style="margin-left: 34px; margin-top: 4px;">
+                        <button type="button" onclick="showReplyForm(${c.id})" style="background: none; border: none; color: var(--green); font-size: 0.78rem; font-weight: 700; cursor: pointer; padding: 0;">💬 Trả lời</button>
+                    </div>
+                    
+                    <!-- Form phản hồi con -->
+                    <div id="replyForm-${c.id}" style="display: none; margin-left: 34px; margin-top: 10px; flex-direction: column; gap: 8px;">
+                        <textarea id="replyText-${c.id}" rows="2" placeholder="Nhập phản hồi giải đáp..." style="width: 100%; padding: 8px 12px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.82rem; font-family: 'Inter', sans-serif; outline: none; background: var(--bg); color: var(--text); resize: vertical;"></textarea>
+                        <div style="display: flex; gap: 8px; justify-content: flex-end;">
+                            <button type="button" onclick="hideReplyForm(${c.id})" style="background: var(--border); color: var(--text); border: none; padding: 5px 12px; border-radius: 6px; font-size: 0.78rem; font-weight: 700; cursor: pointer;">Hủy</button>
+                            <button type="button" onclick="submitReply(${c.id})" style="background: var(--green); color: white; border: none; padding: 5px 12px; border-radius: 6px; font-size: 0.78rem; font-weight: 700; cursor: pointer;">Gửi phản hồi</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Khung chứa danh sách phản hồi con -->
+                    <div id="repliesContainer-${c.id}" style="margin-left: 34px; margin-top: 12px; display: flex; flex-direction: column; gap: 12px; border-left: 2px solid var(--border); padding-left: 14px;">
+                        <!-- Các reply con tự động render -->
+                    </div>
+                `;
+
+                // Render replies con
+                const repliesContainer = commentEl.querySelector(`#repliesContainer-${c.id}`);
+                if (c.replies && c.replies.length > 0) {
+                    c.replies.forEach(r => {
+                        const rEl = document.createElement("div");
+                        rEl.style.display = "flex";
+                        rEl.style.flexDirection = "column";
+                        rEl.style.gap = "4px";
+
+                        const rTeacher = r.user.role === 'admin' ? '<span style="background: var(--accent); color: white; font-size: 0.65rem; font-weight: 800; padding: 2px 6px; border-radius: 4px; margin-left: 6px;">Giáo viên</span>' : '';
+                        
+                        rEl.innerHTML = `
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="display: flex; align-items: center; gap: 6px;">
+                                    <div style="background: #e4ddd3; color: var(--text); width: 22px; height: 22px; border-radius: 50%; font-size: 0.7rem; font-weight: 800; display: flex; align-items: center; justify-content: center;">
+                                        ${r.user.hoTen.charAt(0).toUpperCase()}
+                                    </div>
+                                    <span style="font-size: 0.8rem; font-weight: 700; color: var(--text);">${r.user.hoTen} ${rTeacher}</span>
+                                </div>
+                                <span style="font-size: 0.72rem; color: var(--muted);">${r.createdAt}</span>
+                            </div>
+                            <p style="font-size: 0.82rem; color: var(--text); line-height: 1.4; margin-left: 28px; margin-top: 2px;">${r.noiDung}</p>
+                        `;
+                        repliesContainer.appendChild(rEl);
+                    });
+                } else {
+                    repliesContainer.style.display = "none";
+                }
+
+                container.appendChild(commentEl);
+            });
+        } catch (e) {
+            console.error(e);
+            container.innerHTML = '<div style="color: var(--red); text-align: center; padding: 15px; font-size: 0.82rem;">Lỗi tải dữ liệu thảo luận.</div>';
+        }
+    }
+
+    function showReplyForm(commentId) {
+        document.getElementById(`replyForm-${commentId}`).style.display = "flex";
+    }
+
+    function hideReplyForm(commentId) {
+        document.getElementById(`replyForm-${commentId}`).style.display = "none";
+        document.getElementById(`replyText-${commentId}`).value = "";
+    }
+
+    async function submitComment() {
+        const textVal = document.getElementById("newCommentText").value.trim();
+        if (!textVal) {
+            alert("Vui lòng nhập nội dung câu hỏi!");
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append("noiDung", textVal);
+
+        try {
+            const res = await fetch(`/api/lessons/${activeLessonId}/comments`, {
+                method: "POST",
+                body: formData
+            });
+            if (res.status === 401) {
+                alert("Vui lòng đăng nhập để gửi thảo luận!");
+                window.location.href = "/login";
+                return;
+            }
+            if (res.ok) {
+                document.getElementById("newCommentText").value = "";
+                loadComments(activeLessonId);
+            } else {
+                const err = await res.json();
+                alert(err.error || "Gửi thảo luận thất bại.");
+            }
+        } catch (e) {
+            console.error(e);
+            alert("Lỗi kết nối khi gửi câu hỏi.");
+        }
+    }
+
+    async function submitReply(commentId) {
+        const textVal = document.getElementById(`replyText-${commentId}`).value.trim();
+        if (!textVal) {
+            alert("Vui lòng nhập nội dung phản hồi!");
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append("noiDung", textVal);
+        formData.append("parentId", commentId);
+
+        try {
+            const res = await fetch(`/api/lessons/${activeLessonId}/comments`, {
+                method: "POST",
+                body: formData
+            });
+            if (res.status === 401) {
+                alert("Vui lòng đăng nhập để gửi phản hồi!");
+                window.location.href = "/login";
+                return;
+            }
+            if (res.ok) {
+                hideReplyForm(commentId);
+                loadComments(activeLessonId);
+            } else {
+                const err = await res.json();
+                alert(err.error || "Gửi phản hồi thất bại.");
+            }
+        } catch (e) {
+            console.error(e);
+            alert("Lỗi kết nối khi gửi phản hồi.");
+        }
+    }
+
+    // Tự động tải bình luận của bài học khi load trang (hỗ trợ đọc tham số từ URL)
+    document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const paramLessonId = urlParams.get('lessonId');
+        
+        let targetItem = null;
+        if (paramLessonId) {
+            targetItem = document.querySelector(`.lesson-item[data-lesson-id="${paramLessonId}"]`);
+        }
+        
+        if (!targetItem) {
+            targetItem = document.querySelector('.lesson-item.active');
+        }
+        
+        if (targetItem) {
+            selectLesson(targetItem);
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Đăng Nhập — EduRecommend</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        :root {
+            --bg:       #faf7f2;
+            --surface:  #ffffff;
+            --border:   #e4ddd3;
+            --green:    #2d6a4f;
+            --green2:   #40916c;
+            --green-lt: #d8f3dc;
+            --text:     #1c2b22;
+            --muted:    #7a8c80;
+            --red:      #dc2626;
+            --shadow:   0 10px 30px rgba(45,106,79,.08);
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .auth-container {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 420px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 1.6rem;
+            color: var(--green);
+            text-align: center;
+            margin-bottom: 8px;
+            letter-spacing: -1px;
+        }
+        .logo em { font-style: normal; color: #b7791f; }
+
+        .auth-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-align: center;
+            color: var(--text);
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input {
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 14px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text);
+            outline: none;
+            transition: border-color 0.18s;
+        }
+
+        .form-group input:focus {
+            border-color: var(--green2);
+            background: var(--surface);
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            font-size: 0.85rem;
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        .remember-me input {
+            accent-color: var(--green);
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 13px;
+            background: var(--green);
+            color: white;
+            border: none;
+            border-radius: 11px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            transition: background 0.18s, transform 0.15s;
+            box-shadow: 0 4px 16px rgba(45,106,79,0.2);
+        }
+
+        .btn-submit:hover {
+            background: var(--green2);
+            transform: translateY(-1px);
+        }
+
+        .alert {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: var(--red);
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .alert-info {
+            background: var(--green-lt);
+            border: 1px solid rgba(45,106,79,0.2);
+            color: var(--green);
+        }
+
+        .auth-footer {
+            margin-top: 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        .auth-footer a {
+            color: var(--green);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+        .auth-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="auth-container">
+    <div class="logo">Edu<em>Recommend</em></div>
+    <div class="auth-title">Đăng nhập tài khoản học tập</div>
+
+    <!-- Alert thông báo lỗi đăng nhập -->
+    <div class="alert" th:if="${param.error}">
+        ⚠️ Email hoặc mật khẩu không chính xác!
+    </div>
+
+    <!-- Alert thông báo đã logout -->
+    <div class="alert alert-info" th:if="${param.logout}">
+        ℹ️ Bạn đã đăng xuất thành công.
+    </div>
+    
+    <!-- Alert thông báo hết hạn session -->
+    <div class="alert" th:if="${param.expired}">
+        ⚠️ Tài khoản đã được đăng nhập ở thiết bị khác!
+    </div>
+
+    <form th:action="@{/login}" method="POST">
+        <div class="form-group">
+            <label for="username">Địa chỉ Email</label>
+            <input type="email" id="username" name="username" placeholder="example@gmail.com" required autocomplete="off"/>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" name="password" placeholder="••••••••" required/>
+        </div>
+
+        <div class="remember-me">
+            <input type="checkbox" id="remember-me" name="remember-me"/>
+            <label for="remember-me">Duy trì đăng nhập trên thiết bị này</label>
+        </div>
+
+        <button type="submit" class="btn-submit">Đăng Nhập</button>
+    </form>
+
+    <div class="auth-footer">
+        Bạn chưa có tài khoản? <a href="/register">Đăng ký ngay</a>
+    </div>
+</div>
+
+</body>
+</html>

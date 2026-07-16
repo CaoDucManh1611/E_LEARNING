@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cấu Hình Mã Giảm Giá — EduRecommend</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        :root {
+            --bg:       #faf7f2;
+            --surface:  #ffffff;
+            --border:   #e4ddd3;
+            --green:    #2d6a4f;
+            --green2:   #40916c;
+            --green-lt: #d8f3dc;
+            --text:     #1c2b22;
+            --muted:    #7a8c80;
+            --accent:   #b7791f;
+            --red:      #dc2626;
+            --shadow:   0 2px 16px rgba(45,106,79,.06);
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* ── SIDEBAR LAYOUT ── */
+        .sidebar {
+            width: 260px;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            padding: 30px 20px;
+            position: fixed;
+            top: 0; bottom: 0; left: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.3rem;
+            letter-spacing: -.5px;
+            color: var(--green);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .logo em { font-style: normal; color: var(--accent); }
+
+        .menu-title {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--muted);
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            padding-left: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex-grow: 1;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 12px 16px;
+            border-radius: 10px;
+            transition: all .18s;
+        }
+        .nav-link:hover {
+            background: var(--green-lt);
+            color: var(--green);
+        }
+        .nav-link.active {
+            background: var(--green);
+            color: white;
+            font-weight: 600;
+        }
+
+        .nav-link-logout {
+            margin-top: auto;
+            background: #fef2f2;
+            color: var(--red);
+            font-weight: 600;
+        }
+        .nav-link-logout:hover {
+            background: var(--red);
+            color: white;
+        }
+
+        /* ── MAIN CONTENT ── */
+        .main-content {
+            margin-left: 260px;
+            flex: 1;
+            padding: 40px 48px;
+            min-height: 100vh;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .page-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -.5px;
+            color: var(--text);
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            max-width: 600px;
+        }
+
+        /* ── FORMS ── */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--muted);
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            outline: none;
+            transition: border-color .15s;
+        }
+        .form-control:focus {
+            border-color: var(--green);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.15s;
+        }
+        .btn-primary { background: var(--green); color: white; }
+        .btn-primary:hover { background: var(--green2); }
+        .btn-secondary { background: var(--border); color: var(--text); margin-left: 10px; }
+        .btn-secondary:hover { background: #dcd4c8; }
+    </style>
+</head>
+<body>
+
+<!-- SIDEBAR NAVIGATION -->
+<div class="sidebar">
+    <div class="logo">Edu<em>Recommend</em></div>
+    
+    <div class="menu-title">Điều hướng</div>
+    <div class="nav-links">
+        <a href="/admin" class="nav-link">
+            <span>📊</span> Tổng quan
+        </a>
+        <a href="/admin/categories" class="nav-link">
+            <span>📁</span> Quản lý Danh mục
+        </a>
+        <a href="/admin/courses" class="nav-link">
+            <span>📚</span> Quản lý Khóa học
+        </a>
+        <a href="/admin/coupons" class="nav-link active">
+            <span>🎟️</span> Quản lý Mã giảm giá
+        </a>
+        <a href="/admin/reviews" class="nav-link">
+            <span>⭐</span> Quản lý Đánh giá
+        </a>
+        <a href="/admin/refunds" class="nav-link">
+            <span>🛡️</span> Quản lý Hoàn tiền
+        </a>
+        
+        <div class="menu-title" style="margin-top: 20px;">Học viên</div>
+        <a href="/" class="nav-link">
+            <span>🏠</span> Về Trang chủ
+        </a>
+        
+        <a href="/logout" class="nav-link nav-link-logout">
+            <span>🚪</span> Đăng xuất
+        </a>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+    <div class="page-header">
+        <h1 class="page-title" th:text="${coupon.id != null} ? 'Cập Nhật Mã Giảm Giá' : 'Tạo Mã Giảm Giá Mới'">Tạo Mã Giảm Giá Mới</h1>
+    </div>
+
+    <div class="card">
+        <form th:action="@{/admin/coupons/save}" method="POST" th:object="${coupon}">
+            <input type="hidden" th:field="*{id}"/>
+            
+            <div class="form-group">
+                <label class="form-label" for="maCode">Mã Code (Chữ in hoa, không dấu, viết liền)</label>
+                <input type="text" id="maCode" th:field="*{maCode}" class="form-control" 
+                       placeholder="Ví dụ: SUMMER2026" required
+                       style="text-transform: uppercase;"/>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="loaiGiam">Loại Giảm Giá</label>
+                <select id="loaiGiam" th:field="*{loaiGiam}" class="form-control" required>
+                    <option value="percent">Phần trăm (%)</option>
+                    <option value="fixed">Cố định (VNĐ)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="giaTri">Giá Trị Giảm (% hoặc VNĐ)</label>
+                <input type="number" id="giaTri" th:field="*{giaTri}" class="form-control"
+                       min="1" step="any" placeholder="Ví dụ: 15 (%) hoặc 50000 (VNĐ)" required/>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="soLuong">Số Lượng Lượt Dùng Tối Đa</label>
+                <input type="number" id="soLuong" th:field="*{soLuong}" class="form-control"
+                       min="1" placeholder="Ví dụ: 100" required/>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="ngayHetHan">Ngày Hết Hạn (để trống = không giới hạn)</label>
+                <input type="date" id="ngayHetHan" th:field="*{ngayHetHan}" class="form-control"/>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <button type="submit" class="btn btn-primary">Lưu cấu hình</button>
+                <a href="/admin/coupons" class="btn btn-secondary">Hủy bỏ</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

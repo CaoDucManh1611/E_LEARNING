@@ -1,0 +1,2238 @@
+skill_id,ten_ky_nang
+1,Datenanalyse
+2,Datenbereinigung
+3,Datenvisualisierung (DataViz)
+4,Fallstudie
+5,Job-Portfolio
+6,Prasentation
+7,R Markdown
+8,R-Programmierung
+9,Rstudio
+10,Tabellenkalkulation
+11,Tableau-Software
+12,3d reconstruction
+13,AB Testing
+14,AB Testing and Model Deployment
+15,AI Productivity
+16,AI for Good project framework
+17,AI strategy
+18,AI terminology
+19,API Integration
+20,API endpoints
+21,API security
+22,APIs
+23,AWS Account Management
+24,AWS Certification Preparation
+25,AWS Identity and Access Management
+26,AWS Management Console
+27,AWS cloud
+28,Ableton
+29,Academic Writing
+30,Access Control
+31,Access Structure
+32,Accessibility
+33,Accounting
+34,Accounting Analysis
+35,Accounting Concepts and Measurement
+36,Accounting Cycle
+37,Accounts receivable and cash receipts
+38,Acercamiento al cliente
+39,Active Listening
+40,Ad Management
+41,Adaptability
+42,Adaptation
+43,Adjective
+44,Adobe XD
+45,Adquisiciones
+46,Advertising Effectiveness Evaluation
+47,Advice for Model Development
+48,Aerospace Engineering
+49,Affordable Care Act
+50,Agile Leadership
+51,Agile Management
+52,Agile PM
+53,Agile Software Development
+54,Agile Supply Chain Planning
+55,Agile and Scrum
+56,Agregacao de dados
+57,Agregacion de datos
+58,Agregation des donnees
+59,Air Quality Monitoring
+60,Airplane conception and validation
+61,Alcatel Business Communications
+62,Algorithm Design
+63,Algorithmes et techniques de chiffrement
+64,Algorithmic Trading
+65,Algorithms
+66,Algorithms On Strings
+67,Algoritma dan Teknik Enkripsi
+68,Allergyasthma.
+69,Amazon Web Services (Amazon AWS)
+70,American Law
+71,American Law Policy
+72,Amplify your presentations by having ChatGPT critique your slides or other important documents
+73,Analise dos dados
+74,Analisis
+75,Analisis y estadisticas de marketing
+76,Analyse de donnees
+77,Analyse des donnees
+78,Analysis for Instructional Design
+79,Analysis of Algorithms
+80,Analytics
+81,Analyze Metrics
+82,Analyze and model losses in magnetic components
+83,Anatomy
+84,Anatomy of metastasis
+85,Android Software Development
+86,Android Studio
+87,Angularjs
+88,Animal
+89,Animal Behavior
+90,Anomaly Detection
+91,Ansible
+92,Apache Airflow
+93,Apache Hadoop
+94,Apache Kafka
+95,Apache Spark
+96,Apigee API Platform
+97,AppSheet
+98,AppSheet Automation
+99,Application Design
+100,Application Programming Interfaces (API)
+101,Application development
+102,Application of Financial Statistics and Probability
+103,Applied Creativity
+104,Applied aerodynamics
+105,Appreciative Inquiry
+106,Approvisionnement
+107,Approximation Algorithm
+108,Apresentacao
+109,Architecting on AWS
+110,Architecture
+111,Arduino
+112,Armature
+113,Arrays
+114,Art
+115,Art History
+116,Artifical Intelligence
+117,Artificial Intelligence (AI)
+118,Artificial Neural Network
+119,Asesoramiento
+120,Asking Effective Questions
+121,Assembly Language
+122,Assembly Languages
+123,Assertiveness
+124,Asset
+125,Asset Accounting
+126,Asset Allocation
+127,Asset Management
+128,Astrobiology
+129,Ataques historicos a la ciberseguridad
+130,Attaques historiques
+131,Attention Models
+132,Audio Editing
+133,Audio Production
+134,Audio Recording
+135,Audio processing
+136,Audit
+137,Aufgabenschatzung
+138,Augmentation
+139,Augmented Intelligence
+140,Augmented reality (AR)
+141,Authentication
+142,Authentication and authorization
+143,Autocad
+144,Autocorrect
+145,Autodesk
+146,Autodesk Revit Architecture
+147,Autoimmunity
+148,Automate the editing and management of images and video while cataloging it
+149,Automate the extraction of structured data from documents and the creation of other documents and PowerPoint
+150,Automated Machine Learning (AutoML)
+151,Automating System Administration Tasks with Python
+152,Automation
+153,Autoscaling
+154,Backpropagation
+155,Backup
+156,Backups
+157,Backward Induction
+158,Balance Sheet
+159,Bank Reconciliations
+160,Banking
+161,Base Address
+162,Bash
+163,Bash (Unix Shell)
+164,Bash Scripting
+165,Basic Descriptive Statistics
+166,Basic Programming Language
+167,Basic Python Data Structures
+168,Basic Python Syntax
+169,Basic understanding of macOS helpful
+170,Basics of Databases (SQLNoSQL)
+171,Basis (Linear Algebra)
+172,Basis Of Accounting
+173,Bayes' Theorem
+174,Bayesian Game
+175,Bayesian Network
+176,Bayesian Probability
+177,Bayesian Statistics
+178,Beam Robotics
+179,Behavioral Economics
+180,Behavioral Finance
+181,Behavioral Health
+182,Belief Propagation
+183,Beschaffung
+184,Bestimmung der Stichprobengroe
+185,Big Data
+186,Bigquery
+187,Binary Classification
+188,Binary Code
+189,Binomial Distribution
+190,Bioconductor
+191,Biodiversity
+192,Biodiversity Monitoring
+193,Bioinformatics
+194,Bioinformatics Algorithms
+195,Bioinformatics Analysis
+196,Biological Neuron Model
+197,Biology
+198,Biopython
+199,Biostatistics
+200,Biotechnology
+201,Black-box Testing Techniques
+202,Blockchain
+203,Blockchain (Database)
+204,Blockchains
+205,Bonds
+206,Bookkeeping
+207,Bootstrap
+208,Brain
+209,Brainstorming
+210,Brand Communication
+211,Brand Equity
+212,Brand Identity
+213,Brand Management
+214,Brand Marketing
+215,Branding
+216,Branding Communication
+217,Broadcast
+218,Budget
+219,Build a data model
+220,Build a personal brand on LinkedIn
+221,Build a simple UI using the Layout Editor
+222,Build and sustain a social media community
+223,Building Relationships
+224,Building customer loyalty
+225,Business
+226,Business Analysis
+227,Business Analytics
+228,Business Applications
+229,Business Case Analysis
+230,Business Communication
+231,Business Intelligence
+232,Business Intelligence (BI)
+233,Business Law
+234,Business Marketing
+235,Business Model
+236,Business Modeling
+237,Business Plan
+238,Business Planning
+239,Business Process
+240,Business Processes and Requirements
+241,Business Strategy
+242,Business Transformation
+243,Business Value
+244,Business Writing
+245,Business and process analysis
+246,Bussiness
+247,C
+248,C (Programming Language)
+249,C Programming
+250,C Sharp (C) (Programming Language)
+251,C coding
+252,C programming
+253,CICD
+254,CICD Pipeline
+255,COBOL Divisions
+256,COBOL Structure
+257,COBOL coding
+258,CRISP-DM
+259,CRM
+260,CX
+261,Cadre de cybersecurite (CSF) du NIST
+262,Calculating Dosages
+263,Calculos de dados
+264,Calculos en torno a los datos
+265,Calculs de donnees
+266,Calculus
+267,Camera and imaging
+268,Campaign Management
+269,Cancer Biology
+270,Cancer treatment
+271,Capabilities Analysis
+272,Capital Budgeting
+273,Cardiovascular understanding
+274,Career
+275,Career Development
+276,Career Fulfillment
+277,Cartography
+278,Cascading Style Sheets (CSS)
+279,Case Management
+280,Cash Flow Analysis
+281,Caso practico
+282,Causal Inference
+283,Causality
+284,Centurylink
+285,Change Management
+286,Channel and Direct-to-Consumer Pricing
+287,Character Strengths And Virtues
+288,Chart
+289,Charte de projet
+290,ChatGPT
+291,Chatbot
+292,Chatterbot
+293,Chemistry
+294,Chinese Language
+295,Choose social media platforms and tools
+296,Chords
+297,Ciberseguranca
+298,Ciberseguridad
+299,Civil Engineering
+300,Classification Algorithms
+301,Client Research and Analysis
+302,Client engagement and communication
+303,Climate Change
+304,Clinical Data Management
+305,Clinical Development
+306,Clinical Experience
+307,Clinical Research
+308,Clinical Simulation
+309,Clinical Trial Design
+310,Clinical Trial Management
+311,Clinical Trials
+312,Clinical trial basics
+313,Clinical trial diversity
+314,Cloning and forking
+315,Cloud API
+316,Cloud Applications
+317,Cloud Architecture
+318,Cloud Computing
+319,Cloud Computing Security
+320,Cloud Databases
+321,Cloud Governance Strategy
+322,Cloud Hosting
+323,Cloud Management
+324,Cloud Native
+325,Cloud Networks
+326,Cloud Platforms
+327,Cloud Services
+328,Cloud Storage
+329,Cloud Strategy
+330,Cloud computing.
+331,Cluster Sampling
+332,Coaching
+333,Code Debugging
+334,Codeskulptor
+335,Codigo binario
+336,Coding
+337,Coding Challenge
+338,Cognitive Bias
+339,Cognitive Science
+340,Cold Calling
+341,Coleta de Dados
+342,Collaboration
+343,Collaborative Filtering
+344,Collaborative Working Environment
+345,Collecte de donnees
+346,Color Theory
+347,Column Structure
+348,Comercio electronico
+349,Command line interface (CLI)
+350,Command-Line Interface
+351,Common Business Oriented Language (COBOL)
+352,Common Drugs and Usages
+353,Common Law
+354,Communicating Results
+355,Communicating scientific ideas
+356,Communication
+357,Communication Skills
+358,Communication Theory
+359,Communication and Engagement
+360,Communication efficace
+361,Communications Management
+362,Community Change
+363,Community Health
+364,Comparative Genomics
+365,Compete on the Internal Market
+366,Competitive Analysis
+367,Competitive Position
+368,Compiler
+369,Compliance
+370,Compliance strategy
+371,Components of GANs
+372,Compose UI using Kotlin UI views
+373,Compras
+374,Comprehensive Unit-Based Safety Program (Cusp) Toolkit
+375,Computation
+376,Computational Biology
+377,Computational Fluid Dynamics (CFD)
+378,Computational Neuroscience
+379,Computed Aided Design
+380,Computer Architecture
+381,Computer Graphics (CG)
+382,Computer Network
+383,Computer Programming
+384,Computer Science
+385,Computer Security Incident Management
+386,Computer Vision
+387,Computer-Aided Design (CAD)
+388,Computer-Aided Engineering (CAE)
+389,Computer-Aided Manufacturing
+390,Comunicacao eficaz
+391,Comunicacion efectiva
+392,Concatenation
+393,Concept Drift
+394,Concept mapping and visualization
+395,Conception Experience Utilisateur (UXD)
+396,Conception de lexperience utilisateur (UXD)
+397,Conditional Generation
+398,Configuration Management
+399,Conflict Management
+400,Connect to and consume Azure services and third-party services
+401,Console Applications
+402,Consolization
+403,Constitution
+404,Construction Management
+405,Consulting
+406,Consumer Behaviour
+407,Consumer Neuroscience
+408,Contact Tracing
+409,Contact management
+410,Containers
+411,Content Development
+412,Content Marketing
+413,Continuous Delivery
+414,Continuous Integration
+415,Contract Law
+416,Contracts
+417,Controllable Generation
+418,Conversational design
+419,Convolutional Neural Network
+420,Convulsion
+421,Cooking
+422,Copy Editing
+423,Copyright
+424,Copywriting
+425,Core Data
+426,Corporate Branding
+427,Corporate Finance
+428,Corporate Governance
+429,Corporate Investments
+430,Correlation And Dependence
+431,Corruption
+432,Cortex-M
+433,Cost
+434,Cost Accounting
+435,Cost Control
+436,Cost Estimate
+437,Cost-Based Pricing
+438,CostBenefit Analysis
+439,CountingWeighingMeasuring Medications
+440,Create Oracle SQL Databases
+441,Create a simple Android UI
+442,Create an electronic composition
+443,Create and edit a workbook with multiple sheets
+444,Create and maintain professional looking documents
+445,Create and manage presentations
+446,Create custom patches in Strobe 2
+447,Create custom synthesizer patches
+448,Creating Financial Statements
+449,Creating Pull Requests
+450,Creative Thinking
+451,Creative Writing
+452,Creativity
+453,Credit Risk Measurement and Management
+454,Credit Technology
+455,Criminal Justice
+456,Criptografia
+457,Crisis Intervention
+458,Critical Thinking
+459,Cross-Cultural Communication
+460,Cross-Functional Team Dynamics
+461,Crowdfunding
+462,Crt0
+463,Cryptocurrency
+464,Cryptographic Attacks
+465,Cryptography
+466,Css Code
+467,Css Frameworks
+468,Cube and Rollup
+469,Cuestionamiento
+470,Cultura de la organizacion
+471,Cultura organizacional
+472,Culture organisationnelle
+473,Custom Layers
+474,Custom Loss Functions
+475,Custom Training Loops
+476,Custom and Exotic Models
+477,Custom and Exotic Models with Functional API
+478,Customer Analytics
+479,Customer Awareness
+480,Customer Engagement
+481,Customer Experience (CX) Design
+482,Customer Lifetime Value
+483,Customer Outreach
+484,Customer Relationship Management (CRM)
+485,Customer Satisfaction
+486,Customer Service
+487,Customer Support
+488,Customer Value-based Pricing
+489,Customer loyalty
+490,Cyber
+491,Cyber Attacks
+492,Cyber Defense
+493,Cyberattacks
+494,Cybersecurite
+495,Cybersecurity
+496,DCGANs
+497,DEI Program Assessment
+498,DEI Strategic Planning
+499,DEI Strategy
+500,Damage Assessment
+501,Dashboard
+502,Dashboarding and Reporting
+503,Dashboards and Charts
+504,Data Aggregation
+505,Data Analysis
+506,Data Analysis and Modelling
+507,Data Architecture
+508,Data Breach
+509,Data Calculations
+510,Data Cleansing
+511,Data Clustering Algorithms
+512,Data Collection
+513,Data Configuration
+514,Data Engineer
+515,Data Ethics
+516,Data Evaluation
+517,Data Integrity
+518,Data Labeling at Scale
+519,Data Lakes
+520,Data Management
+521,Data Manipulation
+522,Data Mining
+523,Data Model
+524,Data Modeling
+525,Data Pipelines
+526,Data Science
+527,Data Science Methodology
+528,Data Security
+529,Data Store
+530,Data Structure
+531,Data Structure Design
+532,Data Transmission
+533,Data Validation
+534,Data Visualization (DataViz)
+535,Data Warehouse
+536,Data Warehousing
+537,Data analysis with R
+538,Data ingestion
+539,Data storytelling
+540,Data transformation
+541,Data-Informed Decision-Making
+542,Data-driven decisions
+543,Database (DBMS)
+544,Database Architecture
+545,Database Optimization
+546,Datenaggregation
+547,Datenanalyse
+548,Datenberechnungen
+549,Datenbereinigung
+550,Datenerhebung
+551,Datenethik
+552,Datenintegritat
+553,Datenvisualisierung (DataViz)
+554,De-escalation
+555,Debogage
+556,Debriefing
+557,Debt Management Plan
+558,Debugging
+559,Debugging techniques
+560,Deception
+561,Decision Support System
+562,Decision Tree
+563,Decision Trees
+564,Decision-Making
+565,Deep Learning
+566,Delegation
+567,Delete from Oracle SQL Databases
+568,Delta Lake
+569,Demand Forecasting
+570,Dental Healthcare Organization Operations
+571,Deontologie
+572,Deploy and operationalize machine learning solutions
+573,Deployment Pipelines
+574,Depreciation
+575,Derivatives
+576,Derrivatives
+577,Describe AI workloads and considerations
+578,Describe an analytics workload on Azure
+579,Describe core data concepts
+580,Describe features of Natural Language Processing (NLP) workloads on Azure
+581,Describe features of computer vision workloads on Azure
+582,Describe features of conversational AI workloads on Azure
+583,Describe fundamental principles of machine learning on Azure
+584,Describe how to work with non-relational data on Azure
+585,Describe how to work with relational data on Azure
+586,Describe the apps and services available in a Microsoft 365 subscription
+587,Design
+588,Design Leadership
+589,Design Theory
+590,Design Thinking
+591,Design a web application
+592,Design and optimize inductors and transformers for switched-mode power converters
+593,Design de experiencia do usuario (UXD)
+594,Design equivalent-circuit models for lithium-ion battery cells
+595,Determinacao do tamanho da amostra
+596,Determinacion del tamano de la muestra
+597,Determinants
+598,Determination de la taille dechantillon
+599,Develop Azure compute solutions
+600,Develop for Azure storage
+601,Developing Power
+602,Devops
+603,Diagnostic differentiel et comorbidites
+604,Diagonalization
+605,Dialogflow CX development
+606,Differential Equations
+607,Digital Channel Planning
+608,Digital Design
+609,Digital Fashion Design
+610,Digital Forensics
+611,Digital Leadership
+612,Digital Marketing
+613,Digital Research
+614,Digital Strategy
+615,Digital Supply Chain
+616,Digital Transformation in Fashion
+617,Digital marketing KPIs
+618,Digital transformation
+619,Digitalization in Fashion
+620,Directional Drilling
+621,Directory Service
+622,Diretorios do LDAP
+623,Disaster Recovery
+624,Discounted Cash Flow
+625,Discounted Cash Flow Analysis
+626,Discovery-Driven Planning
+627,Discriminator
+628,Diseno de la experiencia del usuario (UXD)
+629,Display and Video Advertising Strategy
+630,Distributed Computing
+631,Distributed Version Control (DRCS)
+632,Distributed Version Control Systems (DVCS)
+633,Diverse Leadership
+634,Diversity (Business)
+635,Diversity and Cultural Bias Training
+636,Divide And Conquer Algorithms
+637,Dividend Policy
+638,Dividends
+639,Django (Web Framework)
+640,Docker
+641,Documents
+642,Dog
+643,Dolor Assessment
+644,Domain Name System (DNS)
+645,Double-Entry Bookkeeping System
+646,Dropouts
+647,Drug Development
+648,Drug Discovery
+649,Drug Regulations
+650,Dupont Analysis
+651,Dynamic Programming
+652,Dynamical Systems
+653,Dyslexia
+654,E-Commerce
+655,E-Commerce Strategy
+656,E-commerce platforms
+657,E-commerce store optimization
+658,E-invoicing E-way bill
+659,EFL
+660,EMT
+661,ESG
+662,ESL
+663,ETL Data Pipelines
+664,Earned Value Management (EVMT)
+665,Economic Analysis
+666,Economics
+667,Ecosystem Model
+668,Ecriture commerciale
+669,Editing
+670,Education
+671,Effective Communication
+672,Effective Training
+673,Effective Written Communication
+674,Effektive Kommunikation
+675,Eigenvalues And Eigenvectors
+676,Ejecucion del proyecto
+677,Electric Vehicles
+678,Electronic Circuits
+679,Electronic Digital Instrument
+680,Electronic Health Records
+681,Elevator Pitch
+682,Email Marketing
+683,Email Writing
+684,Email list segmentation
+685,Email marketing analytics
+686,Email marketing strategy
+687,Embedded C
+688,Embedded Software
+689,Embedded Systems
+690,Emergency Medical Technician
+691,Emergency Medicine
+692,Emotional Intelligence
+693,Emotional Strength
+694,Emplois de conception UX.
+695,Employee Onboarding
+696,Employee Relations
+697,Empregos em Design de UX
+698,Encadrement
+699,Encryption Algorithms
+700,Encryption Algorithms and Techniques
+701,Energy
+702,Energy Audits
+703,Energy Projects
+704,Engineering
+705,Engineering management
+706,English Grammar
+707,English Language
+708,English language teaching
+709,Enhanced Oil Recovery
+710,Ensemble Learning
+711,Enterprise Data Warehouse (EDW)
+712,Enterprise Software
+713,Entrepreneurial Finance
+714,Entrepreneurship
+715,Entscheidungsfindung
+716,Environmental Impacts of Design
+717,Environmental Law
+718,Environmental Policy
+719,Environmental Protection
+720,Epidemiology
+721,Equities
+722,Equity
+723,Escrita de negocios
+724,Esquema
+725,Esquema de pagina
+726,Esri
+727,Essay Writing
+728,Estatuto del proyecto
+729,Estimacion de tareas
+730,Estimation de la tache
+731,Estimation of costs and benefits
+732,Estimativa de tarefas
+733,Estudo de caso
+734,Ethical Hacking
+735,Ethical Leadership
+736,Ethical Methods
+737,Ethical issues of artificial intelligence
+738,Ethics
+739,Ethics in cybersecurity
+740,Ethics of Communication
+741,Ethics of Technology
+742,Ethique des donnees
+743,Etica
+744,Etica de datos
+745,Etica em Dados
+746,Etude de cas
+747,Euler'S Totient Function
+748,Evaluation
+749,Evaluation de symptomes
+750,Evolution
+751,Examining ideas
+752,Execucao de projetos
+753,Execution du projet
+754,Exit Strategy
+755,Expense Control
+756,Experience utilisateur (UX)
+757,Experience with video production is helpful
+758,Experiencia del usuario (UX)
+759,Experiencia do usuario (UX)
+760,Experiment
+761,Explainable AI
+762,Exploratory Data Analysis
+763,Exploratory Data Analysis (EDA)
+764,Exploratory Data Analysis in AWS
+765,Extended Reality (XR)
+766,Extract Transform Load (ETL)
+767,Extract Transform and Load (ETL)
+768,"Extraction, Transformation And Loading (ETL)"
+769,Facebook Advertising
+770,Facial Recognition System
+771,Fairness Indicators
+772,Fashion Design
+773,Fashion E-Commerce
+774,Fashion Merchandising
+775,Fashion Systems
+776,Feature Engineering
+777,Federal Tax Returns
+778,Feuille de calcul
+779,Fiction Writing
+780,Fidelidad del cliente
+781,Figma
+782,File Management
+783,Film and Televison Writing
+784,Filmmaking
+785,Filtering and ordering
+786,Finance
+787,Financial Accounting
+788,Financial Adviser
+789,Financial Aid Management
+790,Financial Analysis
+791,Financial Data Analysis
+792,Financial Engineering
+793,Financial Management
+794,Financial Markets
+795,Financial Mismanagement
+796,Financial Modeling
+797,Financial Ratio
+798,Financial Risk
+799,Financial Statement
+800,Financial Systems
+801,Fitness And Nutrition
+802,Fixed Income
+803,Flask
+804,Flight dynamics
+805,Flight mechanics
+806,Food Marketing
+807,Food Safety
+808,Food Science
+809,For Loop
+810,Foreach Loop
+811,Forecasting
+812,Foreign Policy
+813,Forensic Accounting
+814,Fourier Analysis
+815,Fragestellung
+816,Fraud Detection
+817,Fraud Investigation
+818,Fraud Prevention
+819,Front-End Web Development
+820,Front-end Development
+821,Front-end design
+822,Fulfillment and delivery
+823,Full Stack Developer
+824,Function Approximation
+825,Functional API
+826,Functional Programming
+827,Fundamental Analysis
+828,Fundamental Programming Concepts
+829,Fundraising
+830,Future Forecasting
+831,Future Value
+832,Futures
+833,GCP ACE Certification
+834,GCP Infrastructure
+835,GPU
+836,GST Compliances Return filing
+837,GST law
+838,GST technical
+839,Game Design
+840,Game Design Document
+841,Game Programming
+842,Game Theory
+843,Gamification
+844,Gap Analysis
+845,Gated Recurrent Unit (GRU)
+846,General Data Protection Regulation (GDPR)
+847,General Statistics
+848,Generate Data Protection Regulation (GDPR)
+849,Generative AI
+850,Generative AI Tools
+851,Generative Adversarial Networks
+852,Generative Machine Learning
+853,Generator
+854,Genetic Analysis
+855,Genomics
+856,Geographic Information System (GIS)
+857,Geology
+858,Gerenciamento Agile
+859,Gerenciamento da qualidade
+860,Gerenciamento das partes interessadas
+861,Gerenciamento de riscos
+862,Gestion Agile
+863,Gestion con la metodologia Agile
+864,Gestion de calidad
+865,Gestion de la qualite
+866,Gestion de los interesados
+867,Gestion de marcas
+868,Gestion de projet
+869,Gestion de projets
+870,Gestion de proyectos
+871,Gestion de riesgos
+872,Gestion des partenaires
+873,Gestion des parties prenantes
+874,Gestion des risques
+875,Gestion du changement
+876,Ggplot2
+877,Git (Software)
+878,Git and GitHub
+879,Github
+880,Goals and Rewards
+881,Good clinical practice
+882,Google
+883,Google Ads Search Advertising
+884,Google Adwords
+885,Google Analytics
+886,Google App Engine (GAE)
+887,Google Cloud
+888,Google Cloud Platform
+889,Google Compute Engine
+890,Google DataflowGoogle BigQuery
+891,Google Sheets
+892,Gradient Descent
+893,Grammar
+894,Graph Theory
+895,Graphic Design
+896,Graphical Model
+897,Graphics
+898,Graphs
+899,Graphs Algorithms
+900,Gratitude
+901,Green Design
+902,Grid system
+903,Growth Strategies
+904,Guitar
+905,Guitar chords
+906,Guitar scales
+907,Gun Violence Epidemiology
+908,HR Lifecycle
+909,HR Tech
+910,HTML
+911,HTML and CSS
+912,Hanyu Shuiping Kaoshi (HSK)
+913,Happiness
+914,Hardware Description Language (HDL)
+915,Harmony
+916,Hash Table
+917,Hashtables
+918,Health Care
+919,Health Economics
+920,Health Education
+921,Health Informatics
+922,Health Information Technology
+923,Health Insurance Portability And Accountability Act (HIPAA)
+924,Health Law
+925,Health Policy
+926,Health Transparency and Disclosures
+927,Health records
+928,Healthcare Administration
+929,Herramientas de gestion de eventos e informacion de seguridad (SIEM)
+930,Heuristic Evaluation
+931,Hierarchical Clustering
+932,Higher-Order Function
+933,Historical Attacks
+934,History
+935,Hoja de calculo
+936,Holistic Product Lifecyle
+937,Hotel Management
+938,How to convey meaning and make messages compelling
+939,How to launch and develop your SAP career
+940,Html5
+941,Human Resources (HR)
+942,Human Resources Best Practices
+943,Human Resources Management
+944,Human Rights and Allyship
+945,Human-centered coaching
+946,Human-level Performance (HLP)
+947,Hybrid Multicloud
+948,Hypertext Preprocessor (PHP)
+949,IBM Cognos Analytics
+950,IBM New Collar
+951,IBM Power Systems
+952,IBM Z
+953,INACSL Standards
+954,IT Customer Support
+955,IT Fundamentals
+956,IT security analyst
+957,ITIL 4 Foundation topics
+958,ITIL Terminogy
+959,Iaas PaaS Saas
+960,Ideation
+961,Identify current vocal behaviors connected to speaking and have techniques to address them.
+962,Identifying species
+963,Idle (Python)
+964,Image Processing
+965,Image Segmentation
+966,Image-to-Image Translation
+967,Immunology
+968,Implement Azure security
+969,Implement responsible machine learning
+970,Implement state-of-charge estimators for lithium-ion battery cells
+971,Implement state-of-health estimators for lithium-ion battery cells
+972,Implementation of data science techniques in investment decisions
+973,Import Data
+974,Improvisation
+975,Incident Detection and Response
+976,Incident Response Playbooks
+977,Income Statement
+978,Indigenous Studies
+979,Inductive Transfer
+980,Industrial Internet of Things (IIoT)
+981,Industry 4.0
+982,Industry Structure
+983,Infectious Diseases
+984,Inference
+985,Influencer Marketing
+986,Influencers
+987,Influencia
+988,Influencing
+989,Informatics
+990,Information Assurance
+991,Information Engineering
+992,Information Security (INFOSEC)
+993,Information Technology
+994,Information Technology (IT) Architecture
+995,Information Technology (IT) Management
+996,Information Technology (IT) Support
+997,Information sharing
+998,Innovation
+999,Innovation Management
+1000,Innovation Pipeline
+1001,Innovation Strategies
+1002,Insert and Modify Oracle SQL Databases
+1003,Inspecting specimens
+1004,Instructional Design
+1005,Instructional Design Modeling
+1006,Instructional System Design
+1007,Instrumental Variable
+1008,Insurance
+1009,Insurance Verification
+1010,Integer Programming
+1011,Integrals
+1012,Integrated Marketing Communications
+1013,Integridad de datos
+1014,Integridade dos dados
+1015,Integrite des donnees
+1016,Intellectual Property
+1017,Intelligent Systems
+1018,Interacting with GitHub
+1019,Interactive Storytelling
+1020,Intercultural Communication
+1021,Interdisciplinary thinking
+1022,Interest Rate
+1023,Interface de comando
+1024,Interfaces
+1025,Interfaz de comandos
+1026,Internal Control
+1027,Internality
+1028,International Humanitarian Law
+1029,International Law
+1030,International Relations
+1031,Internet Of Things (IOT)
+1032,Interpersonal Communication
+1033,Interpretation
+1034,Interpreting Prescriptions
+1035,Interpreting phylogenetic trees
+1036,Intractability
+1037,Intrapersonal skills
+1038,Intrinsic Function
+1039,Intrusion Detection Systems (IDS)
+1040,Inventory
+1041,Inventory Analysis
+1042,Inventory costing methods
+1043,Investigacion en UX
+1044,Investment
+1045,Investment Management
+1046,Ipv4
+1047,Ipython
+1048,Issue Tracking System
+1049,JPA
+1050,Java
+1051,Java Programming
+1052,JavaScript
+1053,JavaScript coding
+1054,Jenkins (Software)
+1055,Jinja (Template Engine)
+1056,Job Analysis
+1057,Job Costing
+1058,Job portfolio
+1059,Job preparedness
+1060,Jobs
+1061,Jobs im Bereich UX-Design
+1062,Journalism
+1063,Jquery
+1064,Json
+1065,Junior cybersecurity analyst
+1066,Junit
+1067,Jupyter Notebook
+1068,Jupyter notebooks
+1069,Justice
+1070,K-Means Clustering
+1071,Kaggle
+1072,Kalkulationstabelle
+1073,Kanban
+1074,Karriereentwicklung
+1075,Kernel Programming
+1076,Knowledge of Major Diseases
+1077,Komputasi Cloud.
+1078,Korean Language
+1079,Kotlin
+1080,Kotlin Playground
+1081,Kubernetes
+1082,LLMs
+1083,Language
+1084,Law
+1085,Layanan Pelanggan
+1086,Leadership
+1087,Leadership And Management
+1088,Leadership Development
+1089,Leadership Management
+1090,Leadership Style
+1091,Leading and managing change in organisation
+1092,Leading subordinates effectively
+1093,Lean Manufacturing
+1094,Lean Methods
+1095,Lean Six Sigma
+1096,Lean Software Development
+1097,Lean Startup
+1098,Lean Thinking
+1099,Learn to assess how climate change impacts financial portfolios and and how to manage climate risk in equity portfolios
+1100,Learning
+1101,Learning Delivery Methods
+1102,Learning Disabilities
+1103,Learning Models
+1104,Learning To Learn
+1105,Learning and Instructional Theories
+1106,Lecture
+1107,Legal Research
+1108,Legal issues of artificial intelligence
+1109,Lesson Plan
+1110,Lightweight Directory Access Protocol (LDAP)
+1111,Limpeza de dados
+1112,Limpieza de datos
+1113,Linear Algebra
+1114,Linear Equation
+1115,Linear Programming (LP)
+1116,Linear Regression
+1117,Linux
+1118,Linux Commands
+1119,Linux Console
+1120,Linux File Systems
+1121,LinuxUnix System Administration
+1122,Liquid Prescriptions
+1123,List Label
+1124,Live Looping
+1125,Load Balancing
+1126,Locality-Sensitive Hashing
+1127,Logic Gate
+1128,Logiciel Tableau
+1129,Logistic Regression
+1130,Logistic Regression for Classification
+1131,Logistics
+1132,Logistics Planning
+1133,Long Short Term Memory (LSTM)
+1134,Luxury Goods
+1135,MIDI programming
+1136,ML Algorithms
+1137,ML Deployment Challenges
+1138,ML Metadata
+1139,ML Pipelines and ML Operations (MLOps)
+1140,MLOps
+1141,Machine Learning
+1142,Machine Learning (ML) Algorithms
+1143,Machine Learning Classification
+1144,Machine Learning Engineering for Production
+1145,Machine Learning Implementation and Operations in AWS
+1146,Machine Learning Operations (MLOps)
+1147,Machine Learning Regression
+1148,Machine Learning applied to Finance
+1149,Machine Translation
+1150,Mainframe
+1151,Makefile
+1152,Malware
+1153,Manage Azure resources for machine learning
+1154,Management
+1155,Management Accounting
+1156,Management Consulting
+1157,Management Theory
+1158,Managing Machine Learning Production Systems
+1159,Manipulate preset patches
+1160,Manufacturing Engineer
+1161,Manufacturing Process Management
+1162,Manufacturing Processes
+1163,Map
+1164,Mapping
+1165,Maqueta
+1166,Maquette fonctionnelle
+1167,Marco de ciberseguridad del NIST (CSF)
+1168,Market (Economics)
+1169,Market Efficiency
+1170,Market Research
+1171,Market Risk Measurement and Management
+1172,Market(Economics)
+1173,Market-Based Pricing
+1174,Marketing
+1175,Marketing Analytics
+1176,Marketing Channel
+1177,Marketing Content Development
+1178,Marketing Experiments
+1179,Marketing Mix
+1180,Marketing Mix Optimization
+1181,Marketing Performance
+1182,Marketing Performance Measurement And Management
+1183,Marketing Plan
+1184,Marketing Strategy
+1185,Marketing de contenidos
+1186,Marketing digital
+1187,Marketing en redes sociales
+1188,Marketing por correo electronico
+1189,Material Design
+1190,Materials
+1191,Math
+1192,Mathematical Finance
+1193,Mathematical Logic
+1194,Mathematical Optimization
+1195,Mathematics
+1196,Matlab
+1197,Matplotlib
+1198,Matrix Algebra
+1199,Measurement Uncertainty
+1200,Mechanical Engineering
+1201,Media planning and strategies
+1202,Medical Billing
+1203,Medical Coding
+1204,Medical Conditions
+1205,Medical Device
+1206,Medical Ethics
+1207,Medical Healthcare Organization Operations
+1208,Medical Terminology
+1209,Medical Writing
+1210,Medical language
+1211,Medicine
+1212,Meditation
+1213,Meeting
+1214,Mental Health
+1215,Mental Illness
+1216,Mergers And Acquisitions (MA)
+1217,Meta Learning
+1218,Meta Spark
+1219,Metabolic Pathways
+1220,Metadados
+1221,Metadata
+1222,Metadaten
+1223,Metadatos
+1224,Metadonnees
+1225,Metastasis theories
+1226,Methodology
+1227,Microbiology
+1228,Microcontroller
+1229,Microeconomics
+1230,Microservices
+1231,Microsoft Azure
+1232,Microsoft Excel
+1233,Microsoft Excel Macro
+1234,Microsoft Excel Vba
+1235,Microsoft Word
+1236,Migration and Innovation
+1237,Mindfulness
+1238,Missing Data
+1239,Mobile Development
+1240,Mobile Marketing
+1241,Model Interpretability
+1242,Model Monitoring
+1243,Model Performance Analysis
+1244,Model Pipelines
+1245,Model Registries
+1246,Model Selection
+1247,Model baseline
+1248,ModelViewController (MVC)
+1249,Modeling
+1250,Modeling in AWS
+1251,Modell
+1252,Modelo de red
+1253,Modelo de rede
+1254,Molecular Biology
+1255,Mongodb
+1256,Monitor and troubleshoot Azure solutions
+1257,Monitoring and Logging
+1258,Monte Carlo Method
+1259,Motivate Employees
+1260,Motivation
+1261,Multi-Task Learning
+1262,Multi-class Classification with FastText and BlazingText
+1263,Multi-class classification
+1264,Multimedia
+1265,Multivariable Calculus
+1266,Museums
+1267,Music
+1268,Music Arrangement
+1269,Music Education
+1270,Music Making
+1271,Music production
+1272,Music recording
+1273,MySQL
+1274,N-gram Language Models
+1275,NIST Cybersecurity Framework (CSF)
+1276,NIST Risk Management Framework (RMF)
+1277,Named-Entity Recognition
+1278,Native Advertising
+1279,Natural Language Generation
+1280,Natural Language Processing
+1281,Natural Language Processing with BERT
+1282,Negotiation
+1283,Negotiation Analysis
+1284,Netconf
+1285,Netflix OSS
+1286,Nettoyage des donnees
+1287,Network Analysis
+1288,Network Architecture
+1289,Network Defense
+1290,Network Effects
+1291,Network Management
+1292,Network Model
+1293,Network Planning And Design
+1294,Network Protocols
+1295,Network Security
+1296,Network Theory
+1297,Networking
+1298,Networking Hardware
+1299,Networking on AWS
+1300,Neural Machine Translation
+1301,Neural Network Architecture
+1302,Neurobiology
+1303,Neurological Disorders
+1304,Neurology
+1305,Neuromarketing
+1306,Neuroscience
+1307,News Reporting
+1308,News Writing
+1309,Newton'S Method
+1310,No-code
+1311,No-code application development
+1312,NoSQL
+1313,NoSQL and Big Data
+1314,Node.Js
+1315,Non-fiction Writing
+1316,Notation
+1317,Note Taking
+1318,Novel Writing
+1319,Number Theory
+1320,Numerical Analysis
+1321,Numpy
+1322,Nursing
+1323,Nutrition
+1324,Oauth
+1325,Object Binding
+1326,Object Detection
+1327,Object Detection and Segmentation
+1328,Object Recognition
+1329,Object-Oriented Programming (OOP)
+1330,Occupational guidance
+1331,Onboarding
+1332,Online Learning
+1333,Open Collaboration
+1334,OpenAPI specifications
+1335,Opencv
+1336,Openshift
+1337,Operating System Security
+1338,Operating Systems
+1339,Operational Risk Measurement and Management
+1340,Operations Management
+1341,Optimizacion de motores de busqueda (SEO)
+1342,Options Strategies
+1343,Organ Systems
+1344,Organic Food
+1345,Organisational design
+1346,Organisationskultur
+1347,Organization Design
+1348,Organizational Analysis
+1349,Organizational Anthropology
+1350,Organizational Culture
+1351,Organizational Structure
+1352,Organizational Theory
+1353,Otimizacao para mecanismos de busca (SEO)
+1354,Outbreak investigation
+1355,Outils de gestion des informations et des evenements de securite (SIEM)
+1356,PEP 8 style guide
+1357,PM Interviewing
+1358,PMI-CAPM
+1359,PPE Accounting
+1360,Packet Analyzer
+1361,Pain Management
+1362,Paleontology
+1363,Palliative Care
+1364,Pandas
+1365,Parallel Computing
+1366,Parts-of-Speech Tagging
+1367,Patient Care
+1368,Patient Interaction
+1369,Patient Safety
+1370,Pattern Matching
+1371,Payment Processing
+1372,Payment Systems
+1373,Penetration Test
+1374,Pensamento estrategico
+1375,Pensamiento critico
+1376,Pensamiento estrategico
+1377,Pentaho
+1378,People Skills
+1379,Perfect Tenses
+1380,Perfectionnement professionnel
+1381,Performance Advertising
+1382,Performance Attribution
+1383,Performance Management
+1384,Performance Technique
+1385,Performance marketing
+1386,Persona (User Experience)
+1387,Personal Development
+1388,Personal Finance
+1389,Personality Development
+1390,Personalized Learning
+1391,Persuasion
+1392,Pesquisa de UX
+1393,Pest Analysis
+1394,Pharmacokinetics
+1395,Pharmacology
+1396,Pharmacy Healthcare Organization Operations
+1397,Photography
+1398,Pivot Chart
+1399,Pivot Charts
+1400,Pivot Table
+1401,Plan a social media advertising strategy
+1402,Planejamento de projetos
+1403,Planificacion de Proyectos
+1404,Planification de projet
+1405,Planilha
+1406,Planning
+1407,Planning and Project Management
+1408,Policy Advocacy
+1409,Policy Analysis
+1410,Policy Design
+1411,Politics
+1412,Pomodoro Technique
+1413,Population Health
+1414,Portfolio Optimization
+1415,Portfolio construction and analysis
+1416,Portfolio de trabajo
+1417,Portfolio pour la recherche d'emploi
+1418,Portfolio preparation
+1419,Portfolio profissional
+1420,Positioning (Marketing)
+1421,Positive Education
+1422,Positive Personality
+1423,Positive Psychology
+1424,Postgresql
+1425,Power Query
+1426,Power energy calculations
+1427,Powershell
+1428,Precomputing Predictions
+1429,Predictive Analytics
+1430,Predictive Modelling
+1431,Prepare Data
+1432,Preparing Data
+1433,Presentation
+1434,Presentation Skills
+1435,Presenting Data Insights
+1436,Presenting to stakeholders
+1437,Press Release
+1438,Price Discrimination
+1439,Price Elasticity Of Demand
+1440,Pricing
+1441,Pricing Strategies
+1442,Principal Component Analysis (PCA)
+1443,Principled Negotiation
+1444,Prise de decision
+1445,Privacy
+1446,Private Equity
+1447,Pro Tools
+1448,Probabilistic Models
+1449,Probability
+1450,Probability And Statistics
+1451,Probability Distribution
+1452,Probability Theory
+1453,Problem Solving
+1454,Problemlosung
+1455,Process Improvement
+1456,Process Management
+1457,Procurement
+1458,Producing
+1459,Product Cost Analysis
+1460,Product Development
+1461,Product Lifecycle
+1462,Product Management
+1463,Product Strategies
+1464,ProductMarket Fit
+1465,Production environments
+1466,Professional
+1467,Professional Communication
+1468,Professional Development
+1469,Profit and loss calculation
+1470,Program Management
+1471,Programacion con Python
+1472,Programacion en R
+1473,Programmable Logic Design
+1474,Programmation Python
+1475,Programming Language
+1476,Programming Principles
+1477,Progressive Web Development
+1478,Project
+1479,Project Charter
+1480,Project Execution
+1481,Project Management
+1482,Project Planning
+1483,Project Scoping and Design
+1484,Project initiation
+1485,Project valuation
+1486,Projektabwicklung
+1487,Projektcharta
+1488,Projektmanagement
+1489,Projektplanung
+1490,Promotion And Marketing Communications
+1491,Pronunciation
+1492,Propensity Score Matching
+1493,Proposal Writing
+1494,Prostate cancer
+1495,Protocoles reseau
+1496,Protocolo ligero de acceso a directorios
+1497,Protokol Jaringan
+1498,Prototipo
+1499,Prototyp
+1500,Prototype
+1501,Prototyping
+1502,Pruebas de usabilidad
+1503,Pseudocode
+1504,Psychological First Aid
+1505,Psychological Issues
+1506,Psychological Tools
+1507,Psychology
+1508,Public Health
+1509,Public Health Interventions
+1510,Public Health Research
+1511,Public Health Surveillance
+1512,Public Health and Wellness Healthcare Organization Operations
+1513,Public Policy
+1514,Public Relations
+1515,Public Speaking
+1516,Public-Key Cryptography
+1517,Publicidad de rendimiento
+1518,Publicidad grafica
+1519,Publicidade grafica
+1520,Punctuation
+1521,Purpose
+1522,Python Libraries
+1523,Python Programming
+1524,Python Scripting
+1525,Python Syntax And Semantics
+1526,Python Tools
+1527,Python Virtual Environments
+1528,Python programming skills
+1529,Qualitative Research
+1530,Qualitatsmanagement
+1531,Quality Control
+1532,Quality Improvement
+1533,Quality Management
+1534,Quantitative Analysis
+1535,Questionamento
+1536,Questioning
+1537,Questionnement
+1538,R Markdown
+1539,R Programmin Language
+1540,R Programming
+1541,READING
+1542,REST API design
+1543,REST APIs
+1544,RESTCONF
+1545,RESTful APIs
+1546,RHOCP
+1547,RNNs
+1548,Randomized Algorithm
+1549,Raspberry Pi
+1550,React
+1551,React (Javascript Library)
+1552,React (Web Framework)
+1553,Reading Prescriptions
+1554,Real Analysis
+1555,Real Estate finance
+1556,Real World
+1557,Real-World Assignments
+1558,Real-World Examples
+1559,Real-time Systems
+1560,Recherche UX
+1561,Recommender Systems
+1562,Recopilacion de datos
+1563,Recording observations
+1564,Recruiting
+1565,Recruitment
+1566,Recurrent Neural Network
+1567,Recursion
+1568,Red Hat Enterprise Linux
+1569,Redaccion de negocios
+1570,Reflective Listening
+1571,Reflexion strategique
+1572,Reformer Models
+1573,Registration Reconciliation
+1574,Regression Analysis
+1575,Regression Models
+1576,Regular Expression (REGEX)
+1577,Regularization to Avoid Overfitting
+1578,Regulatory frameworks
+1579,Reinforcement Learning
+1580,Reinforcement Learning Model Development
+1581,Reinforcement Learning Trading Algo Development
+1582,Reinforcement Learning Trading Algorithm Optimization
+1583,Reinforcement Learning Trading Strategy Development
+1584,Relational Database (RDBMS)
+1585,Relational Database Management System (RDBMS)
+1586,Relational Database Management Systems (RDBMS)
+1587,Relational Databases (RDBMS)
+1588,Renewable Energy
+1589,Reporting Skills
+1590,Reports
+1591,Represent data visually
+1592,Representational State Transfer (REST)
+1593,Reproducible Research
+1594,Reproductive Health
+1595,Research And Design
+1596,Research Design
+1597,Research Methodology
+1598,Research Methods
+1599,Research technology trends
+1600,Researching scientific articles
+1601,Resilience
+1602,Resiliency
+1603,Resolucao de problemas
+1604,Resolucion de problemas
+1605,Resolution de problemes
+1606,Resource Management
+1607,Resource and Capacity Optimization
+1608,Respaldo
+1609,Responsive
+1610,Responsive Web Design
+1611,Rest API's
+1612,Retail Management
+1613,Retirement
+1614,Revenue Management
+1615,Reverting Changes
+1616,Rhythm
+1617,Ridge Regression
+1618,Risikomanagement
+1619,Risk
+1620,Risk Analysis
+1621,Risk Assessment
+1622,Risk Management
+1623,Risk governance
+1624,Risk identification
+1625,Rstudio
+1626,Run experiments and train models
+1627,Run-time Analysis
+1628,Rust Programming
+1629,SAS Programs
+1630,SAS Studio
+1631,SAS VA
+1632,SAS Visual Analytics
+1633,SQL
+1634,SQL RDBMS
+1635,SQL and Python syntax
+1636,SRE Culture
+1637,Sales
+1638,Sales Development
+1639,Sales Management
+1640,Sales Operations
+1641,Sales Presentation
+1642,Sales Strategy
+1643,Salesforce
+1644,Salesforce Lightning
+1645,Salesforce Sales Cloud
+1646,Sample Size Determination
+1647,Samtools
+1648,Saving
+1649,Savoring
+1650,Scala Programming
+1651,Scales
+1652,Scenario Analysis
+1653,Scenario Design
+1654,Schedule
+1655,School Health
+1656,SciPy and scikit-learn
+1657,Science Communication
+1658,Scope (Project Management)
+1659,Screenwriting
+1660,Script Writing
+1661,Scrum
+1662,Scrum (Software Development)
+1663,Scrum Master
+1664,Scrum Methodology
+1665,Search Advertising
+1666,Search Algorithm
+1667,Search Engine Marketing
+1668,Search Engine Marketing (SEM) Strategy
+1669,Search Engine Optimization (SEO)
+1670,Seasonality
+1671,Securite de l'information (InfoSec - Information Security)
+1672,Security Audits
+1673,Security Governance
+1674,Security Hardening
+1675,Security Information and Event Management (SIEM) tools
+1676,Security Management
+1677,Security Operations Center (SOC)
+1678,Security Software
+1679,Seguranca de rede
+1680,Seguranca de redes sem fio
+1681,Seguridad de la informacion (INFOSEC)
+1682,Seguridad de la red
+1683,Seguridad inalambrica
+1684,Self Awareness
+1685,Semantics
+1686,Sentiment Analysis
+1687,Sentiment with Neural Nets
+1688,Serializers and deserializers
+1689,Service Level Agreements (SLA)
+1690,Service client
+1691,Servicio de directorio
+1692,Servico de Diretorios
+1693,Set up a YouTube channel
+1694,Set up a social media experience for a business
+1695,Set up advertising on Facebook and Instagram
+1696,Set up advertising on Snapchat
+1697,Setting up your Development Environment
+1698,Sexually Transmitted Infections
+1699,Share and promote social content
+1700,Sharing Insights With Stakeholders
+1701,Sheets
+1702,Shell Script
+1703,Shiny Dashboards
+1704,Short Story Writing
+1705,Siamese Networks
+1706,Simple Algorithm
+1707,Simulation
+1708,Simulation for Verification
+1709,Singing
+1710,Sistema de Nomes de Dominio (DNS)
+1711,Sistema de nombres de dominio
+1712,Sistemas de Arquivos do Linux
+1713,Sistemas de archivos de Linux
+1714,Sistemas de deteccion de intrusiones (IDS
+1715,Site Reliability Engineering
+1716,Six Sigma
+1717,Six Sigma Green Belt
+1718,Smart Contract
+1719,Smart Investing
+1720,Social Business Model
+1721,Social Entrepreneurship
+1722,Social Issues
+1723,Social Listening
+1724,Social Media
+1725,Social Media Analytics
+1726,Social Media Bidding
+1727,Social Media Branding
+1728,Social Media Marketing
+1729,Social Media Marketing Strategy
+1730,Social Media and Email Marketing Strategy
+1731,Social Network
+1732,Social Psychology
+1733,Social Return On Investment (SROI)
+1734,Social Skills
+1735,Socially Responsible Investing
+1736,Soft skills
+1737,Softcore Processor Design
+1738,Software
+1739,Software Architecture
+1740,Software Design
+1741,Software Design Pattern
+1742,Software Design and Architecture
+1743,Software Development
+1744,Software Development Lifecycle (SDLC)
+1745,Software Development Process
+1746,Software Engineer
+1747,Software Engineering
+1748,Software Requirements
+1749,Software Tableau
+1750,Software Testing
+1751,Solar Energy
+1752,Solar Systems
+1753,Solucao de problemas
+1754,Solucion de problemas
+1755,Solution design and implementation
+1756,Solver
+1757,Songwriting
+1758,Soporte al cliente
+1759,Sorting
+1760,Sorting Algorithm
+1761,Sound Design
+1762,Spatial Analysis
+1763,Speak with confidence and connection
+1764,Speak with greater clarity
+1765,Speech
+1766,Sports Marketing
+1767,Spreadsheet
+1768,Spreadsheet Analysis
+1769,Spreadsheet management
+1770,Spring
+1771,Spring Configuration
+1772,Spring Data
+1773,Spring Framework
+1774,Sprint Planning
+1775,Sqlite
+1776,Staff Management
+1777,Stakeholder Communications
+1778,Stakeholder Management
+1779,Stakeholder-Management
+1780,Star and Snowflake Schema
+1781,Static Analysis
+1782,Statistical Analysis
+1783,Statistical Data Bias Detection
+1784,Statistical Hypothesis Testing
+1785,Statistical Inference
+1786,Statistical Model
+1787,Statistical Thinking
+1788,Statistical inference methods
+1789,Statistics
+1790,Statistics for Marketing
+1791,Stocks
+1792,Story Telling
+1793,Storyboarding
+1794,Storytelling
+1795,Strategic Analysis
+1796,Strategic Foresight
+1797,Strategic Leadership
+1798,Strategic Management
+1799,Strategic Mindset
+1800,Strategic Planning
+1801,Strategic Thinking
+1802,Strategisches Denken
+1803,Strategy Execution
+1804,Strategy Implementation
+1805,Stress
+1806,Stress Management
+1807,Substance Use Disorder
+1808,Substance Use Disorder Diagnosis
+1809,Substance Use Disorder Prevention
+1810,Substance Use Disorder Screening
+1811,Substance Use Disorder Treatment
+1812,Suffix Tree
+1813,Supervised Learning
+1814,Supervision
+1815,Supply And Demand
+1816,Supply Chain
+1817,Supply Chain Analysis
+1818,Supply Chain Risk Management
+1819,Supportive Care
+1820,Supportive communication
+1821,Survey Design
+1822,Survival Analysis
+1823,Sustainability
+1824,Sustainable Design
+1825,Swaps and options
+1826,Swift Programming
+1827,Symbols
+1828,Symmetric-Key Algorithm
+1829,Symptom Assessment and Management
+1830,System Administration
+1831,System Security
+1832,Systemes de detection d'intrusion (IDS)
+1833,Systems Development Life Cycle
+1834,Systems Thinking
+1835,Systems and Design Thinking
+1836,T5BERT Models
+1837,TDDBDD
+1838,TESOL
+1839,Tabellenkalkulation
+1840,Tableau Software
+1841,Tableurs
+1842,Tabular records
+1843,Talent Management
+1844,Task Estimation
+1845,Task Prioritization
+1846,Tax Law
+1847,Teaching
+1848,Teaching Method
+1849,Team Building
+1850,Team Management
+1851,Team dynamics
+1852,Technical Support
+1853,Technology Leadership
+1854,Telemedicine
+1855,TensorFlow Extended (TFX)
+1856,TensorFlow Serving
+1857,Tensorflow
+1858,Termo de abertura do projeto
+1859,Terrorism Studies
+1860,Test Preparation
+1861,Test de facilite dutilisation
+1862,Test dutilisabilite
+1863,Test-Driven Development
+1864,Testagem de usabilidade
+1865,Testing Automation
+1866,Testing in Python
+1867,Tests de la facilite dutilisation
+1868,Text Mining
+1869,Theory Of Relativity
+1870,Threat mitigation
+1871,Ticketing Systems
+1872,TikTok Advertising
+1873,TikTok marketing
+1874,TikTok video creation
+1875,Time Series
+1876,Time management
+1877,Tokenization
+1878,Toma de decisiones
+1879,Tomada de decisoes
+1880,Topic Model
+1881,Trabajos de diseno de UX
+1882,Trading
+1883,Trading Strategy
+1884,Training
+1885,Training Needs
+1886,Training development
+1887,Transformation Matrix
+1888,Transformers
+1889,Transition to Hospice
+1890,Transmission Control Protocol Internet Protocol (TCPIP)
+1891,Transporting
+1892,Trauma
+1893,Travelling Salesman Problem (TSP)
+1894,Tree Ensembles
+1895,Trees (Data Structures)
+1896,Trial Design
+1897,Troubleshooting
+1898,Troubleshooting Debugging
+1899,Troubleshooting Skills
+1900,Tumour immunity
+1901,Tuple
+1902,Twitter Advertising
+1903,Typography
+1904,UI development
+1905,UIUX Designer
+1906,UIUX design
+1907,UX Research
+1908,UX and UI
+1909,UX design jobs
+1910,UX-Forschung
+1911,Uncover campaign insights using native Facebook and Snapchat analytics tools
+1912,Understand balancing requirements and implement power estimators for lithium-ion battery packs
+1913,Understand how climate change risks impact corporate decisions and company value
+1914,Understand how lithium-ion battery cells work and basic requirements of battery-management systems
+1915,Understand the fundamentals of magnetic components including inductors and transformers
+1916,Understand the instruments investment funds and solutions used to finance clean technologies and clean energy
+1917,"Understand the various policy approaches involved in the transition to a low carbon economy including in particular ""cap trade"" carbon markets"
+1918,Understanding Pharmacy Terminology
+1919,Understanding Revenue
+1920,Understanding Tablet and Capsule Prescriptions
+1921,Understanding the SAP world and solutions
+1922,Understanding the evidence for climate change and for its anthropogenic origin
+1923,Underwriting
+1924,Unit Testing
+1925,Unity
+1926,Unity (User Interface)
+1927,Unix
+1928,Unreal Engine (User Interface)
+1929,Unsupervised Learning
+1930,Unweighted Pair Group Method with Arithmetic Mean (UPGMA)
+1931,Usability
+1932,Usability Testing
+1933,Usability-Tests
+1934,Use Ads Manager to create and optimize Twitter ads
+1935,Use ChatGPT to read and understand documents
+1936,Use Facebook Ads Manager to create and optimize ad campaigns
+1937,Use LinkedIn Campaign Manager to optimize B2B advertising campaigns
+1938,Use Snapchat Ad Manager to set up and optimize SnapAds
+1939,Use UI component libraries to build Android UI
+1940,Use social selling tactics to connect and engage with prospects
+1941,User Experience (UX)
+1942,User Experience Design (UXD)
+1943,User Interface
+1944,User Interface Design (UI Design)
+1945,User Interface design (UI Design)
+1946,User Research
+1947,Using Comments to Enhance Code Readability
+1948,Using Git
+1949,Using Pharmacy Software
+1950,Using Version Control
+1951,VHDL Coding
+1952,VSCode
+1953,Validation
+1954,Valuation
+1955,Valuation (Finance)
+1956,Value Proposition
+1957,Value Stream Mapping
+1958,Value estimation
+1959,Vector Calculus
+1960,Vector Space Models
+1961,Venture Capital
+1962,Venture Capital Financing
+1963,Veranderungsmanagement
+1964,Version Control
+1965,Version Control Systems
+1966,Vertex AI
+1967,Veterinary
+1968,Video Game Design
+1969,Video Game Development
+1970,Videography
+1971,Viral Marketing
+1972,Virtual Machine
+1973,Virtual Private Network (VPN)
+1974,Virtual reality (VR)
+1975,Vision Alignment
+1976,Visionary leadership
+1977,Visual Arts
+1978,Visual Communication
+1979,Visualisation des donnees (DataViz)
+1980,Visualizacao de dados (DataViz)
+1981,Visualizacion de Datos (DataViz)
+1982,Visualize complex data trapped in PDFs
+1983,Vital Signs
+1984,Viterbi Algorithm
+1985,Vuforia
+1986,WGANs
+1987,Warehouse Management
+1988,Watson (Computer)
+1989,Watson AI
+1990,Web API
+1991,Web Application
+1992,Web Design
+1993,Web Development
+1994,Web Development Framework
+1995,Web Development Tools
+1996,Web Scraping
+1997,Webpack
+1998,Website Structure
+1999,Website Wireframe
+2000,White-box Testing Techniques
+2001,Whole Genome Sequencing
+2002,Why Business
+2003,Wind Energy
+2004,Wind Energy Engineering
+2005,Wind Power
+2006,Wind Power Generation Modeling
+2007,Wireframe
+2008,Wireless Security
+2009,Word Embedding
+2010,Word Embeddings
+2011,Word2vec
+2012,Wordpress
+2013,Work Breakdown Structure
+2014,Workflow of Data Science projects
+2015,Workflow of Machine Learning projects
+2016,Working in a Pharmacy Setting
+2017,Working with SQlite
+2018,Workplace Inclusion
+2019,Worksheet
+2020,World Markets
+2021,Writing
+2022,Writing Code in Verilog
+2023,Xgboost
+2024,Xml
+2025,Yang
+2026,Yet Another Markup Language (YAML)
+2027,ZOWE
+2028,Zenhub
+2029,abstract thinking
+2030,accomodation
+2031,accounting software
+2032,active learning
+2033,advanced deployment
+2034,agile
+2035,analise de dados
+2036,analisis de datos
+2037,analysis
+2038,analytical thinking
+2039,applying permissions
+2040,arranging
+2041,asp.net
+2042,asset classification
+2043,attack and defend
+2044,automl
+2045,aws security
+2046,battery charging
+2047,battery management systems
+2048,battery types
+2049,behavior
+2050,behavioral psychology
+2051,biomanufacturing
+2052,bioprocess engineering
+2053,black scholes model
+2054,business accounting
+2055,career growth
+2056,case study
+2057,chain of thought prompting
+2058,classification
+2059,cloud networking
+2060,cognos analytics
+2061,computing
+2062,concept critical analysis
+2063,conflict resolution
+2064,content management
+2065,counterterrorism
+2066,create arrays
+2067,create control flow patterns using conditionals and loops
+2068,creating links to files and directories
+2069,cybersecurity analyst
+2070,dash
+2071,data and databases
+2072,data and information management
+2073,data visualizations
+2074,database (DB) design
+2075,database administration
+2076,database management
+2077,database vulnerabilities
+2078,declare and initialize different types of variables
+2079,desarrollo profesional
+2080,desenvolvimento de carreira
+2081,development
+2082,differential diagnosis and comorbidities
+2083,display advertising
+2084,diversity
+2085,educational games
+2086,embedded engineering
+2087,engagement
+2088,environment
+2089,escalation
+2090,establish business partnerships
+2091,establish coaching agreements
+2092,establishing trust
+2093,evidence-based practice
+2094,features and boundaries
+2095,filtering text files
+2096,financial statement analysis
+2097,firmware
+2098,food mindfulness
+2099,formulas and functions
+2100,gerenciamento de projetos
+2101,gestao de mudanca
+2102,gestao de riscos
+2103,gestion de cambios
+2104,glossary of computer graphics
+2105,goal setting
+2106,governance
+2107,guitar performance
+2108,hardware
+2109,health practices
+2110,health psychology
+2111,healthcare
+2112,healthcare data
+2113,healthcare terminology
+2114,hibernate
+2115,human anatomy
+2116,human computer interaction
+2117,hyperparameter tuning
+2118,hypothesis-driven development
+2119,iOS App Development
+2120,image classification
+2121,improved symptom management
+2122,inclusion
+2123,inclusive leadership
+2124,information security analyst
+2125,intake
+2126,integrative healthcare
+2127,integrative medicine
+2128,integrity and discretion
+2129,intervention
+2130,interview Preparation
+2131,interviewing
+2132,javascript library
+2133,keras
+2134,large language models
+2135,legal and institutional tools critical application
+2136,logic
+2137,managing Linux File Systems
+2138,managing people
+2139,maquete
+2140,maquette
+2141,mindful eating
+2142,mockup
+2143,model evaluation
+2144,model interpretation
+2145,money
+2146,motor design
+2147,natural language extraction
+2148,ncclient
+2149,network automation
+2150,networking basics
+2151,neurodiversity
+2152,nft
+2153,onboarding preparation
+2154,online teaching
+2155,open source
+2156,optical design
+2157,optical system specification
+2158,optimization of optical systems
+2159,outreach
+2160,patient-centered care
+2161,perception
+2162,por sus siglas en ingles)
+2163,power bi
+2164,practice using and extending protocols.
+2165,pre-attck
+2166,prediction
+2167,presentacion
+2168,product design
+2169,programacao em R
+2170,programmation R
+2171,prompt engineering
+2172,prompt patterns
+2173,pytorch
+2174,quantitative research
+2175,radiography
+2176,reason
+2177,reasoning
+2178,reflection
+2179,regression
+2180,regression modeling
+2181,regulation
+2182,resume and portfolio preparation
+2183,resume preparation
+2184,scripting
+2185,search marketing
+2186,security
+2187,security analyst
+2188,security principles
+2189,self-awareness
+2190,sensible shopping
+2191,sensor integration
+2192,social activism
+2193,social determinants of health
+2194,social-emotional learning
+2195,sports analytics
+2196,springboot
+2197,stakeholder communication
+2198,strategy
+2199,student engagement
+2200,sustainable eating
+2201,symptom management
+2202,symptoms assessment
+2203,tAgiles Management
+2204,tCoaching
+2205,tCreate and manipulate objects and arrays
+2206,tCreate simple JavaScript code
+2207,tEinflussnahme
+2208,tProblemlosung
+2209,tScrum
+2210,tWrite unit testing using Jest
+2211,tally prime
+2212,teamwork
+2213,technology
+2214,threat analysis
+2215,threat intelligence
+2216,time-to-event modeling
+2217,transformation of conflicts
+2218,updating packages
+2219,use navigation in your apps
+2220,value-based care
+2221,variability
+2222,video game
+2223,video terminology and while not required
+2224,virtual coaching
+2225,virtualization
+2226,visual storytelling
+2227,visualization
+2228,vulnerability assessment
+2229,watson
+2230,web application development
+2231,web interactivty
+2232,well-being
+2233,wellbeing
+2234,whole-person care
+2235,work management
+2236,z systems
+2237,zOS

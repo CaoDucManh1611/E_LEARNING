@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Danh Sách Kỹ Năng - Hệ Thống Gợi Ý</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f4f8; }
+
+        .header {
+            background: linear-gradient(135deg, #1a73e8, #0d47a1);
+            color: white; padding: 20px 30px;
+            display: flex; align-items: center; gap: 20px;
+        }
+        .header a { color: white; text-decoration: none; font-size: 0.9rem; opacity: 0.85; }
+        .header a:hover { opacity: 1; }
+        .header h1 { font-size: 1.4rem; flex: 1; }
+
+        .container { max-width: 900px; margin: 30px auto; padding: 0 16px; }
+
+        .card { background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 24px; }
+
+        .search-bar {
+            width: 100%; padding: 10px 16px; border: 1px solid #ddd;
+            border-radius: 8px; font-size: 0.95rem; margin-bottom: 20px;
+        }
+        .search-bar:focus { border-color: #1a73e8; outline: none; }
+
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+        .skill-tag {
+            background: #e3f2fd; color: #1565c0;
+            padding: 6px 14px; border-radius: 20px; font-size: 0.82rem;
+            cursor: pointer; transition: background 0.15s;
+            border: 1px solid transparent;
+        }
+        .skill-tag:hover { background: #1a73e8; color: white; }
+
+        .stat { color: #666; font-size: 0.85rem; margin-bottom: 14px; }
+
+        .loading { text-align: center; padding: 40px; color: #1a73e8; }
+        .spinner {
+            width: 36px; height: 36px; border: 3px solid #e3f2fd;
+            border-top-color: #1a73e8; border-radius: 50%;
+            animation: spin 0.8s linear infinite; margin: 0 auto 12px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <a href="/">← Trang chủ</a>
+    <h1>📋 Danh Sách Kỹ Năng Coursera</h1>
+</div>
+
+<div class="container">
+    <div class="card">
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <div>Đang tải danh sách kỹ năng...</div>
+        </div>
+
+        <div id="content" style="display:none;">
+            <input type="text" class="search-bar" id="searchInput"
+                   placeholder="🔍 Tìm kỹ năng..."/>
+            <div class="stat" id="stat"></div>
+            <div class="skills-grid" id="skillsGrid"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (async () => {
+        try {
+            const res  = await fetch('/api/skills');
+            const data = await res.json();
+            const skills = data.skills || [];
+
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+            document.getElementById('stat').textContent = `Tổng cộng ${skills.length} kỹ năng`;
+
+            const grid = document.getElementById('skillsGrid');
+            const render = (list) => {
+                grid.innerHTML = list.map(s =>
+                    `<span class="skill-tag" title="${s}">${s}</span>`
+                ).join('');
+            };
+            render(skills);
+
+            document.getElementById('searchInput').addEventListener('input', function() {
+                const q = this.value.toLowerCase();
+                render(skills.filter(s => s.toLowerCase().includes(q)));
+            });
+
+        } catch(e) {
+            document.getElementById('loading').innerHTML =
+                `<div style="color:#c62828">❌ Không tải được danh sách: ${e.message}</div>`;
+        }
+    })();
+</script>
+</body>
+</html>
