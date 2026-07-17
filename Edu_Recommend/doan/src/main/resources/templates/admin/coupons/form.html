@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cấu Hình Mã Giảm Giá — EduRecommend</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        :root {
+            --bg:       #faf7f2;
+            --surface:  #ffffff;
+            --border:   #e4ddd3;
+            --green:    #2d6a4f;
+            --green2:   #40916c;
+            --green-lt: #d8f3dc;
+            --text:     #1c2b22;
+            --muted:    #7a8c80;
+            --accent:   #b7791f;
+            --red:      #dc2626;
+            --shadow:   0 2px 16px rgba(45,106,79,.06);
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* ── SIDEBAR LAYOUT ── */
+        .sidebar {
+            width: 260px;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            padding: 30px 20px;
+            position: fixed;
+            top: 0; bottom: 0; left: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.3rem;
+            letter-spacing: -.5px;
+            color: var(--green);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .logo em { font-style: normal; color: var(--accent); }
+
+        .menu-title {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--muted);
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            padding-left: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex-grow: 1;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 12px 16px;
+            border-radius: 10px;
+                        transition: background-color 0.18s ease, color 0.18s ease, padding-left 0.18s ease;
+            }
+        .nav-link:hover {
+            background: var(--green-lt);
+            color: var(--green); padding-left: 20px;}
+        .nav-link.active {
+            background: var(--green);
+            color: white;
+            font-weight: 600;
+        }
+
+        .nav-link-logout {
+            margin-top: auto;
+            background: #fef2f2;
+            color: var(--red);
+            font-weight: 600;
+        }
+        .nav-link-logout:hover {
+            background: var(--red);
+            color: white;
+        }
+
+        /* ── MAIN CONTENT ── */
+        .main-content {
+            margin-left: 260px;
+            flex: 1;
+            padding: 40px 48px;
+            min-height: 100vh;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .page-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -.5px;
+            color: var(--text);
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            max-width: 600px;
+        }
+
+        /* ── FORMS ── */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--muted);
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            outline: none;
+            transition: border-color .15s;
+        }
+        .form-control:focus {
+            border-color: var(--green);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.15s;
+        }
+        .btn-primary { background: var(--green); color: white; }
+        .btn-primary:hover { background: var(--green2); }
+        .btn-secondary { background: var(--border); color: var(--text); margin-left: 10px; }
+        .btn-secondary:hover { background: #dcd4c8; }
+    </style>
+</head>
+<body>
+
+<!-- SIDEBAR NAVIGATION -->
+<div class="sidebar">
+    <div class="logo">Edu<em>Recommend</em></div>
+    
+    <div class="menu-title">Điều hướng</div>
+    <div class="nav-links">
+        <a href="/admin" class="nav-link">
+            <span>📊</span> Tổng quan
+        </a>
+        <a href="/admin/users" class="nav-link">
+            <span>👥</span> Quản lý Người dùng
+        </a>
+        <a href="/admin/categories" class="nav-link">
+            <span>📁</span> Quản lý Danh mục
+        </a>
+        <a href="/admin/courses" class="nav-link">
+            <span>📚</span> Quản lý Khóa học
+        </a>
+        <a href="/admin/coupons" class="nav-link active">
+            <span>🎟️</span> Quản lý Mã giảm giá
+        </a>
+        <a href="/admin/reviews" class="nav-link">
+            <span>⭐</span> Quản lý Đánh giá
+        </a>
+        <a href="/admin/refunds" class="nav-link">
+            <span>🛡️</span> Quản lý Hoàn tiền
+        </a>
+        <a href="/admin/revenue" class="nav-link">
+            <span>💰</span> Báo cáo Doanh thu
+        </a>
+        <a href="/admin/notifications" class="nav-link">
+            <span>🔔</span> Thông báo
+            <span class="badge" th:if="${globalUnreadCount > 0}" th:text="${globalUnreadCount}" style="background: var(--red); color: white; font-size: 0.75rem; font-weight: 800; padding: 2px 8px; border-radius: 12px; margin-left: auto;">2</span>
+        </a>
+        
+        <div class="menu-title" style="margin-top: 20px;">Học viên</div>
+        <a href="/" class="nav-link">
+            <span>🏠</span> Về Trang chủ
+        </a>
+        
+        <a href="/logout" class="nav-link nav-link-logout">
+            <span>🚪</span> Đăng xuất
+        </a>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+    <div class="page-header">
+        <div style="margin-bottom: 10px;">
+            <a href="/admin/coupons" style="color: var(--muted); text-decoration: none; font-size: 0.85rem; font-weight: 600;">← Quay lại danh sách mã giảm giá</a>
+        </div>
+        <h1 class="page-title" th:text="${coupon.id != null} ? 'Cập Nhật Mã Giảm Giá' : 'Tạo Mã Giảm Giá Mới'">Tạo Mã Giảm Giá Mới</h1>
+    </div>
+
+    <div class="card">
+        <form th:action="@{/admin/coupons/save}" method="POST" th:object="${coupon}">
+            <input type="hidden" th:field="*{id}"/>
+            
+            <div class="form-group">
+                <label class="form-label" for="maCode">Mã Code (Chữ in hoa, không dấu, viết liền)</label>
+                <input type="text" id="maCode" th:field="*{maCode}" class="form-control" 
+                       placeholder="Ví dụ: SUMMER2026" required
+                       style="text-transform: uppercase;"/>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="loaiGiam">Loại Giảm Giá</label>
+                <select id="loaiGiam" th:field="*{loaiGiam}" class="form-control" required>
+                    <option value="percent">Phần trăm (%)</option>
+                    <option value="fixed">Cố định (VNĐ)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="giaTri">Giá Trị Giảm (% hoặc VNĐ)</label>
+                <input type="number" id="giaTri" th:field="*{giaTri}" class="form-control"
+                       min="1" step="any" placeholder="Ví dụ: 15 (%) hoặc 50000 (VNĐ)" required/>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="soLuong">Số Lượng Lượt Dùng Tối Đa</label>
+                <input type="number" id="soLuong" th:field="*{soLuong}" class="form-control"
+                       min="1" placeholder="Ví dụ: 100" required/>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="ngayHetHan">Ngày Hết Hạn (để trống = không giới hạn)</label>
+                <input type="date" id="ngayHetHan" th:field="*{ngayHetHan}" class="form-control"/>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <button type="submit" class="btn btn-primary">Lưu cấu hình</button>
+                <a href="/admin/coupons" class="btn btn-secondary">Hủy bỏ</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<!-- Floating AI Chat Widget -->
+<div id="ai-chat-widget" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999;">
+    <!-- Floating Bubble -->
+    <div id="ai-chat-bubble" style="width: 56px; height: 56px; border-radius: 50%; background: #2d6a4f; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; cursor: grab; box-shadow: 0 4px 16px rgba(45, 106, 79, 0.4); user-select: none; transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1); ">
+        🤖
+    </div>
+    
+    <!-- Chat Window -->
+    <div id="ai-chat-window" style="display: none; position: absolute; bottom: 70px; right: 0; width: 340px; height: 460px; background: white; border: 1px solid #e4ddd3; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); flex-direction: column; overflow: hidden; font-family: 'Inter', sans-serif;">
+        <!-- Header -->
+        <div style="background: #2d6a4f; color: white; padding: 16px; display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.2rem;">🤖</span>
+                <div>
+                    <div style="font-weight: 700; font-size: 0.9rem; line-height: 1.2;">Trợ Lý AI EduRecommend</div>
+                    <div style="font-size: 0.72rem; opacity: 0.85;">Hỏi đáp thông minh tự động</div>
+                </div>
+            </div>
+            <button id="ai-chat-close" style="background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer; padding: 4px;">&times;</button>
+        </div>
+        
+        <!-- Messages Area -->
+        <div id="ai-chat-messages" style="flex-grow: 1; padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; font-size: 0.85rem; background: #faf7f2;">
+            <!-- Welcome message -->
+            <div style="align-self: flex-start; background: white; border: 1px solid #e4ddd3; padding: 10px 14px; border-radius: 12px 12px 12px 0; max-width: 80%; line-height: 1.4; color: #1c2b22; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                Xin chào! Tôi là **Trợ lý AI** của EduRecommend. Tôi có thể giải đáp các câu hỏi về chính sách hoàn tiền, gợi ý lộ trình học tập, hay tính năng giảng viên. Bạn có câu hỏi nào không?
+            </div>
+        </div>
+        
+        <!-- Suggestion Chips -->
+        <div class="ai-chips-container" style="padding: 8px 12px; display: flex; gap: 8px; overflow-x: auto; background: #faf7f2; border-top: 1px solid #e4ddd3; border-bottom: 1px solid #e4ddd3; white-space: nowrap; scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch;">
+            <span class="ai-chip" onclick="sendAIChat('Chính sách hoàn tiền là gì?')" style="display: inline-block; padding: 6px 12px; background: white; border: 1px solid #e4ddd3; border-radius: 20px; font-size: 0.75rem; font-weight: 600; color: #2d6a4f; cursor: pointer; transition: all 0.15s; user-select: none; flex-shrink: 0;">🎯 Hoàn tiền</span>
+            <span class="ai-chip" onclick="sendAIChat('Cách thức AI gợi ý lộ trình học tập?')" style="display: inline-block; padding: 6px 12px; background: white; border: 1px solid #e4ddd3; border-radius: 20px; font-size: 0.75rem; font-weight: 600; color: #2d6a4f; cursor: pointer; transition: all 0.15s; user-select: none; flex-shrink: 0;">🤖 Lộ trình AI</span>
+            <span class="ai-chip" onclick="sendAIChat('Các chức năng cho giảng viên là gì?')" style="display: inline-block; padding: 6px 12px; background: white; border: 1px solid #e4ddd3; border-radius: 20px; font-size: 0.75rem; font-weight: 600; color: #2d6a4f; cursor: pointer; transition: all 0.15s; user-select: none; flex-shrink: 0;">👨‍🏫 Giảng viên</span>
+            <span class="ai-chip" onclick="sendAIChat('Quy định đánh giá sao khóa học?')" style="display: inline-block; padding: 6px 12px; background: white; border: 1px solid #e4ddd3; border-radius: 20px; font-size: 0.75rem; font-weight: 600; color: #2d6a4f; cursor: pointer; transition: all 0.15s; user-select: none; flex-shrink: 0;">⭐ Đánh giá</span>
+        </div>
+        
+        <!-- Input Area -->
+        <div style="padding: 10px 14px; display: flex; gap: 8px; align-items: center; border-top: 1px solid #e4ddd3; background: white;">
+            <input id="ai-chat-input" type="text" placeholder="Nhập câu hỏi của bạn..." style="flex-grow: 1; border: 1.5px solid #e4ddd3; border-radius: 10px; padding: 10px 12px; font-size: 0.85rem; outline: none; font-family: 'Inter', sans-serif; transition: border-color 0.15s;">
+            <button id="ai-chat-send" style="background: #2d6a4f; color: white; border: none; border-radius: 10px; padding: 10px 14px; font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: background 0.15s;">Gửi</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .ai-chip:hover {
+        background: #d8f3dc !important;
+        border-color: #2d6a4f !important;
+    }
+    #ai-chat-input:focus {
+        border-color: #2d6a4f;
+    }
+    #ai-chat-bubble:hover {
+        transform: scale(1.05);
+    }
+    #ai-chat-bubble:active {
+        cursor: grabbing;
+    }
+    .ai-md-bold {
+        font-weight: 700;
+    }
+    .ai-chips-container::-webkit-scrollbar {
+        display: none;
+    }
+    #ai-chat-messages::-webkit-scrollbar {
+        width: 6px;
+    }
+    #ai-chat-messages::-webkit-scrollbar-track {
+        background: #faf7f2;
+    }
+    #ai-chat-messages::-webkit-scrollbar-thumb {
+        background: #c4b5a2;
+        border-radius: 3px;
+    }
+</style>
+
+<script>
+(function() {
+    const bubble = document.getElementById('ai-chat-bubble');
+    const windowEl = document.getElementById('ai-chat-window');
+    const closeBtn = document.getElementById('ai-chat-close');
+    const sendBtn = document.getElementById('ai-chat-send');
+    const inputEl = document.getElementById('ai-chat-input');
+    const msgArea = document.getElementById('ai-chat-messages');
+    
+    let isDragging = false;
+    let startX = 0, startY = 0;
+    let origX = 0, origY = 0;
+    let hasMoved = false;
+
+    // Draggable Logic
+    bubble.addEventListener('mousedown', function(e) {
+        isDragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        const rect = bubble.getBoundingClientRect();
+        origX = rect.left;
+        origY = rect.top;
+        hasMoved = false;
+        document.body.style.userSelect = 'none';
+    });
+
+    document.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+        if (Math.abs(dx) > 5 || Math.abs(dy) > 5) {
+            hasMoved = true;
+        }
+        
+        const newLeft = origX + dx;
+        const newTop = origY + dy;
+        
+        const widget = document.getElementById('ai-chat-widget');
+        widget.style.left = newLeft + 'px';
+        widget.style.top = newTop + 'px';
+        widget.style.bottom = 'auto';
+        widget.style.right = 'auto';
+    });
+
+    document.addEventListener('mouseup', function(e) {
+        if (!isDragging) return;
+        isDragging = false;
+        document.body.style.userSelect = 'auto';
+    });
+
+    // Touch events for mobile compatibility
+    bubble.addEventListener('touchstart', function(e) {
+        isDragging = true;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        const rect = bubble.getBoundingClientRect();
+        origX = rect.left;
+        origY = rect.top;
+        hasMoved = false;
+    });
+
+    document.addEventListener('touchmove', function(e) {
+        if (!isDragging) return;
+        const dx = e.touches[0].clientX - startX;
+        const dy = e.touches[0].clientY - startY;
+        if (Math.abs(dx) > 5 || Math.abs(dy) > 5) {
+            hasMoved = true;
+        }
+        const newLeft = origX + dx;
+        const newTop = origY + dy;
+        
+        const widget = document.getElementById('ai-chat-widget');
+        widget.style.left = newLeft + 'px';
+        widget.style.top = newTop + 'px';
+        widget.style.bottom = 'auto';
+        widget.style.right = 'auto';
+    });
+
+    bubble.addEventListener('touchend', function(e) {
+        isDragging = false;
+    });
+
+    // Toggle Chat Window
+    bubble.addEventListener('click', function(e) {
+        if (hasMoved) return; 
+        if (windowEl.style.display === 'none' || windowEl.style.display === '') {
+            windowEl.style.display = 'flex';
+            inputEl.focus();
+        } else {
+            windowEl.style.display = 'none';
+        }
+    });
+
+    closeBtn.addEventListener('click', function() {
+        windowEl.style.display = 'none';
+    });
+
+    // Send logic
+    window.sendAIChat = function(text) {
+        if (!text || text.trim() === '') return;
+        
+        // Append User Message
+        appendMessage(text, 'user');
+        
+        // Show Typing Indicator
+        const typingId = appendMessage('🤖 Đang suy nghĩ...', 'ai-typing');
+        
+        // Call API
+        fetch('/api/ai/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: text })
+        })
+        .then(res => res.json())
+        .then(data => {
+            // Remove typing indicator
+            document.getElementById(typingId).remove();
+            
+            let reply = data.reply || 'Có lỗi xảy ra!';
+            reply = formatMarkdown(reply);
+            
+            // Append AI response
+            appendMessage(reply, 'ai');
+        })
+        .catch(err => {
+            document.getElementById(typingId).remove();
+            appendMessage('Hệ thống gặp lỗi kết nối offline, vui lòng thử lại sau!', 'ai');
+        });
+    };
+
+    sendBtn.addEventListener('click', function() {
+        const text = inputEl.value;
+        inputEl.value = '';
+        sendAIChat(text);
+    });
+
+    inputEl.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            const text = inputEl.value;
+            inputEl.value = '';
+            sendAIChat(text);
+        }
+    });
+
+    function appendMessage(text, sender) {
+        const msgDiv = document.createElement('div');
+        const id = 'msg-' + Date.now() + '-' + Math.floor(Math.random()*1000);
+        msgDiv.id = id;
+        
+        if (sender === 'user') {
+            msgDiv.style.alignSelf = 'flex-end';
+            msgDiv.style.background = '#d8f3dc';
+            msgDiv.style.border = '1px solid rgba(45, 106, 79, 0.2)';
+            msgDiv.style.color = '#1c2b22';
+            msgDiv.style.padding = '10px 14px';
+            msgDiv.style.borderRadius = '12px 12px 0 12px';
+            msgDiv.style.boxShadow = '0 2px 8px rgba(0,0,0,0.02)';
+        } else if (sender === 'ai-typing') {
+            msgDiv.style.alignSelf = 'flex-start';
+            msgDiv.style.background = 'white';
+            msgDiv.style.border = '1px solid #e4ddd3';
+            msgDiv.style.color = 'var(--muted)';
+            msgDiv.style.padding = '10px 14px';
+            msgDiv.style.borderRadius = '12px 12px 12px 0';
+            msgDiv.style.fontStyle = 'italic';
+        } else {
+            msgDiv.style.alignSelf = 'flex-start';
+            msgDiv.style.background = 'white';
+            msgDiv.style.border = '1px solid #e4ddd3';
+            msgDiv.style.color = '#1c2b22';
+            msgDiv.style.padding = '10px 14px';
+            msgDiv.style.borderRadius = '12px 12px 12px 0';
+            msgDiv.style.boxShadow = '0 2px 8px rgba(0,0,0,0.02)';
+        }
+        
+        msgDiv.style.maxWidth = '85%';
+        msgDiv.style.lineHeight = '1.45';
+        msgDiv.style.whiteSpace = 'pre-line';
+        msgDiv.innerHTML = text;
+        
+        msgArea.appendChild(msgDiv);
+        msgArea.scrollTop = msgArea.scrollHeight;
+        return id;
+    }
+
+    function formatMarkdown(text) {
+        let formatted = text;
+        formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong class="ai-md-bold">$1</strong>');
+        return formatted;
+    }
+})();
+</script>
+
+</body>
+</html>

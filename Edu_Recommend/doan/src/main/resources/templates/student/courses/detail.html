@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title th:text="${course.tenKhoaHoc} + ' — EduRecommend'">Chi Tiết Khóa Học</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        :root {
+            --bg:       #faf7f2;
+            --surface:  #ffffff;
+            --border:   #e4ddd3;
+            --green:    #2d6a4f;
+            --green2:   #40916c;
+            --green-lt: #d8f3dc;
+            --text:     #1c2b22;
+            --muted:    #7a8c80;
+            --accent:   #b7791f;
+            --red:      #dc2626;
+            --shadow:   0 4px 20px rgba(45,106,79,.05);
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+        }
+
+        /* ── NAVBAR ── */
+        nav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(250,247,242,.92);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 48px;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 64px;
+        }
+        .logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -.5px; color: var(--green); text-decoration: none; }
+        .logo em { font-style: normal; color: var(--accent); }
+        .nav-links { display: flex; gap: 6px; align-items: center; }
+        .nav-link {
+            color: var(--muted); text-decoration: none;
+            font-size: .85rem; font-weight: 500;
+            padding: 7px 16px; border-radius: 8px;             transition: background-color 0.18s ease, color 0.18s ease, padding-left 0.18s ease;
+            }
+        .nav-link:hover { color: var(--green); background: var(--green-lt); transform: translateY(-2px);}
+        .nav-link.active { color: var(--green); background: var(--green-lt); font-weight: 600; }
+        .btn-auth {
+            font-size: .82rem; font-weight: 700; text-decoration: none;
+            padding: 8px 16px; border-radius: 9px; transition: all .15s;
+        }
+        .btn-login { color: var(--green); }
+        .btn-register { background: var(--green); color: white; margin-left: 6px; }
+        .btn-register:hover { background: var(--green2); }
+
+        /* ── AVATAR DROPDOWN ── */
+        .user-menu-container {
+            position: relative;
+            display: inline-block;
+        }
+        .avatar-btn {
+            background: var(--green-lt);
+            color: var(--green);
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.9rem;
+            cursor: pointer;
+            border: 1.5px solid var(--green2);
+            transition: all 0.15s;
+        }
+        .avatar-btn:hover {
+            transform: scale(1.05);
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: 48px; right: 0;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            width: 220px;
+            display: none;
+            flex-direction: column;
+            padding: 8px 0;
+            z-index: 200;
+            text-align: left;
+        }
+        .dropdown-menu.show { display: flex; }
+        .dropdown-header {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 6px;
+        }
+        .user-fullname { font-size: 0.88rem; font-weight: 700; color: var(--text); }
+        .user-email { font-size: 0.75rem; color: var(--muted); margin-top: 2px; word-break: break-all; }
+        .dropdown-item {
+            padding: 10px 16px;
+            font-size: 0.82rem;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background 0.15s;
+        }
+        .dropdown-item:hover {
+            background: var(--green-lt);
+            color: var(--green);
+        }
+        .dropdown-item.logout {
+            color: var(--red);
+            border-top: 1px solid var(--border);
+            margin-top: 6px;
+        }
+        .dropdown-item.logout:hover {
+            background: #fef2f2;
+            color: var(--red);
+        }
+
+        .container { max-width: 1050px; margin: 0 auto; padding: 40px 24px; }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            transition: color 0.15s;
+        }
+        .back-link:hover { color: var(--green); }
+
+        /* ── COURSE LAYOUT ── */
+        .course-layout {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .main-info {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        .badge {
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+        }
+        .badge-cat { background: var(--green-lt); color: var(--green); }
+        .badge-level { background: #fef3c7; color: #d97706; }
+
+        .course-name {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: var(--text);
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+
+        .course-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #374151;
+            margin-bottom: 30px;
+        }
+
+        /* ── SYLLABUS ── */
+        .syllabus-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: var(--text);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+        }
+
+        .lesson-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .lesson-item {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.18s;
+        }
+        
+        /* Nếu đã mua khóa học, cho hover bài học trông nhấp nháy chuyển động */
+        .lesson-item.clickable:hover {
+            padding-left: 20px;
+            border-color: var(--green2);
+            background: var(--green-lt);
+            cursor: pointer;
+        }
+        
+        .lesson-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .lesson-num {
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: var(--green);
+            background: var(--surface);
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+        }
+        .lesson-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+        .lesson-dur {
+            font-size: 0.8rem;
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        /* ── SIDEBAR BUY CARD ── */
+        .side-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 90px;
+        }
+
+        .side-img-wrap {
+            width: 100%;
+            height: 180px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #f3ede4;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+        .side-img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+        .side-img-placeholder {
+            width: 100%; height: 100%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.85rem; color: var(--muted); font-weight: 600;
+        }
+
+        .side-price-lbl {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .side-price {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--green);
+            margin-bottom: 20px;
+        }
+
+        .btn-action {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 0.92rem;
+            font-weight: 800;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.18s;
+            border: none;
+        }
+        .btn-buy {
+            background: var(--green);
+            color: white;
+            box-shadow: 0 4px 16px rgba(45,106,79,0.2);
+        }
+        .btn-buy:hover { background: var(--green2); }
+        .btn-enrolled {
+            background: var(--green-lt);
+            color: var(--green);
+            font-weight: 800;
+        }
+        .btn-enrolled:hover {
+            background: var(--green);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<!-- NAVBAR -->
+<!-- NAVBAR -->
+<!-- NAVBAR -->
+<nav>
+    <a href="/" class="logo">Edu<em>Recommend</em></a>
+    <div class="nav-links">
+        <a href="/" class="nav-link ">Trang chủ</a>
+        <a href="/student/courses" class="nav-link ">Khóa học</a>
+        <a href="/cart" sec:authorize="!hasRole('admin')" class="nav-link" style="display: flex; align-items: center; gap: 4px;">
+            🛒 Giỏ hàng
+            <span th:if="${globalCartCount > 0}" th:text="${globalCartCount}" 
+                  style="background: #dc2626; color: white; font-size: 0.68rem; font-weight: 800; padding: 1px 6px; border-radius: 10px; line-height: 1; min-width: 16px; text-align: center; display: inline-block;">3</span>
+        </a>
+        
+        <span sec:authorize="isAnonymous()">
+            <a href="/login" class="btn-auth btn-login">Đăng nhập</a>
+            <a href="/register" class="btn-auth btn-register">Đăng ký</a>
+        </span>
+        
+        <!-- NOTIFICATION BELL DROPDOWN -->
+        <div class="notif-menu-container" sec:authorize="isAuthenticated()" style="position: relative; display: inline-block; margin-right: 15px; vertical-align: middle;">
+            <div class="notif-btn" onclick="toggleNotifDropdown()" style="cursor: pointer; font-size: 1.15rem; position: relative; padding: 0; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: var(--green-lt); border-radius: 50%; border: 1.5px solid var(--green2); transition: all 0.15s;">
+                🔔
+                <span th:if="${globalUnreadCount > 0}" th:text="${globalUnreadCount}" 
+                      style="position: absolute; top: -6px; right: -6px; background: #dc2626; color: white; font-size: 0.65rem; font-weight: 800; padding: 1px 5px; border-radius: 10px; min-width: 16px; text-align: center; line-height: 1;">3</span>
+            </div>
+            
+            <div class="dropdown-menu" id="notifDropdown" style="position: absolute; top: 48px; right: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); width: 300px; display: none; flex-direction: column; padding: 12px; z-index: 300; max-height: 400px; overflow-y: auto; text-align: left;">
+                <h4 style="font-size: 0.82rem; font-weight: 800; color: var(--green); margin-bottom: 10px; border-bottom: 1px solid var(--border); padding-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px;">Thông báo Hỏi đáp</h4>
+                
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <a th:each="n : ${globalNotifications}" 
+                       th:href="@{/student/notifications/{id}/click(id=${n.id})}"
+                       style="position: relative; text-decoration: none; color: inherit; display: block; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); transition: background 0.15s; font-size: 0.78rem; text-align: left;"
+                       th:styleappend="${!n.daDoc} ? 'border-left: 3px solid var(--accent); background: #fffdf7;' : ''">
+                       <button th:onclick="|deleteNotification(event, this, ${n.id})|" 
+                               style="position: absolute; top: 6px; right: 8px; border: none; background: none; color: var(--muted); font-size: 1.1rem; cursor: pointer; line-height: 1; padding: 2px 6px; border-radius: 4px; transition: all 0.15s; z-index: 10;" 
+                               onmouseover="this.style.color='var(--red)'; this.style.backgroundColor='#fee2e2';"
+                               onmouseout="this.style.color='var(--muted)'; this.style.backgroundColor='transparent';">&times;</button>
+                       <div style="font-weight: 700; margin-bottom: 2px;" th:text="${n.tieuDe}">Tiêu đề</div>
+                       <p style="color: var(--text); line-height: 1.3; font-size: 0.75rem; padding-right: 15px;" th:text="${n.noiDung}">Nội dung...</p>
+                       <div style="font-size: 0.65rem; color: var(--muted); text-align: right; margin-top: 4px;" 
+                            th:text="${n.createdAt != null ? #temporals.format(n.createdAt, 'dd/MM/yyyy HH:mm') : 'Gần đây'}">16/07</div>
+                    </a>
+                    
+                    <div th:if="${#lists.isEmpty(globalNotifications)}" style="text-align: center; color: var(--muted); font-style: italic; padding: 15px; font-size: 0.78rem;">
+                        Không có thông báo nào.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AVATAR DROPDOWN MENU -->
+        <div class="user-menu-container" sec:authorize="isAuthenticated()" style="position: relative; display: inline-block; vertical-align: middle;">
+            <div class="avatar-btn" id="avatarBtn" onclick="toggleDropdown()"
+                 th:text="${currentUser != null && currentUser.hoTen != null && !#strings.isEmpty(currentUser.hoTen)} ? ${#strings.substring(currentUser.hoTen,0,1).toUpperCase()} : 'U'">U</div>
+            
+            <div class="dropdown-menu" id="dropdownMenu" style="position: absolute; top: 48px; right: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); width: 220px; display: none; flex-direction: column; padding: 8px 0; z-index: 200;">
+                <div class="dropdown-header" style="padding: 12px 16px; border-bottom: 1px solid var(--border); margin-bottom: 6px; text-align: left;">
+                    <div class="user-fullname" style="font-size: 0.88rem; font-weight: 700; color: var(--text);" th:text="${currentUser != null ? currentUser.hoTen : 'Học viên'}">Họ và tên</div>
+                    <div class="user-email" style="font-size: 0.75rem; color: var(--muted); margin-top: 2px; word-break: break-all;" th:text="${currentUser != null ? currentUser.email : ''}">email@gmail.com</div>
+                </div>
+                
+                <a href="/student/my-courses" sec:authorize="hasRole('student')" class="dropdown-item">📖 Khóa học của tôi</a>
+                <a href="/student/orders" sec:authorize="hasRole('student')" class="dropdown-item">🧾 Lịch sử đơn hàng</a>
+                <a href="/student/recommend" sec:authorize="hasRole('student')" class="dropdown-item">🤖 Gợi ý lộ trình AI</a>
+                <a href="/admin" sec:authorize="hasRole('admin')" class="dropdown-item" style="color: var(--accent);">⚙️ Trang quản trị</a>
+                <a href="/teacher/my-courses" sec:authorize="hasRole('teacher')" class="dropdown-item">📖 Khóa học của tôi</a>
+                <a href="/student/orders" sec:authorize="hasRole('teacher')" class="dropdown-item">🧾 Lịch sử đơn hàng</a>
+                <a href="/student/recommend" sec:authorize="hasRole('teacher')" class="dropdown-item">🤖 Gợi ý lộ trình AI</a>
+                <a href="/teacher/dashboard" sec:authorize="hasRole('teacher')" class="dropdown-item" style="color: var(--accent);">👨‍🏫 Trang Giảng viên</a>
+                <a href="/logout" class="dropdown-item logout">🚪 Đăng xuất</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <a href="/student/courses" class="back-link">← Quay lại danh sách Khóa học</a>
+
+    <div class="course-layout">
+        <!-- LEFT: MAIN INFO -->
+        <div class="main-info">
+            <div class="course-meta">
+                <span class="badge badge-cat" th:text="${course.category != null ? course.category.tenDanhMuc : 'Chung'}">Danh mục</span>
+                <span class="badge badge-level" th:text="${course.capDo}">Trình độ</span>
+                <span class="badge" style="background:#e0e7ff; color:#3730a3;">
+                    👨‍🏫 Giảng viên: <strong th:text="${course.teacher != null ? course.teacher.hoTen : 'Quản trị viên'}">Tên GV</strong>
+                </span>
+            </div>
+            
+            <h1 class="course-name" th:text="${course.tenKhoaHoc}">Lập trình Java</h1>
+            
+            <div class="course-rating" style="display: flex; align-items: center; gap: 6px; font-size: 0.9rem; margin: -10px 0 20px; color: var(--accent); font-weight: 700;">
+                <span th:if="${course.reviewCount > 0}">
+                    ⭐ <span th:text="${course.averageStars}">4.5</span>
+                    <span style="color: var(--muted); font-weight: 500;" th:text="'(' + ${course.reviewCount} + ' đánh giá)'">(10 đánh giá)</span>
+                </span>
+                <span th:unless="${course.reviewCount > 0}" style="color: var(--muted); font-weight: 500; font-style: italic;">
+                    Chưa có đánh giá cho khóa học này
+                </span>
+            </div>
+            
+            <p class="course-desc" th:text="${course.moTa}">Mô tả khóa học ở đây...</p>
+
+            <!-- SYLLABUS -->
+            <h2 class="syllabus-title">Nội Dung Khóa Học</h2>
+            <div class="lesson-list">
+                <a th:each="lesson : ${lessons}" 
+                   th:href="${isEnrolled} ? @{/student/courses/{courseId}/learn(courseId=${course.id})} : '#'"
+                   class="lesson-item" 
+                   th:classappend="${isEnrolled} ? 'clickable' : ''"
+                   onclick="if(!this.classList.contains('clickable')) { showBuyWarning(event); return false; }">
+                    
+                    <div class="lesson-left">
+                        <div class="lesson-num" th:text="${lesson.thuTu}">1</div>
+                        <div class="lesson-title" th:text="${lesson.tieuDe}">Bài học 1</div>
+                    </div>
+                    <span class="lesson-dur" th:text="${lesson.thoiLuongPhut != null ? lesson.thoiLuongPhut + ' phút' : '10 phút'}">10 phút</span>
+                </a>
+                
+                <div th:if="${#lists.isEmpty(lessons)}" style="color: var(--muted); text-align: center; padding: 20px;">
+                    Chưa có bài học nào được tải lên cho khóa học này.
+                </div>
+            </div>
+
+            <!-- REVIEWS SECTION -->
+            <div class="reviews-section" style="margin-top: 40px; border-top: 1px solid var(--border); padding-top: 30px;">
+                <h2 class="syllabus-title" style="margin-bottom: 20px;">Đánh Giá & Nhận Xét Từ Học Viên</h2>
+
+                <!-- Hiển thị thông báo thành công / lỗi -->
+                <div th:if="${successMsg}" th:text="${successMsg}" style="background: #e8f5e9; color: #2e7d32; padding: 12px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; margin-bottom: 20px;">Thành công</div>
+                <div th:if="${errorMsg}" th:text="${errorMsg}" style="background: #fef2f2; color: #dc2626; padding: 12px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; margin-bottom: 20px;">Lỗi</div>
+
+                <!-- Form viết đánh giá mới -->
+                <div th:if="${canReview}" class="review-form-card" style="background: #faf7f2; border: 1.5px dashed var(--border); border-radius: 16px; padding: 24px; margin-bottom: 30px;">
+                    <h3 style="font-size: 1rem; font-weight: 800; color: var(--green); margin-bottom: 12px;">Chia sẻ trải nghiệm của bạn</h3>
+                    <form th:action="@{/student/courses/{courseId}/review(courseId=${course.id})}" method="POST">
+                        
+                        <div style="margin-bottom: 16px;">
+                            <label style="font-size: 0.75rem; font-weight: 700; color: var(--muted); text-transform: uppercase; display: block; margin-bottom: 6px;">Số sao đánh giá *</label>
+                            <div class="star-rating" style="display: flex; gap: 8px;">
+                                <label th:each="star : ${#numbers.sequence(1, 5)}" style="cursor: pointer; font-size: 1rem; display: flex; align-items: center; gap: 4px;">
+                                    <input type="radio" name="soSao" th:value="${star}" th:checked="${star == 5}" required style="cursor: pointer;"/>
+                                    <span th:text="${star} + ' ⭐'">5 ⭐</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 16px;">
+                            <label style="font-size: 0.75rem; font-weight: 700; color: var(--muted); text-transform: uppercase; display: block; margin-bottom: 6px;">Nội dung bình luận/nhận xét (Không bắt buộc)</label>
+                            <textarea name="noiDung" rows="3" placeholder="Nhận xét của bạn về chất lượng khóa học, bài học..." 
+                                      style="width: 100%; padding: 12px; border: 1.5px solid var(--border); border-radius: 10px; outline: none; font-family: 'Inter', sans-serif; font-size: 0.88rem; background: var(--surface); transition: border-color 0.15s; resize: vertical;"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-action btn-buy" style="width: auto; padding: 10px 24px; font-size: 0.85rem; font-weight: 700; border-radius: 8px; display: inline-block;">Gửi Đánh Giá</button>
+                    </form>
+                </div>
+
+                <!-- Thông báo nếu đã đánh giá -->
+                <div th:if="${hasReviewed && !#authorization.expression('hasRole(''admin'')')}" style="background: rgba(45,106,79,0.06); color: var(--green); padding: 12px 16px; border-radius: 10px; font-size: 0.82rem; font-weight: 600; margin-bottom: 30px;">
+                    ✓ Bạn đã hoàn tất đánh giá khóa học này. Cảm ơn phản hồi của bạn!
+                </div>
+
+                <!-- Danh sách nhận xét từ học viên khác -->
+                <div class="reviews-list" style="display: flex; flex-direction: column; gap: 16px;">
+                    <div th:each="r : ${reviews}" style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; box-shadow: var(--shadow);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <div style="background: var(--green-lt); color: var(--green); width: 28px; height: 28px; border-radius: 50%; font-size: 0.78rem; font-weight: 800; display: flex; align-items: center; justify-content: center;"
+                                     th:text="${#strings.substring(r.user.hoTen,0,1).toUpperCase()}">H</div>
+                                <span style="font-size: 0.88rem; font-weight: 700; color: var(--text);" th:text="${r.user.hoTen}">Học viên</span>
+                            </div>
+                            <span style="font-size: 0.78rem; color: var(--muted);" th:text="${r.createdAt != null ? #temporals.format(r.createdAt, 'dd/MM/yyyy') : 'Gần đây'}">16/07/2026</span>
+                        </div>
+                        <div style="color: var(--accent); font-weight: 700; font-size: 0.82rem; margin-bottom: 6px;">
+                            <span th:each="num : ${#numbers.sequence(1, r.soSao)}">⭐</span>
+                        </div>
+                        <p style="font-size: 0.88rem; color: var(--text); line-height: 1.4;" th:text="${#strings.isEmpty(r.noiDung) ? 'Không có nhận xét chi tiết.' : r.noiDung}">Nội dung nhận xét</p>
+                    </div>
+
+                    <div th:if="${#lists.isEmpty(reviews)}" style="color: var(--muted); text-align: center; font-style: italic; padding: 20px; font-size: 0.85rem;">
+                        Chưa có đánh giá nào cho khóa học này.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: SIDEBAR BUY CARD -->
+        <div class="side-card">
+            <div class="side-img-wrap">
+                <img th:if="${course.hinhAnh != null && !#strings.isEmpty(course.hinhAnh)}" 
+                     th:src="${course.hinhAnh != null ? course.hinhAnh : '/images/default-course.jpg'}" class="side-img" alt="Ảnh khóa học"/>
+                <div th:unless="${course.hinhAnh != null && !#strings.isEmpty(course.hinhAnh)}" 
+                     class="side-img-placeholder">📚 No Image</div>
+            </div>
+            
+            <div class="side-price-lbl">Giá chính thức</div>
+            <div class="side-price" th:text="${#numbers.formatDecimal(course.gia, 1, 'POINT', 0, 'COMMA')} + 'đ'">1.000.000đ</div>
+            
+            <!-- Đăng ký học / Vào lớp học -->
+            <div th:if="${isEnrolled}">
+                <!-- Đã mua: Dẫn vào lớp học thực tế -->
+                <a th:href="@{/student/courses/{id}/learn(id=${course.id})}" class="btn-action btn-enrolled">📖 Vào Lớp Học Ngay</a>
+            </div>
+            <div th:unless="${isEnrolled}">
+                <!-- Chưa mua: Thêm vào giỏ hàng -->
+                <a th:href="@{/cart/add/{id}(id=${course.id})}" class="btn-action btn-buy">🛒 Đăng Ký Học Ngay</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleDropdown() {
+        const menu = document.getElementById('dropdownMenu');
+        if (menu) {
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'flex';
+                const notifMenu = document.getElementById('notifDropdown');
+                if (notifMenu) notifMenu.style.display = 'none';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+    }
+
+    function toggleNotifDropdown() {
+        const notifMenu = document.getElementById('notifDropdown');
+        if (notifMenu) {
+            if (notifMenu.style.display === 'none' || notifMenu.style.display === '') {
+                notifMenu.style.display = 'flex';
+                const menu = document.getElementById('dropdownMenu');
+                if (menu) menu.style.display = 'none';
+            } else {
+                notifMenu.style.display = 'none';
+            }
+        }
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('#avatarBtn') && !event.target.closest('#avatarBtn') && !event.target.closest('.notif-btn') && !event.target.closest('#notifDropdown') && !event.target.closest('#dropdownMenu')) {
+            const menu = document.getElementById('dropdownMenu');
+            if (menu) menu.style.display = 'none';
+            const notifMenu = document.getElementById('notifDropdown');
+            if (notifMenu) notifMenu.style.display = 'none';
+        }
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+function deleteNotification(event, btn, notifId) {
+    event.stopPropagation();
+    event.preventDefault();
+    
+    Swal.fire({
+        title: 'Xóa thông báo?',
+        text: 'Bạn có chắc chắn muốn xóa thông báo này không?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#2d6a4f',
+        cancelButtonColor: '#dc2626',
+        confirmButtonText: 'Đồng ý',
+        cancelButtonText: 'Hủy'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            fetch('/student/notifications/' + notifId + '/delete', {
+                method: 'POST'
+            }).then(response => {
+                if (response.ok) {
+                    const card = btn.closest('.notif-card') || btn.closest('a');
+                    if (card) {
+                        card.remove();
+                    }
+                    
+                    const badges = document.querySelectorAll('.badge, .notif-btn span');
+                    badges.forEach(badge => {
+                        let count = parseInt(badge.textContent);
+                        if (!isNaN(count) && count > 0) {
+                            count--;
+                            if (count === 0) {
+                                badge.remove();
+                            } else {
+                                badge.textContent = count;
+                            }
+                        }
+                    });
+                    
+                    Swal.fire({
+                        title: 'Đã xóa!',
+                        text: 'Thông báo đã được gỡ bỏ.',
+                        icon: 'success',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                } else {
+                    Swal.fire('Lỗi', 'Không thể xóa thông báo.', 'error');
+                }
+            }).catch(err => {
+                console.error(err);
+                Swal.fire('Lỗi', 'Lỗi kết nối đến máy chủ.', 'error');
+            });
+        }
+    });
+}
+
+function showBuyWarning(event) {
+    event.preventDefault();
+    Swal.fire({
+        title: 'Thông báo',
+        text: 'Vui lòng mua khóa học để bắt đầu học tập và xem video bài giảng nhé!',
+        icon: 'info',
+        confirmButtonColor: '#2d6a4f',
+        confirmButtonText: 'Đồng ý'
+    });
+}
+</script>
+
+
+<!-- Floating AI Chat Widget -->
+<div id="ai-chat-widget" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999;">
+    <!-- Floating Bubble -->
+    <div id="ai-chat-bubble" style="width: 56px; height: 56px; border-radius: 50%; background: #2d6a4f; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; cursor: grab; box-shadow: 0 4px 16px rgba(45, 106, 79, 0.4); user-select: none; transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1); ">
+        🤖
+    </div>
+    
+    <!-- Chat Window -->
+    <div id="ai-chat-window" style="display: none; position: absolute; bottom: 70px; right: 0; width: 340px; height: 460px; background: white; border: 1px solid #e4ddd3; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); flex-direction: column; overflow: hidden; font-family: 'Inter', sans-serif;">
+        <!-- Header -->
+        <div style="background: #2d6a4f; color: white; padding: 16px; display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.2rem;">🤖</span>
+                <div>
+                    <div style="font-weight: 700; font-size: 0.9rem; line-height: 1.2;">Trợ Lý AI EduRecommend</div>
+                    <div style="font-size: 0.72rem; opacity: 0.85;">Hỏi đáp thông minh tự động</div>
+                </div>
+            </div>
+            <button id="ai-chat-close" style="background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer; padding: 4px;">&times;</button>
+        </div>
+        
+        <!-- Messages Area -->
+        <div id="ai-chat-messages" style="flex-grow: 1; padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; font-size: 0.85rem; background: #faf7f2;">
+            <!-- Welcome message -->
+            <div style="align-self: flex-start; background: white; border: 1px solid #e4ddd3; padding: 10px 14px; border-radius: 12px 12px 12px 0; max-width: 80%; line-height: 1.4; color: #1c2b22; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                Xin chào! Tôi là **Trợ lý AI** của EduRecommend. Tôi có thể giải đáp các câu hỏi về chính sách hoàn tiền, gợi ý lộ trình học tập, hay tính năng giảng viên. Bạn có câu hỏi nào không?
+            </div>
+        </div>
+        
+        <!-- Suggestion Chips -->
+        <div class="ai-chips-container" style="padding: 8px 12px; display: flex; gap: 8px; overflow-x: auto; background: #faf7f2; border-top: 1px solid #e4ddd3; border-bottom: 1px solid #e4ddd3; white-space: nowrap; scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch;">
+            <span class="ai-chip" onclick="sendAIChat('Chính sách hoàn tiền là gì?')" style="display: inline-block; padding: 6px 12px; background: white; border: 1px solid #e4ddd3; border-radius: 20px; font-size: 0.75rem; font-weight: 600; color: #2d6a4f; cursor: pointer; transition: all 0.15s; user-select: none; flex-shrink: 0;">🎯 Hoàn tiền</span>
+            <span class="ai-chip" onclick="sendAIChat('Cách thức AI gợi ý lộ trình học tập?')" style="display: inline-block; padding: 6px 12px; background: white; border: 1px solid #e4ddd3; border-radius: 20px; font-size: 0.75rem; font-weight: 600; color: #2d6a4f; cursor: pointer; transition: all 0.15s; user-select: none; flex-shrink: 0;">🤖 Lộ trình AI</span>
+            <span class="ai-chip" onclick="sendAIChat('Các chức năng cho giảng viên là gì?')" style="display: inline-block; padding: 6px 12px; background: white; border: 1px solid #e4ddd3; border-radius: 20px; font-size: 0.75rem; font-weight: 600; color: #2d6a4f; cursor: pointer; transition: all 0.15s; user-select: none; flex-shrink: 0;">👨‍🏫 Giảng viên</span>
+            <span class="ai-chip" onclick="sendAIChat('Quy định đánh giá sao khóa học?')" style="display: inline-block; padding: 6px 12px; background: white; border: 1px solid #e4ddd3; border-radius: 20px; font-size: 0.75rem; font-weight: 600; color: #2d6a4f; cursor: pointer; transition: all 0.15s; user-select: none; flex-shrink: 0;">⭐ Đánh giá</span>
+        </div>
+        
+        <!-- Input Area -->
+        <div style="padding: 10px 14px; display: flex; gap: 8px; align-items: center; border-top: 1px solid #e4ddd3; background: white;">
+            <input id="ai-chat-input" type="text" placeholder="Nhập câu hỏi của bạn..." style="flex-grow: 1; border: 1.5px solid #e4ddd3; border-radius: 10px; padding: 10px 12px; font-size: 0.85rem; outline: none; font-family: 'Inter', sans-serif; transition: border-color 0.15s;">
+            <button id="ai-chat-send" style="background: #2d6a4f; color: white; border: none; border-radius: 10px; padding: 10px 14px; font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: background 0.15s;">Gửi</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .ai-chip:hover {
+        background: #d8f3dc !important;
+        border-color: #2d6a4f !important;
+    }
+    #ai-chat-input:focus {
+        border-color: #2d6a4f;
+    }
+    #ai-chat-bubble:hover {
+        transform: scale(1.05);
+    }
+    #ai-chat-bubble:active {
+        cursor: grabbing;
+    }
+    .ai-md-bold {
+        font-weight: 700;
+    }
+    .ai-chips-container::-webkit-scrollbar {
+        display: none;
+    }
+    #ai-chat-messages::-webkit-scrollbar {
+        width: 6px;
+    }
+    #ai-chat-messages::-webkit-scrollbar-track {
+        background: #faf7f2;
+    }
+    #ai-chat-messages::-webkit-scrollbar-thumb {
+        background: #c4b5a2;
+        border-radius: 3px;
+    }
+</style>
+
+<script>
+(function() {
+    const bubble = document.getElementById('ai-chat-bubble');
+    const windowEl = document.getElementById('ai-chat-window');
+    const closeBtn = document.getElementById('ai-chat-close');
+    const sendBtn = document.getElementById('ai-chat-send');
+    const inputEl = document.getElementById('ai-chat-input');
+    const msgArea = document.getElementById('ai-chat-messages');
+    
+    let isDragging = false;
+    let startX = 0, startY = 0;
+    let origX = 0, origY = 0;
+    let hasMoved = false;
+
+    // Draggable Logic
+    bubble.addEventListener('mousedown', function(e) {
+        isDragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        const rect = bubble.getBoundingClientRect();
+        origX = rect.left;
+        origY = rect.top;
+        hasMoved = false;
+        document.body.style.userSelect = 'none';
+    });
+
+    document.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+        if (Math.abs(dx) > 5 || Math.abs(dy) > 5) {
+            hasMoved = true;
+        }
+        
+        const newLeft = origX + dx;
+        const newTop = origY + dy;
+        
+        const widget = document.getElementById('ai-chat-widget');
+        widget.style.left = newLeft + 'px';
+        widget.style.top = newTop + 'px';
+        widget.style.bottom = 'auto';
+        widget.style.right = 'auto';
+    });
+
+    document.addEventListener('mouseup', function(e) {
+        if (!isDragging) return;
+        isDragging = false;
+        document.body.style.userSelect = 'auto';
+    });
+
+    // Touch events for mobile compatibility
+    bubble.addEventListener('touchstart', function(e) {
+        isDragging = true;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        const rect = bubble.getBoundingClientRect();
+        origX = rect.left;
+        origY = rect.top;
+        hasMoved = false;
+    });
+
+    document.addEventListener('touchmove', function(e) {
+        if (!isDragging) return;
+        const dx = e.touches[0].clientX - startX;
+        const dy = e.touches[0].clientY - startY;
+        if (Math.abs(dx) > 5 || Math.abs(dy) > 5) {
+            hasMoved = true;
+        }
+        const newLeft = origX + dx;
+        const newTop = origY + dy;
+        
+        const widget = document.getElementById('ai-chat-widget');
+        widget.style.left = newLeft + 'px';
+        widget.style.top = newTop + 'px';
+        widget.style.bottom = 'auto';
+        widget.style.right = 'auto';
+    });
+
+    bubble.addEventListener('touchend', function(e) {
+        isDragging = false;
+    });
+
+    // Toggle Chat Window
+    bubble.addEventListener('click', function(e) {
+        if (hasMoved) return; 
+        if (windowEl.style.display === 'none' || windowEl.style.display === '') {
+            windowEl.style.display = 'flex';
+            inputEl.focus();
+        } else {
+            windowEl.style.display = 'none';
+        }
+    });
+
+    closeBtn.addEventListener('click', function() {
+        windowEl.style.display = 'none';
+    });
+
+    // Send logic
+    window.sendAIChat = function(text) {
+        if (!text || text.trim() === '') return;
+        
+        // Append User Message
+        appendMessage(text, 'user');
+        
+        // Show Typing Indicator
+        const typingId = appendMessage('🤖 Đang suy nghĩ...', 'ai-typing');
+        
+        // Call API
+        fetch('/api/ai/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: text })
+        })
+        .then(res => res.json())
+        .then(data => {
+            // Remove typing indicator
+            document.getElementById(typingId).remove();
+            
+            let reply = data.reply || 'Có lỗi xảy ra!';
+            reply = formatMarkdown(reply);
+            
+            // Append AI response
+            appendMessage(reply, 'ai');
+        })
+        .catch(err => {
+            document.getElementById(typingId).remove();
+            appendMessage('Hệ thống gặp lỗi kết nối offline, vui lòng thử lại sau!', 'ai');
+        });
+    };
+
+    sendBtn.addEventListener('click', function() {
+        const text = inputEl.value;
+        inputEl.value = '';
+        sendAIChat(text);
+    });
+
+    inputEl.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            const text = inputEl.value;
+            inputEl.value = '';
+            sendAIChat(text);
+        }
+    });
+
+    function appendMessage(text, sender) {
+        const msgDiv = document.createElement('div');
+        const id = 'msg-' + Date.now() + '-' + Math.floor(Math.random()*1000);
+        msgDiv.id = id;
+        
+        if (sender === 'user') {
+            msgDiv.style.alignSelf = 'flex-end';
+            msgDiv.style.background = '#d8f3dc';
+            msgDiv.style.border = '1px solid rgba(45, 106, 79, 0.2)';
+            msgDiv.style.color = '#1c2b22';
+            msgDiv.style.padding = '10px 14px';
+            msgDiv.style.borderRadius = '12px 12px 0 12px';
+            msgDiv.style.boxShadow = '0 2px 8px rgba(0,0,0,0.02)';
+        } else if (sender === 'ai-typing') {
+            msgDiv.style.alignSelf = 'flex-start';
+            msgDiv.style.background = 'white';
+            msgDiv.style.border = '1px solid #e4ddd3';
+            msgDiv.style.color = 'var(--muted)';
+            msgDiv.style.padding = '10px 14px';
+            msgDiv.style.borderRadius = '12px 12px 12px 0';
+            msgDiv.style.fontStyle = 'italic';
+        } else {
+            msgDiv.style.alignSelf = 'flex-start';
+            msgDiv.style.background = 'white';
+            msgDiv.style.border = '1px solid #e4ddd3';
+            msgDiv.style.color = '#1c2b22';
+            msgDiv.style.padding = '10px 14px';
+            msgDiv.style.borderRadius = '12px 12px 12px 0';
+            msgDiv.style.boxShadow = '0 2px 8px rgba(0,0,0,0.02)';
+        }
+        
+        msgDiv.style.maxWidth = '85%';
+        msgDiv.style.lineHeight = '1.45';
+        msgDiv.style.whiteSpace = 'pre-line';
+        msgDiv.innerHTML = text;
+        
+        msgArea.appendChild(msgDiv);
+        msgArea.scrollTop = msgArea.scrollHeight;
+        return id;
+    }
+
+    function formatMarkdown(text) {
+        let formatted = text;
+        formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong class="ai-md-bold">$1</strong>');
+        return formatted;
+    }
+})();
+</script>
+
+</body>
+</html>
