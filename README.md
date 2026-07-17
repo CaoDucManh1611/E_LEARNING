@@ -213,4 +213,4 @@ Truy cập ứng dụng tại địa chỉ: `http://localhost:8080/`
 
 *   **Cao Đức Mạnh**
 *   **Nguyễn Nhật Toàn**
-*   *Đồ án tốt nghiệp / Đồ án môn học Khai phá dữ liệu & Học máy ứng dụng.*
+*   *Dự án Khai phá dữ liệu & Học máy ứng dụng.*

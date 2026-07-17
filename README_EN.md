@@ -191,4 +191,4 @@ Access the application locally at: `http://localhost:8080/`
 
 *   **Cao Duc Manh**
 *   **Nguyen Nhat Toan**
-*   *Capstone Project / Applied Data Mining & Machine Learning course project.*
+*   *Applied Data Mining & Machine Learning Project.*
