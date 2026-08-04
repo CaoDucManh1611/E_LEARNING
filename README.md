@@ -46,13 +46,9 @@ Hệ thống được thiết kế theo kiến trúc Microservices & RESTful API
 
 ## 📸 3. Giao diện ứng dụng (Screenshots)
 
-| Trang chủ & Danh sách khóa học | Hệ thống Gợi ý Lộ trình AI |
+| Trang chủ ứng dụng | Danh sách khóa học & AI Gợi ý |
 |:---:|:---:|
-| *(Thêm ảnh docs/screenshots/home.png)* | *(Thêm ảnh docs/screenshots/recommend.png)* |
-
-| Trợ lý AI Chatbot (Gemini API) | Quản trị Dashboard (Admin) |
-|:---:|:---:|
-| *(Thêm ảnh docs/screenshots/chat.png)* | *(Thêm ảnh docs/screenshots/admin.png)* |
+| ![Trang chủ](docs/screenshots/home.png) | ![Danh sách khóa học](docs/screenshots/recommend.png) |
 
 ---
 
