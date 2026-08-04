@@ -42,16 +42,21 @@ Hệ thống được thiết kế theo kiến trúc Microservices & RESTful API
   └──────────────────┘   └──────────────────┘   └──────────────────┘
 ```
 
-### 🧩 Phân tầng ứng dụng:
-- **Frontend App**: Vue 3 (Vite, Pinia/Provide-Inject, Lucide Icons) hỗ trợ trải nghiệm người dùng mượt mà.
-- **Backend Service**: Spring Boot 4.0.6 trên nền Java 26, phụ trách xác thực, giỏ hàng, thanh toán, quản lý khóa học, bài học và kiểm thử đơn vị JUnit 5 + Mockito.
-- **AI Recommendation Engine**: Python Flask API chạy các thuật toán Khai phá dữ liệu (Luật kết hợp Apriori & Phân nhóm KNN).
-- **AI Chatbot**: Google Gemini API hỗ trợ tư vấn tự động (kèm cơ chế Offline Fallback khi mất kết nối).
-- **Container & CI/CD**: Docker (Amazon Corretto 26 Alpine) + GitHub Actions tự động kiểm thử và đẩy Docker Image lên Docker Hub.
+---
+
+## 📸 3. Giao diện ứng dụng (Screenshots)
+
+| Trang chủ & Danh sách khóa học | Hệ thống Gợi ý Lộ trình AI |
+|:---:|:---:|
+| *(Thêm ảnh docs/screenshots/home.png)* | *(Thêm ảnh docs/screenshots/recommend.png)* |
+
+| Trợ lý AI Chatbot (Gemini API) | Quản trị Dashboard (Admin) |
+|:---:|:---:|
+| *(Thêm ảnh docs/screenshots/chat.png)* | *(Thêm ảnh docs/screenshots/admin.png)* |
 
 ---
 
-## 🔥 3. Chức năng chính
+## 🔥 4. Chức năng chính
 
 ### 👨‍🎓 Học viên (Student)
 - **Khám phá khóa học**: Tìm kiếm, lọc khóa học theo danh mục, giá, đánh giá.
@@ -70,7 +75,7 @@ Hệ thống được thiết kế theo kiến trúc Microservices & RESTful API
 
 ---
 
-## 🛠️ 4. Công nghệ sử dụng
+## 🛠️ 5. Công nghệ sử dụng
 
 | Phân loại | Công nghệ / Thư viện |
 |---|---|
@@ -84,7 +89,7 @@ Hệ thống được thiết kế theo kiến trúc Microservices & RESTful API
 
 ---
 
-## 📁 5. Cấu trúc thư mục dự án
+## 📁 6. Cấu trúc thư mục dự án
 
 ```
 E_LEARNING/
@@ -113,7 +118,7 @@ E_LEARNING/
 
 ---
 
-## 🚀 6. Hướng dẫn chạy cục bộ (Local Setup)
+## 🚀 7. Hướng dẫn chạy cục bộ (Local Setup)
 
 ### Yêu cầu tiên quyết:
 - **JDK 26** trở lên
@@ -156,7 +161,7 @@ python app.py
 
 ---
 
-## 🐳 7. Chạy bằng Docker
+## 🐳 8. Chạy bằng Docker
 
 Ứng dụng hỗ trợ đóng gói Docker siêu nhẹ bằng Multi-stage Build:
 
@@ -170,7 +175,7 @@ docker run -d -p 8080:8080 --name backend edurecommend-backend:latest
 
 ---
 
-## ⚙️ 8. Quyền trình CI/CD (GitHub Actions)
+## ⚙️ 9. Quyền trình CI/CD (GitHub Actions)
 
 Dự án được tích hợp tự động hóa quy trình phát triển và triển khai:
 
@@ -195,6 +200,6 @@ Dự án được tích hợp tự động hóa quy trình phát triển và tri
 
 ---
 
-## 📄 9. Giấy phép & Bản quyền
+## 📄 10. Giấy phép & Bản quyền
 
 Dự án được phát triển phục vụ mục đích nghiên cứu, học tập và làm đồ án khai phá dữ liệu / phát triển ứng dụng Web.
