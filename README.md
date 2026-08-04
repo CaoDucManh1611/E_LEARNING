@@ -1,216 +1,200 @@
-# 🎓 EduRecommend - Hệ Thống E-Learning & Gợi Ý Lộ Trình Học Tập Tối Ưu Bằng AI
+# 🎓 EduRecommend - Hệ thống Bán khóa học & Gợi ý Lộ trình Học tập Tích hợp AI
 
-**EduRecommend** là một giải pháp công nghệ toàn diện kết hợp giữa **Khai phá dữ liệu (Data Mining)**, **Học máy (Machine Learning)** và **Kỹ nghệ phần mềm (Software Engineering)**. Nền tảng không chỉ quản lý và kinh doanh khóa học lập trình trực tuyến (E-Learning) chuyên nghiệp mà còn đóng vai trò như một cố vấn học tập ảo – phân tích các chỉ số học tập, sức khỏe và sinh hoạt của từng học viên để đề xuất lộ trình khóa học tối ưu thông qua mô hình dự báo AI.
-
----
-
-## 🌐 Multilingual Readme
-*   [English Version (Bản tiếng Anh)](./README_EN.md)
-
----
-
-## 🛠️ CÔNG NGHỆ SỬ DỤNG (TECH STACK)
-
-Để xây dựng một hệ thống hoàn chỉnh từ xử lý dữ liệu, chạy mô hình AI đến triển khai ứng dụng thực tế, các công nghệ sau đã được áp dụng:
-
-### 1. Phân Hệ Backend Web & Cơ Sở Dữ Liệu
-*   **Java 26.0.1 (Amazon Corretto)**: Phiên bản Java mới nhất để tối ưu hóa hiệu năng thực thi hệ thống.
-*   **Spring Boot 4.0.6**: Framework cốt lõi để xây dựng cấu trúc phần mềm ổn định, nhanh chóng.
-*   **Spring Security**: Thiết lập bộ lọc bảo mật, xử lý đăng nhập, quản lý session và phân quyền người dùng (Student/Teacher/Admin).
-*   **Spring Data JPA & Hibernate**: Đơn giản hóa việc thực hiện các câu truy vấn và tự động ánh xạ đối tượng xuống database.
-*   **MySQL 8.0**: Hệ quản trị cơ sở dữ liệu quan hệ lưu trữ thông tin tài khoản, khóa học, đơn hàng, hóa đơn, coupon và tiến độ học tập.
-*   **Thymeleaf**: Công nghệ Template Engine xử lý kết xuất giao diện HTML động phía Server.
-
-### 2. Phân Hệ Trí Tuệ Nhân Tạo & Khai Phá Dữ Liệu
-*   **Python 3.12**: Ngôn ngữ chính dùng cho xử lý số liệu và học máy.
-*   **Flask API**: Framework Web Python dùng để đóng gói mô hình ML thành REST API, được deploy độc lập trên cloud **Render** (24/7).
-*   **Pandas & NumPy**: Thư viện xử lý dữ liệu dạng bảng, xử lý các giá trị khuyết thiếu và định dạng kiểu dữ liệu.
-*   **Matplotlib & Seaborn**: Thư viện vẽ biểu đồ phân tích dữ liệu trực quan (Data Visualization).
-*   **Scikit-learn**: Thư viện huấn luyện thuật toán **K-Nearest Neighbors (KNN)** phân loại nhóm học lực học sinh.
-*   **Mlxtend**: Thư viện chạy thuật toán **Apriori** khai phá luật kết hợp để gợi ý khóa học tối ưu.
-*   **Gemini 2.5 Flash API**: Mô hình ngôn ngữ lớn (LLM) của Google tích hợp làm widget AI chatbot tư vấn tự động.
-
-### 3. Phân Hệ Frontend
-*   **HTML5, CSS3, JavaScript**: Xây dựng giao diện web phản hồi (Responsive) và xử lý tương tác động.
-*   **Font chữ Inter**: Được chuẩn hóa toàn bộ trên tất cả các trang giao diện, đem lại cảm giác hiện đại, dễ đọc cho giao diện tiếng Việt.
-*   **SweetAlert2 & Animate.css**: Thư viện tạo hộp thoại popup thông báo động và hiệu ứng chuyển động mượt mà cho trải nghiệm người dùng.
+![Build Status](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-brightgreen?logo=github-actions)
+![Java Version](https://img.shields.io/badge/Java-26-orange?logo=openjdk)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.6-brightgreen?logo=springboot)
+![Vue.js](https://img.shields.io/badge/Vue.js-3.x-4FC08D?logo=vuedotjs)
+![Python Flask](https://img.shields.io/badge/Flask-AI%20Engine-blue?logo=flask)
+![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)
 
 ---
 
-## 🗺️ TỔNG QUAN KỊCH BẢN PHÁT TRIỂN DỰ ÁN
+## 📌 1. Giới thiệu tổng quan
 
-Quy trình phát triển dự án được thiết kế nghiêm ngặt theo mô hình chuyển tiếp từ nghiên cứu dữ liệu đến ứng dụng thực tiễn:
+**EduRecommend** là một nền tảng thương mại điện tử chuyên cung cấp các khóa học trực tuyến (E-Learning) kết hợp với **Hệ thống gợi ý AI thông minh (Apriori + KNN)** và **Trợ lý tư vấn AI Chatbot (Google Gemini API)**.
+
+Dự án giúp tối ưu hóa lộ trình học tập dựa trên 17 đặc trưng học vấn của học viên (thời gian học, điểm số, điểm chuyên cần, mục tiêu kỹ năng...) kết hợp khai phá dữ liệu từ xu hướng thị trường (từ catalog 800+ khóa học Coursera).
+
+---
+
+## 🏗️ 2. Kiến trúc hệ thống
+
+Hệ thống được thiết kế theo kiến trúc Microservices & RESTful API chuẩn hóa:
 
 ```
-[Dữ liệu Khảo sát Thô] 
-       │ (Pandas, NumPy, re, unicodedata)
-       ▼
-[GIAI ĐOẠN 1: TIỀN XỬ LÝ & LÀM SẠCH] (Điền khuyết, Chuẩn hóa, Khai thác thuộc tính kỹ năng)
-       │
-       ▼
-[TRỰC QUAN HÓA & PHÂN TÍCH DỮ LIỆU] (Vẽ biểu đồ tương quan Heatmap, Biểu đồ phân phối Histogram/KDE)
-       │
-       ▼
-[GIAI ĐOẠN 2: HUẤN LUYỆN MÔ HÌNH AI] (Train mô hình KNN & Apriori, Deploy Flask API trên Cloud)
-       │
-       ▼
-[GIAI ĐOẠN 3: PHẦN MỀM THỰC TẾ] (Spring Boot Web App, Phân quyền Security, Widget AI Gemini Chat)
+                  ┌─────────────────────────────────────┐
+                  │          Frontend (Vue 3)           │
+                  │   Vite + SPA + Responsive Layout    │
+                  └──────────────────┬──────────────────┘
+                                     │ REST API
+                                     ▼
+                  ┌─────────────────────────────────────┐
+                  │       Backend (Spring Boot 4)       │
+                  │   Java 26 + Spring Security + Data  │
+                  └─────────┬─────────────────┬─────────┘
+                            │                 │
+             ┌──────────────┴──────┐   ┌──────┴───────────────┐
+             ▼                     ▼   ▼                      ▼
+  ┌──────────────────┐   ┌──────────────────┐   ┌──────────────────┐
+  │   Database       │   │  AI Service      │   │  Google Gemini   │
+  │   MySQL / H2     │   │  Flask (Python)  │   │  API Chatbot     │
+  │   JPA / Hibernate│   │  Apriori + KNN   │   │  (Generative AI) │
+  └──────────────────┘   └──────────────────┘   └──────────────────┘
 ```
 
----
-
-## 📊 GIAI ĐOẠN 1: KHAI PHÁ & TIỀN XỬ LÝ DỮ LIỆU (DATA MINING & CLEANING)
-
-Dữ liệu thô ban đầu được khai thác từ hai nguồn chính và được xử lý trong các file Jupyter Notebook (`Data_Cleaning.ipynb` và `Clean_Data_for_MySQL.ipynb`):
-
-### 1. Nguồn Dữ Liệu Ban Đầu
-*   **Student Dataset (10,000 dòng khảo sát):** Chứa thông tin chi tiết về thói quen học tập và đời sống của học sinh. Các cột thuộc tính bao gồm: `Hours_Studied` (Giờ tự học), `Attendance` (Chuyên cần), `Previous_Scores` (Điểm kỳ trước), `Sleep_Hours` (Giờ ngủ), `Tutoring_Sessions` (Số buổi học thêm), `Extracurricular_Activities` (Hoạt động ngoại khóa), `Physical_Activity` (Giờ thể thao), `Parental_Education_Level` (Trình độ học vấn cha mẹ), `Distance_from_Home` (Khoảng cách từ nhà đến trường).
-*   **Coursera Dataset (Hàng trăm khóa học công nghệ):** Chứa thông tin về tên khóa học, cấp độ (Beginner, Intermediate, Advanced), số lượng học viên đã đăng ký, và chuỗi văn bản danh sách kỹ năng bổ trợ (`skills`).
-
-### 2. Chi Tiết Kỹ Thuật Làm Sạch Dữ Liệu (Python - Pandas & NumPy)
-Dữ liệu thô chứa nhiều nhiễu, giá trị khuyết thiếu và sai định dạng đã được xử lý qua các bước:
-*   **Xử lý dữ liệu khuyết thiếu (Missing Data Imputation):**
-    *   **Đối với thuộc tính phân loại (Categorical):** Dùng giá trị xuất hiện nhiều nhất (Mode). Ví dụ: `Parental_Education_Level` rỗng được điền là `'High School'`; `Distance_from_Home` rỗng được điền là `'Near'`.
-    *   **Đối với thuộc tính số (Numerical):** Dùng giá trị trung vị (Median) của cột để tránh làm lệch phân phối dữ liệu gốc khi có các điểm dị biệt (outliers).
-*   **Làm sạch dữ liệu định dạng số lượng học viên:**
-    *   Cột `course_students_enrolled` ban đầu chứa dữ liệu dạng văn bản (ví dụ: `120k` hoặc `1.2m`).
-    *   Đã sử dụng biểu thức chính quy (Regular Expression) để lọc lấy phần số, nhân tương ứng với hệ số (nhân `1,000` cho `k` và `1,000,000` cho `m`) để chuyển đổi thành kiểu số nguyên (`Integer/Long`) đồng bộ phục vụ sắp xếp, thống kê.
-*   **Chuẩn hóa cấu trúc CSDL quan hệ:**
-    *   Cột `skills` chứa danh sách kỹ năng dạng mảng chuỗi trong file CSV.
-    *   Tiến hành phân tách (flatten) danh sách kỹ năng này thành bảng danh mục kỹ năng độc lập (`skills.csv`) và bảng trung gian liên kết khóa học - kỹ năng (`external_course_skills.csv`) để import trực tiếp vào cấu trúc cơ sở dữ liệu MySQL, đảm bảo chuẩn hóa dạng chuẩn 3 (3NF).
+### 🧩 Phân tầng ứng dụng:
+- **Frontend App**: Vue 3 (Vite, Pinia/Provide-Inject, Lucide Icons) hỗ trợ trải nghiệm người dùng mượt mà.
+- **Backend Service**: Spring Boot 4.0.6 trên nền Java 26, phụ trách xác thực, giỏ hàng, thanh toán, quản lý khóa học, bài học và kiểm thử đơn vị JUnit 5 + Mockito.
+- **AI Recommendation Engine**: Python Flask API chạy các thuật toán Khai phá dữ liệu (Luật kết hợp Apriori & Phân nhóm KNN).
+- **AI Chatbot**: Google Gemini API hỗ trợ tư vấn tự động (kèm cơ chế Offline Fallback khi mất kết nối).
+- **Container & CI/CD**: Docker (Amazon Corretto 26 Alpine) + GitHub Actions tự động kiểm thử và đẩy Docker Image lên Docker Hub.
 
 ---
 
-## 📈 TRỰC QUAN HÓA & KHAI PHÁ DỮ LIỆU (DATA VISUALIZATION)
+## 🔥 3. Chức năng chính
 
-Để hiểu rõ cấu trúc dữ liệu trước khi đưa vào mô hình học máy, các biểu đồ trực quan hóa dữ liệu được vẽ trong các Notebook bằng thư viện **Matplotlib** và **Seaborn**:
+### 👨‍🎓 Học viên (Student)
+- **Khám phá khóa học**: Tìm kiếm, lọc khóa học theo danh mục, giá, đánh giá.
+- **Tư vấn AI Recommendation**: Điền form 17 thông số học tập để AI phân tích và đề xuất lộ trình kỹ năng phù hợp.
+- **Giỏ hàng & Thanh toán**: Áp mã giảm giá (Coupon), thanh toán đơn hàng (Payment Simulator).
+- **Học tập trực tuyến**: Xem video bài học nhúng (YouTube Unlisted), theo dõi tiến độ hoàn thành.
+- **Chứng chỉ & Đánh giá**: Tự động nhận chứng chỉ hoàn thành khóa học và viết đánh giá sao (Review).
+- **AI Chatbot trợ lý**: Hỏi đáp trực tiếp về chính sách hoàn tiền, khóa học phù hợp, tư vấn lộ trình.
 
-1.  **Biểu Đồ Nhiệt Tương Quan (Correlation Heatmap):**
-    *   Sử dụng `sns.heatmap` hiển thị ma trận tương quan giữa các biến số. 
-    *   Kết quả phân tích chỉ ra rằng **Hours_Studied** (Số giờ tự học), **Attendance** (Tỷ lệ chuyên cần), và **Previous_Scores** (Điểm số cũ) là 3 thuộc tính có hệ số tương quan tuyến tính Pearson cao nhất đối với kết quả học tập đầu ra của học sinh. Đây là cơ sở để tăng trọng số đặc trưng (feature weighting) trong mô hình KNN.
-2.  **Biểu Đồ Phân Phối (Distribution Plots - Histograms/KDE):**
-    *   Vẽ biểu đồ phân phối tần suất của cột điểm số cũ (`Previous_Scores`) và số giờ tự học (`Hours_Studied`).
-    *   Giúp kiểm tra xem dữ liệu có bị lệch (skewed) hay tuân theo phân phối chuẩn để quyết định phương pháp chuẩn hóa dữ liệu.
-3.  **Biểu Đồ Luật Kết Hợp (Apriori Rules Scatter Plot):**
-    *   Trực quan hóa tập hợp các luật kết hợp tìm được từ thuật toán Apriori dựa trên hai trục tọa độ: Độ hỗ trợ (Support) và Độ tin cậy (Confidence).
-    *   Giúp bộ lọc lọc bỏ những luật kết hợp có độ tin cậy thấp, chỉ giữ lại các luật mạnh để đề xuất lộ trình khóa học chính xác nhất.
-
----
-
-## 🤖 GIAI ĐOẠN 2: HUẤN LUYỆN MÔ HÌNH HỌC MÁY (MODEL TRAINING & AI SERVER)
-
-Sau khi dữ liệu được làm sạch và phân tích trực quan, mô hình học máy được xây dựng và triển khai độc lập làm API gợi ý lộ trình học tập:
-
-### 1. Thuật Toán Sử Dụng (`Data_Mining_Train_Project.ipynb`)
-*   **K-Nearest Neighbors (KNN Classifier):**
-    *   Học viên được phân vào các nhóm năng lực học tập dựa trên các thuộc tính đầu vào.
-    *   Dữ liệu được chuẩn hóa thông qua **StandardScaler** để các đặc trưng có thang đo lớn không lấn át các đặc trưng khác.
-    *   **Trọng số đặc trưng cá nhân hóa (Feature Weighting):** Tiến hành nhân trọng số **x3** đối với 3 đặc trưng quan trọng nhất: **Hours_Studied** (Số giờ tự học), **Attendance** (Tỷ lệ chuyên cần), và **Previous_Scores** (Điểm số cũ). Việc này giúp tăng cường độ chính xác khi phân loại nhóm học tập.
-*   **Apriori (Luật kết hợp - Association Rules):**
-    *   Sử dụng để tìm các luật kết hợp giữa nhóm năng lực học tập của học viên và các khóa học công nghệ thông tin tương ứng.
-    *   Hệ thống sẽ gợi ý: "Học sinh thuộc nhóm năng lực học tập A sẽ cần học lộ trình gồm khóa học Beginner X -> Intermediate Y -> Advanced Z".
-
-### 2. Triển Khai AI Server (Flask API)
-*   Mô hình được lưu lại (serialize) và đóng gói thành một REST API sử dụng **Flask (Python)**.
-*   Ứng dụng được deploy trực tuyến trên nền tảng đám mây **Render** tại địa chỉ: `https://flask-recommend-api.onrender.com`.
-*   Spring Boot kết nối tới Flask API thông qua `RestTemplate` với thời gian Timeout được cấu hình tối ưu để xử lý độ trễ phản hồi của Cloud Server.
+### 🛡️ Quản trị viên (Admin)
+- **Quản lý khóa học (CRUD)**: Tạo, sửa, xóa khóa học và các bài học (Lessons).
+- **Quản lý danh mục & Coupon**: Tạo mã giảm giá, giới hạn lượt dùng.
+- **Duyệt hoàn tiền (Refund)**: Xử lý yêu cầu hoàn tiền của học viên theo quy định.
+- **Thống kê doanh thu**: Dashboard trực quan về doanh thu, số học viên, khóa học bán chạy.
+- **Giám sát AI Engine**: Kiểm tra trạng thái kết nối tới Flask AI Service.
 
 ---
 
-## 💻 GIAI ĐOẠN 3: PHẦN MỀM ỨNG DỤNG THỰC TẾ (SPRING BOOT PLATFORM)
+## 🛠️ 4. Công nghệ sử dụng
 
-Nền tảng phần mềm được phát triển bằng **Spring Boot** đóng vai trò là hệ thống tương tác chính với người dùng và quản lý toàn bộ nghiệp vụ E-Learning:
-
-### 1. Kiến Trúc Bảo Mật & Phân Quyền (Spring Security)
-*   Phân quyền chi tiết dựa trên vai trò: **ROLE_STUDENT** (Học viên), **ROLE_TEACHER** (Giảng viên), **ROLE_ADMIN** (Quản trị viên).
-*   Đăng nhập bằng Form Login bảo mật, tích hợp tính năng tự động ghi nhớ đăng nhập (Remember Me) bằng token tồn tại trong 14 ngày.
-*   Vô hiệu hóa tấn công CSRF cho các yêu cầu API, cấu hình trang báo lỗi phân quyền 403 (`/access-deny`) và giới hạn tối đa 1 session đăng nhập trên mỗi tài khoản để tăng tính bảo mật.
-*   Mở quyền truy cập công khai không cần đăng nhập cho API chatbot AI (`/api/ai/**`) để khách truy cập trang chủ vẫn có thể được tư vấn.
-
-### 2. Các Phân Hệ Nghiệp Vụ Của Hệ Thống
-
-#### A. Phân Hệ Học Viên (Student)
-*   **Gợi Ý Lộ Trình AI:** Nhập các thông số cá nhân, hệ thống gửi yêu cầu REST API tới Flask Server và kết xuất lộ trình khóa học phù hợp trực tiếp lên giao diện.
-*   **Thanh Toán & Hóa Đơn (Invoice):** Áp dụng mã giảm giá (Coupon), xử lý giỏ hàng, thực hiện thanh toán giả lập. Khi đơn hàng chuyển trạng thái "Đã thanh toán" (Paid), hệ thống tự động xuất hóa đơn điện tử chứa mã vạch giao dịch độc nhất (UUID).
-*   **Học Trực Tuyến & Cấp Chứng Chỉ:** Học viên xem video bài giảng, trao đổi bài học qua bình luận cây phân cấp (Lesson Comment). Khi tiến độ học tập đạt 100%, hệ thống tự động sinh file PDF Chứng chỉ (Certificate) chứa tên học viên, tên khóa học và ngày hoàn thành.
-*   **Yêu Cầu Hoàn Tiền (Refund Flow):** Học viên có thể gửi yêu cầu hoàn tiền nếu khóa học mua dưới 7 ngày và tiến độ học dưới 20%.
-
-#### B. Phân Hệ Giảng Viên (Teacher)
-*   **Quản Lý Khóa Học & Bài Giảng:** Tạo khóa học, bài học mới và tải lên video không giới hạn kích thước file.
-*   **Báo Cáo Doanh Thu:** Thống kê số lượng học viên thực tế, tiến độ học của từng em, và số tiền thực nhận sau khi khấu trừ hoa hồng của hệ thống (Commission).
-
-#### C. Phân Hệ Quản Trị Viên (Admin)
-*   **Bảng Điều Khiển Doanh Thu (Dashboard):** Biểu đồ trực quan hóa doanh thu theo thời gian, quản lý danh sách người dùng.
-*   **Phê Duyệt Khóa Học & Hoàn Tiền:** Duyệt khóa học mới của giáo viên trước khi public; duyệt yêu cầu hoàn tiền of học viên (hệ thống tự động thu hồi quyền học và trừ hoa hồng of giáo viên tương ứng).
-
-#### D. Trợ Lý AI Gemini Chatbot
-*   Tích hợp trực tiếp **Gemini 2.5 Flash API** để chat trực tuyến, giải đáp thắc mắc về khóa học, lộ trình học và chính sách hoàn tiền.
-*   Tích hợp sẵn bộ phản hồi **Offline thông minh** để tự động trả lời tư vấn dựa trên từ khóa nếu hệ thống mất kết nối API key.
+| Phân loại | Công nghệ / Thư viện |
+|---|---|
+| **Backend Core** | Java 26, Spring Boot 4.0.6, Spring Data JPA, Spring Security |
+| **Database** | MySQL (Production), H2 Database (Testing) |
+| **Frontend** | Vue 3, Vite, JavaScript ES6+, Vanilla CSS (Custom Design Token) |
+| **AI / Data Mining** | Python 3.12, Flask, Pandas, Scikit-learn (KNN), Mlxtend (Apriori) |
+| **AI Chatbot** | Google Gemini API (REST client) |
+| **Testing** | JUnit 5, Mockito, AssertJ |
+| **Container & CI/CD** | Docker, Docker Buildx, GitHub Actions |
 
 ---
 
-## 📁 CẤU TRÚC THƯ MỤC DỰ ÁN (PROJECT STRUCTURE)
+## 📁 5. Cấu trúc thư mục dự án
 
 ```
-Edu_Recommend/
-├── Edu_Recommend_Data/                 # Bộ dữ liệu thô, dữ liệu sạch và Notebooks ML
-│   ├── Data_Cleaning.ipynb             # Notebook tiền xử lý dữ liệu khảo sát
-│   ├── Clean_Data_for_MySQL.ipynb      # Notebook làm sạch và chuẩn hóa DB khóa học
-│   ├── Data_Mining_Train_Project.ipynb # Notebook huấn luyện mô hình KNN & Apriori
-│   └── *.csv                           # Các tệp dữ liệu CSV trước và sau khi làm sạch
-├── doan/                               # Mã nguồn Backend Spring Boot
-│   ├── src/main/java/com/example/doan/
-│   │   ├── Config/                     # Cấu hình Web, Security (permitAll API AI), RestTemplate
-│   │   ├── Controller/
-│   │   │   ├── admin/                  # Quản lý Coupon, Doanh thu, Phê duyệt khóa học
-│   │   │   ├── student/                # Xem khóa học, Gợi ý AI, Yêu cầu hoàn tiền, Chứng chỉ
-│   │   │   ├── teacher/                # Đăng bài học, xem báo cáo doanh thu, tiến độ học viên
-│   │   │   └── shared/                 # PageController, CartController, AIChatController (Gemini)
-│   │   ├── Service/                    # Chứa logic nghiệp vụ phân tầng rõ ràng theo domain
-│   │   │   ├── course/, order/, user/, enrollment/, review/, refund/, notification/, common/
-│   │   ├── Model/                      # Thực thể JPA ánh xạ DB (StudentInfo, Order, Invoice, Course...)
-│   │   │   ├── course/, order/, user/, enrollment/, review/, refund/, notification/, recommend/
-│   │   ├── Repository/                 # Tầng giao tiếp database Spring Data JPA (chia theo domain)
-│   │   └── DoanApplication.java        # Main class khởi động Spring Boot
-│   └── src/main/resources/
-│       ├── templates/                  # Giao diện Thymeleaf HTML/CSS/JS (đã đồng bộ font Inter)
-│       └── application.properties       # Cấu hình Spring Boot, Kết nối DB, Gemini API Key
+E_LEARNING/
+├── .github/
+│   └── workflows/
+│       └── ci.yml             # Cấu hình GitHub Actions CI/CD Pipeline
+├── Edu_Recommend/
+│   └── doan/                  # Spring Boot 4 Backend Project
+│       ├── src/
+│       │   ├── main/          # Mã nguồn Backend (Controllers, Services, Models, Repositories)
+│       │   └── test/          # Unit Tests (JUnit 5 + Mockito)
+│       ├── mvnw / mvnw.cmd    # Maven Wrapper
+│       └── pom.xml            # Cấu hình Maven dependencies
+├── flask_api/                 # Python Flask AI Engine (Apriori + KNN)
+│   ├── app.py
+│   └── requirements.txt
+├── frontend-vue/              # Vue 3 Single Page Application
+│   ├── src/
+│   │   ├── components/        # UI Components (Nav, ChatWidget, CourseCard...)
+│   │   ├── views/             # Các trang (Home, Courses, Recommend, Admin...)
+│   │   └── services/          # Gọi API Backend
+│   └── package.json
+├── Dockerfile                 # Multi-stage Docker build file (Amazon Corretto 26)
+└── README.md                  # Tài liệu hướng dẫn dự án
 ```
 
 ---
 
-## 🛠️ HƯỚNG DẪN KHỞI CHẠY DỰ ÁN
+## 🚀 6. Hướng dẫn chạy cục bộ (Local Setup)
 
-### 1. Khởi Tạo Cơ Sở Dữ Liệu MySQL
-Tạo cơ sở dữ liệu mới trong MySQL Command Line hoặc Workbench:
-```sql
-CREATE DATABASE doan_khai_pha CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-```
+### Yêu cầu tiên quyết:
+- **JDK 26** trở lên
+- **Node.js** v18+ & **npm**
+- **Python** 3.10+
+- **MySQL** 8.0+
 
-### 2. Cấu Hình Kết Nối
-Mở file `doan/src/main/resources/application.properties` và sửa thông tin kết nối MySQL của bạn:
-```properties
-spring.datasource.username=username_cua_ban
-spring.datasource.password=password_cua_ban
-```
-
-### 3. Biên Dịch & Chạy Server
-Mở Terminal tại thư mục `doan/` và chạy các lệnh:
+### Bước 1: Khởi chạy Backend (Spring Boot)
 ```bash
-# Biên dịch dự án
-./mvnw clean compile
+cd Edu_Recommend/doan
 
-# Chạy ứng dụng Spring Boot
+# Chạy bằng Maven Wrapper
 ./mvnw spring-boot:run
 ```
-Truy cập ứng dụng tại địa chỉ: `http://localhost:8080/`
+*(Backend sẽ khởi chạy tại port `8080`)*
 
-*(Lưu ý: Mật khẩu đăng nhập mặc định của tất cả người dùng trong hệ thống dữ liệu mẫu đã được seed sẵn là `123456`)*
+### Bước 2: Khởi chạy Frontend (Vue 3)
+```bash
+cd frontend-vue
+
+# Cài đặt dependencies
+npm install
+
+# Chạy môi trường dev
+npm run dev
+```
+*(Frontend sẽ khởi chạy tại `http://localhost:5173`)*
+
+### Bước 3: Khởi chạy AI Service (Flask)
+```bash
+cd flask_api
+
+# Cài đặt thư viện Python
+pip install -r requirements.txt
+
+# Chạy Flask app
+python app.py
+```
+*(Flask AI Engine sẽ khởi chạy tại port `5000`)*
 
 ---
 
-## 👥 TÁC GIẢ & THÀNH VIÊN THỰC HIỆN
+## 🐳 7. Chạy bằng Docker
 
-*   **Cao Đức Mạnh**
-*   **Nguyễn Nhật Toàn**
-*   *Dự án Khai phá dữ liệu & Học máy ứng dụng.*
+Ứng dụng hỗ trợ đóng gói Docker siêu nhẹ bằng Multi-stage Build:
+
+```bash
+# Build Docker image
+docker build -t edurecommend-backend:latest .
+
+# Chạy container
+docker run -d -p 8080:8080 --name backend edurecommend-backend:latest
+```
+
+---
+
+## ⚙️ 8. Quyền trình CI/CD (GitHub Actions)
+
+Dự án được tích hợp tự động hóa quy trình phát triển và triển khai:
+
+```
+[ Git Push / Pull Request ]
+            │
+            ▼
+ 🧪 CI Job (Chạy trên mọi Branch)
+    ├── Checkout Code
+    ├── Set up JDK 26 (Amazon Corretto)
+    └── Run Unit Tests (./mvnw clean test)
+            │
+            ├── (Nếu FAILED) ──► ❌ Dừng workflow & Báo lỗi
+            │
+            ▼ (Nếu PASSED)
+ 🐳 CD Job (Chỉ chạy khi Push/Merge vào nhánh 'main')
+    ├── Set up Docker Buildx
+    ├── Log in to Docker Hub
+    ├── Build Docker Image
+    └── Push to Docker Hub (caoducmanh1611/edurecommend-backend:latest)
+```
+
+---
+
+## 📄 9. Giấy phép & Bản quyền
+
+Dự án được phát triển phục vụ mục đích nghiên cứu, học tập và làm đồ án khai phá dữ liệu / phát triển ứng dụng Web.
