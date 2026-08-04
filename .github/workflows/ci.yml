@@ -1,0 +1,47 @@
+name: Java CI/CD with Maven and Docker Build
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "**" ]
+
+jobs:
+  test:
+    name: Run Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 26 (Corretto)
+        uses: actions/setup-java@v4
+        with:
+          java-version: '26'
+          distribution: 'corretto'
+          cache: 'maven'
+
+      - name: Make Maven wrapper executable
+        run: chmod +x mvnw
+        working-directory: Edu_Recommend/doan
+
+      - name: Run Maven Tests
+        run: ./mvnw clean test
+        working-directory: Edu_Recommend/doan
+
+  docker-build:
+    name: Verify Docker Build
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker Image
+        run: |
+          docker build -t edurecommend-backend:latest .

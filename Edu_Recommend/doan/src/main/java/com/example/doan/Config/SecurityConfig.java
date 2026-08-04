@@ -2,13 +2,22 @@ package com.example.doan.Config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
+import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
+import java.util.List;
 
 
 @Configuration
@@ -33,42 +42,42 @@ public class SecurityConfig {
     }
 
     @Bean
-    public AuthenticationSuccessHandler customAuthenticationSuccessHandler() {
-        return (request, response, authentication) -> {
-            response.sendRedirect("/");
-        };
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
+        return config.getAuthenticationManager();
+    }
+
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration config = new CorsConfiguration();
+        config.setAllowedOrigins(List.of("http://localhost:5173", "http://127.0.0.1:5173"));
+        config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        config.setAllowedHeaders(List.of("*"));
+        config.setAllowCredentials(true);
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", config);
+        return source;
     }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http, UserDetailsService userDetailsService) throws Exception {
         http
+            .cors(Customizer.withDefaults())
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(requests -> requests
-                // 1. Cho phép công khai tất cả mọi người truy cập
-                .requestMatchers(
-                    "/", "/index", "/index.html", "/login", "/register",
-                    "/api/recommend", "/api/skills", "/api/health", "/api/eda",
-                    "/api/student-info", "/api/ai/**",
-                    "/css/**", "/js/**", "/images/**", "/uploads/**"
-                ).permitAll()
-                
-                // 2. Bảo vệ trang quản trị Admin và các API quản lý sinh viên
-                .requestMatchers("/admin.html", "/admin/**", "/api/student-info/all", "/api/student-info/*").hasRole("admin")
-                
-                // 3. Bảo vệ trang quản trị của Giảng viên (Giai đoạn 2)
-                .requestMatchers("/teacher/**").hasRole("teacher")
-                
-                // 4. Các request còn lại bắt buộc phải đăng nhập
-                .anyRequest().authenticated()
+                // RESTful API v1 dành cho frontend VueJS
+                .requestMatchers("/uploads/**").permitAll()
+                .requestMatchers("/api/v1/auth/**", "/api/v1/health", "/api/v1/skills", "/api/v1/recommend", "/api/v1/eda", "/api/v1/ai/**", "/api/v1/student-info").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/v1/categories/**", "/api/v1/courses/**").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/v1/lessons/**").permitAll()
+                .requestMatchers("/api/v1/admin/**").hasRole("admin")
+                .requestMatchers("/api/v1/teacher/**").hasRole("teacher")
+                .requestMatchers("/api/v1/student/**", "/api/v1/cart/**", "/api/v1/checkout/**", "/api/v1/profile/**", "/api/v1/notifications/**", "/api/v1/lessons/**", "/api/v1/uploads/**").authenticated()
+
+                // Vue SPA routes/static files are public; API security is handled above.
+                .anyRequest().permitAll()
             )
-            
-            // Cấu hình Form Login
-            .formLogin(form -> form
-                .loginPage("/login")              // Link dẫn đến trang login
-                .successHandler(customAuthenticationSuccessHandler()) // Điều hướng động dựa trên Role
-                .failureUrl("/login?error")       // Thất bại
-                .permitAll()
-            )
+            .formLogin(form -> form.disable())
             
             // Cấu hình Logout
             .logout(logout -> logout
@@ -77,8 +86,25 @@ public class SecurityConfig {
                 .permitAll()
             )
             
-            // Xử lý trang báo lỗi phân quyền 403
-            .exceptionHandling(e -> e.accessDeniedPage("/access-deny"))
+            // Xử lý lỗi phân quyền: API trả JSON, web Thymeleaf vẫn về trang deny
+            .exceptionHandling(e -> e
+                .defaultAuthenticationEntryPointFor((request, response, authException) -> {
+                    response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                    response.setContentType("application/json;charset=UTF-8");
+                    response.getWriter().write("{\"success\":false,\"message\":\"Chua dang nhap\"}");
+                }, request -> request.getRequestURI().startsWith("/api/v1/"))
+                .accessDeniedHandler((request, response, accessDeniedException) -> {
+                    if (request.getRequestURI().startsWith("/api/v1/")) {
+                        response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+                        response.setContentType("application/json;charset=UTF-8");
+                        response.getWriter().write("{\"success\":false,\"message\":\"Khong co quyen truy cap\"}");
+                    } else {
+                        response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+                        response.setContentType("application/json;charset=UTF-8");
+                        response.getWriter().write("{\"success\":false,\"message\":\"Khong co quyen truy cap\"}");
+                    }
+                })
+            )
             
             // Giới hạn Session
             .sessionManagement(session -> session
