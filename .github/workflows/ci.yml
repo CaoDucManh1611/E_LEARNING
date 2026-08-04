@@ -1,11 +1,17 @@
-name: Java CI/CD with Maven and Docker Build
+name: Java CI/CD with Maven and Docker Hub
 
 on:
   push:
-    branches: [ "**" ]
+    branches: ["main", "Update_Project"]
   pull_request:
-    branches: [ "**" ]
+    branches: ["main"]
 
+permissions:
+  contents: read
+
+# ─────────────────────────────────────────────────────────────────────────────
+# JOB 1 — CI: Chạy unit test + xác minh Docker build được
+# ─────────────────────────────────────────────────────────────────────────────
 jobs:
   test:
     name: Run Unit Tests
@@ -15,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up JDK 26 (Corretto)
+      - name: Set up Java 26 (Amazon Corretto)
         uses: actions/setup-java@v4
         with:
           java-version: '26'
@@ -30,18 +36,52 @@ jobs:
         run: ./mvnw clean test
         working-directory: Edu_Recommend/doan
 
-  docker-build:
-    name: Verify Docker Build
-    needs: test
+# ─────────────────────────────────────────────────────────────────────────────
+# JOB 2 — CD: Build và push Docker image lên Docker Hub
+#   Chỉ chạy khi push vào nhánh main (sau khi test pass)
+# ─────────────────────────────────────────────────────────────────────────────
+  docker-publish:
+    name: Build & Push to Docker Hub
     runs-on: ubuntu-latest
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Docker Buildx
+      # Bật Docker BuildKit (build nhanh hơn, hỗ trợ multi-platform)
+      - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build Docker Image
-        run: |
-          docker build -t edurecommend-backend:latest .
+      # Đăng nhập vào Docker Hub bằng Secrets đã cấu hình trên GitHub
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Tạo metadata: tags và labels cho image
+      # Tag sẽ gồm: latest  +  <ngày-tháng>  +  <7 ký tự commit SHA>
+      - name: Extract Docker metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/edurecommend-backend
+          tags: |
+            type=raw,value=latest
+            type=sha,format=short
+            type=schedule,pattern={{date 'YYYYMMDD'}}
+
+      # Build image và push lên Docker Hub
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          # Cache layer để build lần sau nhanh hơn
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
