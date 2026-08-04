@@ -13,10 +13,6 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
-/**
- * Unit test cho Recommend_Api_Controller.
- * Không boot Spring context — test trực tiếp logic bằng Mockito thuần.
- */
 class Recommend_Api_Controller_Test {
 
     private FlaskApiService flaskApiService;
@@ -27,15 +23,10 @@ class Recommend_Api_Controller_Test {
     void setUp() {
         flaskApiService = mock(FlaskApiService.class);
         geminiService = mock(Gemini_Service.class);
-        // Truyền null cho các repo không cần trong test này
         controller = new Recommend_Api_Controller(
                 flaskApiService, null, null, null, geminiService
         );
     }
-
-    // ------------------------------------------------------------------ //
-    // GET /api/v1/health
-    // ------------------------------------------------------------------ //
 
     @Test
     void health_returnsHealthy_whenFlaskIsUp() {
@@ -59,10 +50,6 @@ class Recommend_Api_Controller_Test {
         assertThat(response.getBody()).containsEntry("flask_api", "unreachable");
     }
 
-    // ------------------------------------------------------------------ //
-    // GET /api/v1/skills
-    // ------------------------------------------------------------------ //
-
     @Test
     void skills_returnsListOfSkills() {
         when(flaskApiService.getTopSkills()).thenReturn(List.of("Java", "Python", "SQL"));
@@ -77,10 +64,6 @@ class Recommend_Api_Controller_Test {
         List<String> skills = (List<String>) response.getBody().get("skills");
         assertThat(skills).containsExactly("Java", "Python", "SQL");
     }
-
-    // ------------------------------------------------------------------ //
-    // POST /api/v1/ai/chat
-    // ------------------------------------------------------------------ //
 
     @Test
     void chat_returnsOfflineFallback_whenGeminiNotConfigured() {
