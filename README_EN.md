@@ -1,194 +1,203 @@
-# 🎓 EduRecommend - E-Learning & AI-Powered Course Recommendation System
+# 🎓 EduRecommend - E-Learning Platform & AI-Powered Course Recommendation System
 
-**EduRecommend** is a comprehensive educational technology solution combining **Data Mining**, **Machine Learning**, and **Software Engineering**. The platform not only manages and sells online programming courses (E-Learning) but also serves as an AI academic advisor. It analyzes students' study habits, academic history, and daily routines to recommend personalized course learning paths through predictive modeling.
-
----
-
-## 🌐 Multilingual Readme
-*   [Tiếng Việt (Vietnamese Version)](./README.md)
-
----
-
-## 🛠️ TECHNOLOGIES USED (TECH STACK)
-
-A complete end-to-end stack was implemented to handle data processing, model training, AI serving, and web platform hosting:
-
-### 1. Web Backend & Database
-*   **Java 26.0.1 (Amazon Corretto)**: Leveraging the latest Java runtime features for optimized execution.
-*   **Spring Boot 4.0.6**: Core framework providing a robust, production-ready web application architecture.
-*   **Spring Security**: Standard security filter chain managing secure login, session cookies, remember-me tokens, and CSRF protection.
-*   **Spring Data JPA & Hibernate**: Object-Relational Mapping (ORM) framework to simplify database persistence operations.
-*   **MySQL 8.0**: Relational Database Management System (RDBMS) storing user profiles, courses, orders, invoices, coupons, and progress logs.
-*   **Thymeleaf**: Server-side Template Engine for rendering dynamic HTML views.
-
-### 2. Artificial Intelligence & Data Mining
-*   **Python 3.12**: Primary programming language utilized for data science and model training.
-*   **Flask API**: Lightweight Python web framework wrapping the ML model into REST endpoints, deployed on **Render** (24/7).
-*   **Pandas & NumPy**: Data manipulation libraries used for data cleaning, handling missing values, and data type casting.
-*   **Matplotlib & Seaborn**: Libraries used for data visualization and exploratory data analysis (EDA).
-*   **Scikit-learn**: Machine learning library used to train the **K-Nearest Neighbors (KNN)** student classifier.
-*   **Mlxtend**: Library executing the **Apriori Association Rules** algorithm to generate personalized course recommendations.
-*   **Gemini 2.5 Flash API**: Large Language Model (LLM) integrated into the frontend as an interactive AI assistant widget.
-
-### 3. Frontend & UX
-*   **HTML5, CSS3, JavaScript**: Responsive layout styling and client-side dynamic behaviors.
-*   **Inter Typography**: System-wide font standardization to ensure clean, readable, and modern UI text rendering.
-*   **SweetAlert2 & Animate.css**: Libraries creating dynamic popup alerts and smooth animations.
+![Build Status](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-brightgreen?logo=github-actions)
+![Java Version](https://img.shields.io/badge/Java-26-orange?logo=openjdk)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.6-brightgreen?logo=springboot)
+![Vue.js](https://img.shields.io/badge/Vue.js-3.x-4FC08D?logo=vuedotjs)
+![Python Flask](https://img.shields.io/badge/Flask-AI%20Engine-blue?logo=flask)
+![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)
 
 ---
 
-## 🗺️ DEVELOPMENT LIFECYCLE ROADMAP
+## 📌 1. Overview
 
-The development pipeline transitions logically from raw data research to production software:
+**EduRecommend** is an e-learning platform that combines **Data Mining (Apriori & KNN algorithms)** with **Generative AI Chatbot (Google Gemini API)** to provide personalized course recommendation paths for students based on their academic profile and market skill trends.
+
+---
+
+## 🌐 Multilingual README
+*   [🇻🇳 Tiếng Việt (Vietnamese Version)](./README.md)
+
+---
+
+## 🏗️ 2. System Architecture
+
+The project follows a modern Microservices & RESTful API architecture:
 
 ```
-[Raw Survey Data] 
-       │ (Pandas, NumPy, re, unicodedata)
-       ▼
-[PHASE 1: PREPROCESSING & CLEANING] (Imputation, Normalization, Skill set parsing)
-       │
-       ▼
-[DATA VISUALIZATION & ANALYSIS] (Correlation Heatmaps, Distribution Histograms)
-       │
-       ▼
-[PHASE 2: MACHINE LEARNING TRAINING] (KNN & Apriori rules training, Flask API deployment)
-       │
-       ▼
-[PHASE 3: SOFTWARE APPLICATION] (Spring Boot Web App, Security Role Filter, Gemini Chat)
+                  ┌─────────────────────────────────────┐
+                  │          Frontend (Vue 3)           │
+                  │   Vite + SPA + Responsive Layout    │
+                  └──────────────────┬──────────────────┘
+                                     │ REST API
+                                     ▼
+                  ┌─────────────────────────────────────┐
+                  │       Backend (Spring Boot 4)       │
+                  │   Java 26 + Spring Security + Data  │
+                  └─────────┬─────────────────┬─────────┘
+                            │                 │
+             ┌──────────────┴──────┐   ┌──────┴───────────────┐
+             ▼                     ▼   ▼                      ▼
+  ┌──────────────────┐   ┌──────────────────┐   ┌──────────────────┐
+  │   Database       │   │  AI Service      │   │  Google Gemini   │
+  │   MySQL / H2     │   │  Flask (Python)  │   │  API Chatbot     │
+  │   JPA / Hibernate│   │  Apriori + KNN   │   │  (Generative AI) │
+  └──────────────────┘   └──────────────────┘   └──────────────────┘
 ```
 
 ---
 
-## 📊 PHASE 1: DATA MINING & PREPROCESSING (CLEANING)
+## 📸 3. Application UI Screenshots
 
-Raw data is extracted from two sources and cleaned in Jupyter Notebooks (`Data_Cleaning.ipynb` and `Clean_Data_for_MySQL.ipynb`):
-
-### 1. Data Sources
-*   **Student Dataset (10,000 survey records):** Contains detailed student attributes, including academic metrics (`Hours_Studied`, `Attendance`, `Previous_Scores`, `Tutoring_Sessions`) and daily habits (`Sleep_Hours`, `Extracurricular_Activities`, `Physical_Activity`, `Parental_Education_Level`, `Distance_from_Home`).
-*   **Coursera Dataset (Hundreds of tech courses):** Contains course metadata including titles, difficulty levels, enrollment count, and comma-separated skills taught.
-
-### 2. Preprocessing & Cleaning (Pandas & NumPy)
-*   **Missing Value Imputation:**
-    *   **Categorical columns:** Missing values filled with the mode. (e.g., `Parental_Education_Level` set to `'High School'`, `Distance_from_Home` set to `'Near'`).
-    *   **Numerical columns:** Missing values filled with the median to prevent outliers from skewing the model distribution.
-*   **Numeric Conversion:** Standardized the `course_students_enrolled` column from abbreviations (e.g., `120k` converted to `120000`, `1.2m` converted to `1200000`) into clean integer formats for indexing.
-*   **Database Normalization (3NF):** Extracted the skills column from Coursera data to create a standalone skills registry (`skills.csv`) and a lookup table (`external_course_skills.csv`) for a clean relational database schema in MySQL.
+| Homepage View | Courses Catalog & AI Recommendation |
+|:---:|:---:|
+| ![Homepage](docs/screenshots/home.png) | ![Courses Catalog](docs/screenshots/recommend.png) |
 
 ---
 
-## 📈 DATA VISUALIZATION & EDA
+## 🔥 4. Key Features
 
-To understand feature distributions and verify statistical integrity, visualizations were generated using **Matplotlib** and **Seaborn**:
+### 👨‍🎓 Student Portal
+- **Browse & Search Courses**: Filter by category, price, and ratings.
+- **AI Recommendation Engine**: Complete a 17-parameter academic survey for personalized skill recommendations.
+- **Cart & Checkout**: Apply discount coupons and process simulated payments.
+- **Online Learning**: Watch unlisted YouTube video lessons and track completion progress.
+- **Certificates & Reviews**: Auto-generate completion certificates and submit course reviews.
+- **AI Chatbot Advisor**: Instant assistance regarding refund policies, course advice, and study roadmaps.
 
-1.  **Correlation Heatmap (`sns.heatmap`):**
-    *   Revealed that `Hours_Studied`, `Attendance`, and `Previous_Scores` have the highest Pearson correlation coefficients relative to student academic performance. This guided our feature scaling weights in model training.
-2.  **Distribution Plots (Histograms/KDE):**
-    *   Examined the distribution of study hours and test scores to ensure proper standardization and avoid model bias.
-3.  **Apriori Association Rules Plot:**
-    *   Visualized Support vs. Confidence to filter out weak rules, retaining only high-confidence rules for course path recommendation.
-
----
-
-## 🤖 PHASE 2: MACHINE LEARNING & AI SERVICE
-
-### 1. Model Training (`Data_Mining_Train_Project.ipynb`)
-*   **K-Nearest Neighbors (KNN Classifier):**
-    *   Groups students into performance cohorts based on their academic and lifestyle metrics.
-    *   Input features are scaled using **StandardScaler** to ensure uniform variance.
-    *   **Custom Feature Weighting:** Multiplied the values of the 3 key features (`Hours_Studied`, `Attendance`, `Previous_Scores`) by **x3** to emphasize their impact on the classification boundary.
-*   **Apriori Association Rules:**
-    *   Mined association rules linking performance cohorts to optimal sequence tracks of programming courses (e.g., Beginner X ➔ Intermediate Y ➔ Advanced Z).
-
-### 2. AI Server Deployment (Flask API)
-*   The trained models are serialized and hosted via a lightweight **Flask** web API.
-*   Deployed on **Render** (`https://flask-recommend-api.onrender.com`).
-*   Spring Boot queries this API asynchronously using `RestTemplate` to request recommendations based on real-time user inputs.
+### 🛡️ Admin Dashboard
+- **Course & Lesson Management (CRUD)**: Create, edit, and organize courses and video lessons.
+- **Category & Coupon Management**: Create promo codes with usage quotas.
+- **Refund Request Approvals**: Process and approve student refund requests.
+- **Revenue Analytics**: Visual metrics covering overall revenue, enrolled students, and top-selling courses.
+- **AI Service Monitoring**: Health checks monitoring the Python Flask AI service.
 
 ---
 
-## 💻 PHASE 3: PRODUCTION SOFTWARE APPLICATION
+## 🛠️ 5. Tech Stack
 
-The **Spring Boot** application handles all user operations and commercial e-learning flows:
-
-### 1. Authentication & Security (Spring Security)
-*   Role-based authorization: **ROLE_STUDENT**, **ROLE_TEACHER**, **ROLE_ADMIN**.
-*   Form-based authentication with 14-day persistent Remember-Me tokens.
-*   CSRF protection disabled for API requests, concurrent session management limited to 1 active session per user, and custom access-denied pages (`/access-deny`).
-*   Publicly permit all requests to the AI chat endpoint (`/api/ai/**`) so guest users can chat with the assistant on landing pages.
-
-### 2. Business Features
-
-#### A. Student Features
-*   **Course Discovery & Checkout**: Add courses to cart, apply coupon discounts, simulated checkout, and download dynamic invoices with transactional UUID codes.
-*   **AI Path Suggestion**: Enter lifestyle/academic attributes, send REST requests to the Flask server, and render recommendations on the UI.
-*   **Learning Area & Certificates**: Video lecture player, recursive comments for Q&A, and automatic PDF Certificate generation upon 100% course completion.
-*   **Refund Requests**: Request refunds within 7 days of purchase if course progress is under 20%.
-
-#### B. Teacher Features
-*   **Course Management**: Upload course chapters and video lectures with no file size limitations.
-*   **Earnings Report**: Track enrollment statistics, student study progress, and net revenue share after platform commission deductions.
-
-#### C. Admin Features
-*   **Earnings Dashboard**: Live charting of system-wide revenue over time.
-*   **Approvals**: Approve/reject new teacher courses and process student refund requests (automatically revoking student access and adjusting teacher commissions).
-
-#### D. Gemini AI Assistant
-*   An overlay chatbot powered by the **Gemini 2.5 Flash API** to answer queries about courses and policies.
-*   Includes a fallback offline rule-based mechanism that triggers automatically if the API key is not configured.
+| Category | Technologies / Libraries |
+|---|---|
+| **Backend Core** | Java 26, Spring Boot 4.0.6, Spring Data JPA, Spring Security |
+| **Database** | MySQL 8.0 (Production), H2 Database (In-memory Testing) |
+| **Frontend** | Vue 3, Vite, ES6+ JavaScript, Vanilla CSS |
+| **AI / Machine Learning** | Python 3.12, Flask, Pandas, Scikit-learn (KNN), Mlxtend (Apriori) |
+| **AI Chatbot** | Google Gemini API (REST client) |
+| **Testing** | JUnit 5, Mockito, AssertJ |
+| **Container & CI/CD** | Docker, Docker Buildx, GitHub Actions |
 
 ---
 
-## 📁 PROJECT STRUCTURE
+## 📁 6. Project Directory Structure
 
 ```
-Edu_Recommend/
-├── Edu_Recommend_Data/                 # Datasets & Jupyter Notebooks
-├── doan/                               # Spring Boot codebase
-│   ├── src/main/java/com/example/doan/
-│   │   ├── Config/                     # Web configs & Security filters
-│   │   ├── Controller/                 # Sub-divided REST/Page Controllers (admin, student, teacher, shared)
-│   │   ├── Service/                    # Domain-driven service interfaces & classes
-│   │   ├── Model/                      # JPA Entities (course, user, order, enrollment, etc.)
-│   │   └── Repository/                 # Database JPA repositories
-│   └── src/main/resources/
-│       ├── templates/                  # Thymeleaf templates styled with Inter font
-│       └── application.properties       # Database, server, and API configurations
+E_LEARNING/
+├── .github/
+│   └── workflows/
+│       └── ci.yml             # GitHub Actions CI/CD Pipeline
+├── Edu_Recommend/
+│   └── doan/                  # Spring Boot 4 Backend Project
+│       ├── src/
+│       │   ├── main/          # Backend Source Code (Controllers, Services, Repositories)
+│       │   └── test/          # Unit Tests (JUnit 5 + Mockito)
+│       ├── mvnw / mvnw.cmd    # Maven Wrapper
+│       └── pom.xml            # Maven POM File
+├── flask_api/                 # Python Flask AI Engine (Apriori + KNN)
+│   ├── app.py
+│   └── requirements.txt
+├── frontend-vue/              # Vue 3 Single Page Application
+│   ├── src/
+│   │   ├── components/        # UI Components
+│   │   ├── views/             # Views & Pages
+│   │   └── services/          # API Services
+│   └── package.json
+├── docs/
+│   └── screenshots/           # Captured Application UI Screenshots
+├── Dockerfile                 # Multi-stage Docker build file (Amazon Corretto 26)
+├── README.md                  # Vietnamese Documentation
+└── README_EN.md               # English Documentation
 ```
 
 ---
 
-## 🛠️ RUNNING THE PROJECT
+## 🚀 7. Local Setup Guide
 
-### 1. Database Initialization
-Create a MySQL database:
-```sql
-CREATE DATABASE doan_khai_pha CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-```
+### Prerequisites:
+- **JDK 26** or higher
+- **Node.js** v18+ & **npm**
+- **Python** 3.10+
+- **MySQL** 8.0+
 
-### 2. Connection Settings
-Modify `doan/src/main/resources/application.properties` with your MySQL credentials:
-```properties
-spring.datasource.username=your_db_username
-spring.datasource.password=your_db_password
-```
-
-### 3. Build & Run
-From the `doan/` directory, execute:
+### Step 1: Start Backend (Spring Boot)
 ```bash
-# Compile project
-./mvnw clean compile
+cd Edu_Recommend/doan
 
-# Run Spring Boot app
+# Run with Maven Wrapper
 ./mvnw spring-boot:run
 ```
-Access the application locally at: `http://localhost:8080/`
+*(Backend runs at port `8080`)*
 
-*(Note: Default password for seeded demo accounts is `123456`)*
+### Step 2: Start Frontend (Vue 3)
+```bash
+cd frontend-vue
+
+# Install dependencies
+npm install
+
+# Start Vite dev server
+npm run dev
+```
+*(Frontend runs at `http://localhost:5173`)*
+
+### Step 3: Start AI Service (Flask)
+```bash
+cd flask_api
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Start Flask API
+python app.py
+```
+*(Flask AI Engine runs at port `5000`)*
 
 ---
 
-## 👥 AUTHORS
+## 🐳 8. Docker Deployment
 
-*   **Cao Duc Manh**
-*   **Nguyen Nhat Toan**
-*   *Applied Data Mining & Machine Learning Project.*
+```bash
+# Build Docker image
+docker build -t edurecommend-backend:latest .
+
+# Run Docker container
+docker run -d -p 8080:8080 --name backend edurecommend-backend:latest
+```
+
+---
+
+## ⚙️ 9. CI/CD Pipeline (GitHub Actions)
+
+```
+[ Git Push / Pull Request ]
+            │
+            ▼
+ 🧪 CI Job (Runs on all Branches)
+    ├── Checkout Repository
+    ├── Set up JDK 26 (Amazon Corretto)
+    └── Run Unit Tests (./mvnw clean test)
+            │
+            ├── (If FAILED) ──► ❌ Stop Workflow
+            │
+            ▼ (If PASSED)
+ 🐳 CD Job (Runs only on Push/Merge to 'main')
+    ├── Set up Docker Buildx
+    ├── Log in to Docker Hub
+    ├── Build Docker Image
+    └── Push to Docker Hub (caoducmanh1611/edurecommend-backend:latest)
+```
+
+---
+
+## 📄 10. License
+
+Developed for research, educational, data mining, and web engineering portfolio purposes.
