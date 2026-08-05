@@ -69,6 +69,12 @@ Hệ thống được thiết kế theo kiến trúc Microservices & RESTful API
 - **Thống kê doanh thu**: Dashboard trực quan về doanh thu, số học viên, khóa học bán chạy.
 - **Giám sát AI Engine**: Kiểm tra trạng thái kết nối tới Flask AI Service.
 
+### 🏫 Giảng viên (Teacher)
+- **Quản lý khóa học**: Gửi yêu cầu tạo mới khóa học (chờ Admin duyệt), cập nhật, hoặc xóa khóa học (kèm lý do hoàn tiền cho học viên).
+- **Quản lý bài học (CRUD)**: Quản lý chi tiết nội dung các bài học (Lessons) trong khóa học do mình sở hữu.
+- **Thống kê doanh thu & Học viên**: Dashboard thống kê doanh thu cá nhân từ học phí chia sẻ, tổng số học sinh đã đăng ký.
+- **Xem đánh giá (Reviews)**: Theo dõi và phản hồi đánh giá của học sinh dành cho các khóa học của mình.
+
 ---
 
 ## 🛠️ 5. Công nghệ sử dụng
@@ -122,7 +128,22 @@ E_LEARNING/
 - **Python** 3.10+
 - **MySQL** 8.0+
 
-### Bước 1: Khởi chạy Backend (Spring Boot)
+### ⚡ Khởi chạy đóng gói tích hợp tự động (Dùng 1 URL duy nhất - Khuyên dùng)
+Dự án được tích hợp sẵn file script để tự động build Frontend Vue và đóng gói trực tiếp vào thư mục static của Backend Spring Boot, chạy dưới cổng `8080`:
+
+*   **Chạy trên Windows:**
+    Chạy file `run_packaged.bat` tại thư mục gốc:
+    ```bash
+    .\run_packaged.bat
+    ```
+
+👉 **Địa chỉ truy cập duy nhất:** [**http://localhost:8080**](http://localhost:8080) (Gồm giao diện Vue 3 + API Backend + kết nối AI tự động qua Cloud)
+
+---
+
+### 🛠️ Cách 2: Khởi chạy thủ công từng phần
+
+#### Bước 1: Khởi chạy Backend (Spring Boot)
 ```bash
 cd Edu_Recommend/doan
 
@@ -131,7 +152,7 @@ cd Edu_Recommend/doan
 ```
 *(Backend sẽ khởi chạy tại port `8080`)*
 
-### Bước 2: Khởi chạy Frontend (Vue 3)
+#### Bước 2: Khởi chạy Frontend (Vue 3)
 ```bash
 cd frontend-vue
 
@@ -143,7 +164,7 @@ npm run dev
 ```
 *(Frontend sẽ khởi chạy tại `http://localhost:5173`)*
 
-### Bước 3: Khởi chạy AI Service (Flask)
+#### Bước 3: Khởi chạy AI Service (Flask)
 ```bash
 cd flask_api
 

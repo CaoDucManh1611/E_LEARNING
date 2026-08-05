@@ -72,6 +72,12 @@ The project follows a modern Microservices & RESTful API architecture:
 - **Revenue Analytics**: Visual metrics covering overall revenue, enrolled students, and top-selling courses.
 - **AI Service Monitoring**: Health checks monitoring the Python Flask AI service.
 
+### 🏫 Teacher Portal
+- **Course Management**: Submit requests to publish new courses (pending Admin review), update, or delete courses (with refund reasons for students).
+- **Lesson Management (CRUD)**: Manage detailed video lessons inside self-owned courses.
+- **Revenue & Enrollment Analytics**: Personal earnings dashboard from tuition commission and tracking registered students count.
+- **Student Reviews**: View and reply to student feedback and rating reviews on self-owned courses.
+
 ---
 
 ## 🛠️ 5. Tech Stack
@@ -128,7 +134,22 @@ E_LEARNING/
 - **Python** 3.10+
 - **MySQL** 8.0+
 
-### Step 1: Start Backend (Spring Boot)
+### ⚡ Automatic Packaged Single-URL Launch (Recommended)
+The project comes with a convenient batch script to automatically build the Frontend and package it directly inside the Spring Boot static resources, running under port `8080`:
+
+*   **Running on Windows:**
+    Run the batch script from the root directory:
+    ```bash
+    .\run_packaged.bat
+    ```
+
+👉 **Single Access URL:** [**http://localhost:8080**](http://localhost:8080) (Vue Frontend + API Backend + AI automatically connected via Cloud)
+
+---
+
+### 🛠️ Option 2: Manual Step-by-Step Setup
+
+#### Step 1: Start Backend (Spring Boot)
 ```bash
 cd Edu_Recommend/doan
 
@@ -137,7 +158,7 @@ cd Edu_Recommend/doan
 ```
 *(Backend runs at port `8080`)*
 
-### Step 2: Start Frontend (Vue 3)
+#### Step 2: Start Frontend (Vue 3)
 ```bash
 cd frontend-vue
 
@@ -149,7 +170,7 @@ npm run dev
 ```
 *(Frontend runs at `http://localhost:5173`)*
 
-### Step 3: Start AI Service (Flask)
+#### Step 3: Start AI Service (Flask)
 ```bash
 cd flask_api
 
