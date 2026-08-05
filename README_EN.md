@@ -198,6 +198,3 @@ docker run -d -p 8080:8080 --name backend edurecommend-backend:latest
 
 ---
 
-## 📄 10. License
-
-Developed for research, educational, data mining, and web engineering portfolio purposes.
