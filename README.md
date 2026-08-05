@@ -196,6 +196,3 @@ Dự án được tích hợp tự động hóa quy trình phát triển và tri
 
 ---
 
-## 📄 10. Giấy phép & Bản quyền
-
-Dự án được phát triển phục vụ mục đích nghiên cứu, học tập và làm đồ án khai phá dữ liệu / phát triển ứng dụng Web.
